@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=11 format=3 uid="uid://b056akm3q4sxp"]
+
+[ext_resource type="PackedScene" uid="uid://syki6k0e6aac" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.tscn" id="1_xps7r"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_3lbuy"]
+[ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="4_jqoxk"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="5_68w2y"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="5_a1d1j"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="5_x6tca"]
+
+[sub_resource type="Resource" id="Resource_jg22k"]
+script = ExtResource("2_3lbuy")
+scene = ExtResource("1_xps7r")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_gnxqs"]
+script = ExtResource("2_3lbuy")
+scene = ExtResource("5_a1d1j")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_w4c8u"]
+script = ExtResource("2_3lbuy")
+scene = ExtResource("4_jqoxk")
+overrides = {
+"normal_font": "\"res://assets/fonts/NotoSansTC-Regular.ttf\""
+}
+
+[sub_resource type="Resource" id="Resource_drg57"]
+script = ExtResource("2_3lbuy")
+scene = ExtResource("5_68w2y")
+overrides = {}
+
+[resource]
+script = ExtResource("5_x6tca")
+name = "text_bubble_style"
+layer_list = Array[String](["11", "12", "10"])
+layer_info = {
+"": SubResource("Resource_jg22k"),
+"10": SubResource("Resource_gnxqs"),
+"11": SubResource("Resource_w4c8u"),
+"12": SubResource("Resource_drg57")
+}
+base_overrides = {}
+layers = Array[ExtResource("2_3lbuy")]([])
+metadata/_latest_layer = "11"

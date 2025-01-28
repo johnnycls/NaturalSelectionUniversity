@@ -26,8 +26,42 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"me": "res://dialogic/characters/me.dch"
+}
+directories/dtl_directory={
+"intro": "res://dialogic/timelines/intro.dtl"
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+audio/max_channels=4.0
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+layout/style_list=["res://dialogic/styles/visual_novel_style.tres"]
+layout/default_style="res://dialogic/styles/visual_novel_style.tres"
+glossary/default_case_sensitive=true
+variables={}
+translation/enabled=false
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
+translation/add_separator=false
 
 [display]
 
@@ -35,6 +69,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
@@ -49,6 +84,11 @@ moving_objects=""
 remove_when_touched_by_player=""
 poop=""
 birds=""
+
+[gui]
+
+theme/custom="res://assets/theme/base_theme.tres"
+theme/custom_font="res://assets/fonts/NotoSansTC-Regular.ttf"
 
 [input]
 

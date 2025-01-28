@@ -11,23 +11,23 @@ func init() -> void:
 func _ready() -> void:
 	Main.ui_changed.connect(init)
 	
-	back_btn.pressed.connect(_on_back_button_pressed)
-	lang_select.item_selected.connect(_on_language_selected)
+	back_btn.pressed.connect(_on_back_btn_pressed)
+	lang_select.item_selected.connect(_on_lang_select_item_selected)
 	
 	for lang_id in Config.LANG_IDS_TO_CODES:
 		lang_select.add_item(Config.LANG_NAMES[Config.LANG_IDS_TO_CODES[lang_id]], lang_id)
 	lang_select.selected = State.settings.get("language", Config.DEFAULT_LANG)
-
-func _on_back_button_pressed() -> void:
-	_save_settings()
-	Main.change_ui(home.instantiate())
-	
-func _on_language_selected(id: int) -> void:
-	var code: String = Config.LANG_IDS_TO_CODES[id]
-	TranslationServer.set_locale(code)
 
 func _save_settings() -> void:
 	var settings: Dictionary = {
 		"language": lang_select.selected
 	}
 	State.save_settings(settings)
+
+func _on_back_btn_pressed() -> void:
+	_save_settings()
+	Main.change_ui(home.instantiate())
+
+func _on_lang_select_item_selected(id: int) -> void:
+	var code: String = Config.LANG_IDS_TO_CODES[id]
+	TranslationServer.set_locale(code)

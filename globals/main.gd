@@ -4,7 +4,6 @@ signal ui_changed
 
 var home_scene = load("res://uis/home.tscn")
 var game_scene = load("res://game/index.tscn")
-var levels_ui = load("res://uis/levels.tscn")
 
 @onready var hud = $Hud
 

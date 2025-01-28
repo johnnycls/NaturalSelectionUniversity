@@ -1,14 +1,13 @@
 extends CanvasLayer
 
-#var select_sound = preload("res://assets/audio/select.wav")
+var select_sound = preload("res://assets/audio/select.wav")
 
 @onready var ui: Control = $UI
 @onready var menu: Control = $Menu
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func select() -> void:
-	pass
-	#Global.play_sound(audio_player, select_sound)
+	Global.play_sound(audio_player, select_sound)
 
 func _ready() -> void:
 	add_sound_effects_for_btns(ui)

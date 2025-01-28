@@ -1,6 +1,6 @@
-extends Control
+extends MarginContainer
 
-@onready var back_btn = $Btns/BackBtn
+@onready var back_btn = $VBoxContainer/Btns/BackBtn
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_menu"):
