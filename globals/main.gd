@@ -9,7 +9,6 @@ var game_scene = load("res://game/index.tscn")
 
 var _current_scene: Node
 var can_open_menu: bool = false
-var is_dialogue: bool = false
 	
 func _remove_scene() -> void:
 	if Global.is_node_valid(_current_scene):
@@ -26,6 +25,7 @@ func start_game() -> void:
 func back_to_home_screen() -> void:
 	_remove_scene()
 	change_ui(home_scene.instantiate())
+	Dialogic.end_timeline()
 	can_open_menu = false
 	BgmPlayer.play_bgm(0,0)
 

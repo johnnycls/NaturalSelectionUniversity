@@ -4,10 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://7i2ltxhfe2tn" path="res://uis/home.tscn" id="2_1urqo"]
 [ext_resource type="PackedScene" uid="uid://b3q3m5cestqii" path="res://uis/menu.tscn" id="4_bq5jc"]
 
-[node name="Hud" type="CanvasLayer"]
+[node name="Hud" type="Node"]
 script = ExtResource("1_hqj21")
 
-[node name="UI" type="Control" parent="."]
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = -50
+
+[node name="UI" type="Control" parent="UILayer"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,11 +18,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Home" parent="UI" instance=ExtResource("2_1urqo")]
+[node name="Home" parent="UILayer/UI" instance=ExtResource("2_1urqo")]
 layout_mode = 1
 
 [node name="Menu" parent="." instance=ExtResource("4_bq5jc")]
-process_mode = 3
-visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

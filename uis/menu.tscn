@@ -2,44 +2,7 @@
 
 [ext_resource type="Script" path="res://uis/menu.gd" id="1_5n7kh"]
 
-[node name="Menu" type="MarginContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 40
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 40
+[node name="Menu" type="CanvasLayer"]
+process_mode = 3
+layer = 50
 script = ExtResource("1_5n7kh")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 2
-
-[node name="Btns" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="HomeScreenBtn" type="Button" parent="VBoxContainer/Btns"]
-layout_mode = 2
-size_flags_horizontal = 2
-focus_neighbor_top = NodePath("../BackBtn")
-text = "HOME"
-
-[node name="BackBtn" type="Button" parent="VBoxContainer/Btns"]
-layout_mode = 2
-focus_neighbor_bottom = NodePath("../HomeScreenBtn")
-text = "BACK"
-
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/PanelContainer"]
-layout_mode = 2
-columns = 6
-
-[connection signal="pressed" from="VBoxContainer/Btns/HomeScreenBtn" to="." method="_on_home_screen_btn_pressed"]
-[connection signal="pressed" from="VBoxContainer/Btns/BackBtn" to="." method="_on_back_btn_pressed"]

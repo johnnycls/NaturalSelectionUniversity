@@ -1,26 +1,20 @@
-extends MarginContainer
+extends CanvasLayer
 
-@onready var back_btn = $VBoxContainer/Btns/BackBtn
+var menu_content_scene = preload("res://uis/menu_content.tscn")
+
+var menu_content
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_menu"):
-		if visible:
+		if menu_content!=null:
 			close_menu()
 		elif (Main.can_open_menu):
 			open_menu()
 
 func close_menu() -> void:
-	hide()
-	get_tree().paused = false
+	menu_content.queue_free()
+	menu_content = null
 
 func open_menu() -> void:
-	get_tree().paused = true
-	show()
-	back_btn.grab_focus()
-
-func _on_back_btn_pressed() -> void:
-	close_menu()
-	
-func _on_home_screen_btn_pressed() -> void:
-	Main.back_to_home_screen()
-	close_menu()
+	menu_content = menu_content_scene.instantiate()
+	add_child(menu_content)

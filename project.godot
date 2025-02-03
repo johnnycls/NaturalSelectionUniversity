@@ -13,7 +13,7 @@ config_version=5
 config/name="RPG"
 run/main_scene="res://dummy.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/windows_native_icon="res://icon.ico"
+config/icon="res://icon.svg"
 
 [autoload]
 
@@ -27,10 +27,25 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"me": "res://dialogic/characters/me.dch"
+"doctor": "res://dialogic/characters/doctor.dch",
+"doctor_assistant": "res://dialogic/characters/doctor_assistant.dch",
+"friend": "res://dialogic/characters/friend.dch",
+"me": "res://dialogic/characters/me.dch",
+"principal": "res://dialogic/characters/principal.dch",
+"sales": "res://dialogic/characters/sales.dch",
+"waiter": "res://dialogic/characters/waiter.dch"
 }
 directories/dtl_directory={
-"intro": "res://dialogic/timelines/intro.dtl"
+"bad_end": "res://dialogic/timelines/bad_end.dtl",
+"ceremony": "res://dialogic/timelines/ceremony.dtl",
+"good_end": "res://dialogic/timelines/good_end.dtl",
+"hospital": "res://dialogic/timelines/hospital.dtl",
+"intro": "res://dialogic/timelines/intro.dtl",
+"lecture": "res://dialogic/timelines/lecture.dtl",
+"paper": "res://dialogic/timelines/paper.dtl",
+"restaurant": "res://dialogic/timelines/restaurant.dtl",
+"sleep": "res://dialogic/timelines/sleep.dtl",
+"supermarket": "res://dialogic/timelines/supermarket.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -172,6 +187,10 @@ dialogic_default_action={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/translations/translation.cmn.translation", "res://assets/translations/translation.en.translation", "res://assets/translations/translation.zh.translation")
 
 [rendering]
 

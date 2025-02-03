@@ -1,0 +1,23 @@
+join me left
+join friend right
+me: INTRO_0
+friend: INTRO_1
+me: INTRO_2
+friend: INTRO_3
+me: INTRO_4
+friend: INTRO_5
+me: INTRO_6
+friend: INTRO_7
+me: INTRO_8
+me: INTRO_9
+me: INTRO_10
+friend: INTRO_11
+me: INTRO_12
+friend: INTRO_13
+friend: INTRO_14
+me: INTRO_15
+me: INTRO_16
+friend: INTRO_17
+me: INTRO_18
+friend: INTRO_19
+[signal arg_type="dict" arg="{"title":"intro_ended"}"]

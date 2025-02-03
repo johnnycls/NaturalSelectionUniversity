@@ -1,9 +1,9 @@
-extends CanvasLayer
+extends Node
 
 var select_sound = preload("res://assets/audio/select.wav")
 
-@onready var ui: Control = $UI
-@onready var menu: Control = $Menu
+@onready var ui: Control = $UILayer/UI
+@onready var menu: CanvasLayer = $Menu
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func select() -> void:

@@ -19,10 +19,9 @@ func _read_progress() -> Dictionary:
 	var json = JSON.new()
 	return json.get_data() if json.parse(file.get_as_text()) == OK else {}
 	
-func update_progress(key: String, value)-> void:
-	var new_progress = progress.duplicate(true)
-	new_progress[key] = value
-	save_progress(new_progress)
+func merge_progress(_progress: Dictionary)-> void:
+	progress.merge(_progress, true)
+	save_progress(progress)
 
 func save_progress(_progress: Dictionary) -> bool:
 	var file = FileAccess.open(Config.PROGRESS_PATH, FileAccess.WRITE)
