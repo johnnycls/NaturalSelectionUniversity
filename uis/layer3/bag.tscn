@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnlcd7ah2tqa1"]
+
+[ext_resource type="Script" path="res://uis/layer3/bag.gd" id="1_qytys"]
+
+[node name="Bag" type="PanelContainer"]
+script = ExtResource("1_qytys")

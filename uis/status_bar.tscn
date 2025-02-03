@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://cb1hvsdau44m3"]
-
-[node name="StatusBar" type="CanvasLayer"]
-process_mode = 3
-layer = 50

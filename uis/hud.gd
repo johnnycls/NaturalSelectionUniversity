@@ -2,7 +2,9 @@ extends Node
 
 var select_sound = preload("res://assets/audio/select.wav")
 
-@onready var ui: Control = $UILayer/UI
+@onready var ui: CanvasLayer = $UILayer
+@onready var status_bar: CanvasLayer = $StatusBar
+@onready var popup_layer: CanvasLayer = $PopupLayer
 @onready var menu: CanvasLayer = $Menu
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
@@ -30,7 +32,15 @@ func close_menu() -> void:
 
 func add_sound_effects_for_btns(node: Node) -> void:
 	if node is Button:
-		node.focus_entered.connect(select)
 		node.pressed.connect(select)
 	for child in node.get_children():
 		add_sound_effects_for_btns(child)
+
+func update_status(new_status: Dictionary) -> void:
+	status_bar.update_status(new_status)
+
+func popup(page: Control) -> void:
+	popup_layer.popup(page)
+	
+func close_popup() -> void:
+	popup_layer.close()

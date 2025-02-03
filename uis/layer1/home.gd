@@ -1,7 +1,7 @@
-extends VBoxContainer
+extends Control
 
-@onready var new_game_btn: Button = $NewGameBtn
-@onready var continue_btn: Button = $ContinueBtn
+@onready var new_game_btn: Button = $VBoxContainer/NewGameBtn
+@onready var continue_btn: Button = $VBoxContainer/ContinueBtn
 
 var settings_scene = load("res://uis/settings.tscn")
 
