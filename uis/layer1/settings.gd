@@ -1,6 +1,6 @@
 extends Control
 
-const home := preload("res://uis/home.tscn")
+const home := preload("res://uis/layer1/home.tscn")
 
 @onready var back_btn: Button = $BackBtn
 @onready var lang_select: OptionButton = $LangSelect

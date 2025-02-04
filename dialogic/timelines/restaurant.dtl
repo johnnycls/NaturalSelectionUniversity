@@ -1,0 +1,8 @@
+join waiter center
+waiter: RESTAURANT_0
+- FOOD_0
+	set {food} = 0
+	jump eat/
+
+- RESTAURANT_1
+waiter: RESTAURANT_2

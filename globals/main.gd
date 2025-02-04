@@ -2,7 +2,7 @@ extends Node
 
 signal ui_changed
 
-var home_scene = load("res://uis/home.tscn")
+var home_scene = load("res://uis/layer1/home.tscn")
 var game_scene = load("res://game/index.tscn")
 
 @onready var hud = $Hud

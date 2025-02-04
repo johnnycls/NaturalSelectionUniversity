@@ -10,14 +10,14 @@
 "style": "visual_novel_style",
 "suffix": ""
 },
-"default_portrait": "New portrait",
+"default_portrait": "normal",
 "description": "",
 "display_name": "ME",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
-"New portrait": {
+"normal": {
 "export_overrides": {
 "image": ""
 },

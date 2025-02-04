@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var menu_content_scene = preload("res://uis/menu_content.tscn")
+var menu_content_scene = preload("res://uis/layer4/menu_content.tscn")
 
 var menu_content
 	

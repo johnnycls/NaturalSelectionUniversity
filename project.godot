@@ -31,6 +31,7 @@ directories/dch_directory={
 "doctor_assistant": "res://dialogic/characters/doctor_assistant.dch",
 "friend": "res://dialogic/characters/friend.dch",
 "me": "res://dialogic/characters/me.dch",
+"mouse": "res://dialogic/characters/mouse.dch",
 "principal": "res://dialogic/characters/principal.dch",
 "sales": "res://dialogic/characters/sales.dch",
 "waiter": "res://dialogic/characters/waiter.dch"
@@ -38,6 +39,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "bad_end": "res://dialogic/timelines/bad_end.dtl",
 "ceremony": "res://dialogic/timelines/ceremony.dtl",
+"eat": "res://dialogic/timelines/eat.dtl",
 "good_end": "res://dialogic/timelines/good_end.dtl",
 "hospital": "res://dialogic/timelines/hospital.dtl",
 "intro": "res://dialogic/timelines/intro.dtl",
@@ -70,7 +72,9 @@ text/autopauses={}
 layout/style_list=["res://dialogic/styles/visual_novel_style.tres"]
 layout/default_style="res://dialogic/styles/visual_novel_style.tres"
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"food": 0
+}
 translation/enabled=false
 translation/original_locale="en"
 translation/file_mode=1

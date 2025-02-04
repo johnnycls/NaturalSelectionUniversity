@@ -18,7 +18,6 @@ offset_top = -498.0
 [node name="StatusBar" parent="." instance=ExtResource("3_iiych")]
 
 [node name="PopupLayer" parent="." instance=ExtResource("4_3p783")]
-layer = 75
 
 [node name="Menu" parent="." instance=ExtResource("4_bq5jc")]
 

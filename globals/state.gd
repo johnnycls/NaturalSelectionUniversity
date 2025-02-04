@@ -2,10 +2,12 @@ extends Node
 
 var progress: Dictionary
 var settings: Dictionary
+var record: Dictionary
 
 func _ready() -> void:
 	settings = _read_settings()
 	progress = _read_progress()
+	record = _read_record()
 	_update_lang()
 
 func _read_progress() -> Dictionary:
@@ -57,3 +59,32 @@ func _read_settings() -> Dictionary:
 func _update_lang():
 	var lang_id: int = settings.get("language", Config.DEFAULT_LANG)
 	TranslationServer.set_locale(Config.LANG_IDS_TO_CODES[lang_id])
+
+func _read_record() -> Dictionary:
+	if not FileAccess.file_exists(Config.RECORD_PATH):
+		return {}
+	
+	var file = FileAccess.open(Config.RECORD_PATH, FileAccess.READ)
+	if not file:
+		return {}
+	
+	var json = JSON.new()
+	return json.get_data() if json.parse(file.get_as_text()) == OK else {}
+	
+func merge_record(_record: Dictionary)-> void:
+	record.merge(_record, true)
+	save_record(record)
+
+func save_record(_record: Dictionary) -> bool:
+	var file = FileAccess.open(Config.RECORD_PATH, FileAccess.WRITE)
+	if not file:
+		return false
+	file.store_string(JSON.stringify(_record))
+	file.close()
+	record = _record
+	return true
+
+func _delete_record() -> bool:
+	if FileAccess.file_exists(Config.RECORD_PATH):
+		return DirAccess.remove_absolute(Config.RECORD_PATH) == OK
+	return true

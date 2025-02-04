@@ -3,7 +3,7 @@ extends Control
 @onready var new_game_btn: Button = $VBoxContainer/NewGameBtn
 @onready var continue_btn: Button = $VBoxContainer/ContinueBtn
 
-var settings_scene = load("res://uis/settings.tscn")
+var settings_scene = load("res://uis/layer1/settings.tscn")
 
 func _ready() -> void:
 	Main.ui_changed.connect(init)

@@ -1,0 +1,23 @@
+join doctor center
+\doctor: HOSPITAL_0
+label choice
+- HOSPITAL_1
+	\doctor: HOSPITAL_6
+	[signal arg_type="dict" arg="{"body": {},"endpoint":"update_status"}"]
+	\doctor: HOSPITAL_7
+- HOSPITAL_2
+	\doctor: HOSPITAL_6
+	[signal arg_type="dict" arg="{"body": {},"endpoint":"update_status"}"]
+	\doctor: HOSPITAL_7
+- HOSPITAL_3
+	\doctor: HOSPITAL_6
+	\doctor: HOSPITAL_8
+	[signal arg_type="dict" arg="{"body": {},"endpoint":"update_status"}"]
+	\doctor: HOSPITAL_7
+- HOSPITAL_4
+	\doctor: HOSPITAL_6
+	[signal arg_type="dict" arg="{"body": {},"endpoint":"update_status"}"]
+	\doctor: HOSPITAL_7
+	jump choice
+- HOSPITAL_5
+\doctor: HOSPITAL_9

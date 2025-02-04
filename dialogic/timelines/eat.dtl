@@ -1,0 +1,20 @@
+- RESTAURANT_8
+	mouse: RESTAURANT_10
+	if randf()  <  Config.FOOD_POISON_PROB:
+		RESTAURANT_11
+		me: RESTAURANT_13
+	else:
+		RESTAURANT_12
+		me: RESTAURANT_14
+		me: RESTAURANT_3
+		[signal arg_type="dict" arg="{"body": "{}"]
+- RESTAURANT_9
+	if randf()  <  Config.FOOD_POISON_PROB:
+		me: RESTAURANT_5
+		me: RESTAURANT_6
+		me: RESTAURANT_7
+		[signal arg_type="dict" arg="{"body": "{}"]
+	else:
+		me: RESTAURANT_3
+		[signal arg_type="dict" arg="{"body": "{}"]
+jump restaurant/

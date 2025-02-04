@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var status_bar_content_scene = preload("res://uis/status_bar_content.tscn")
+var status_bar_content_scene = preload("res://uis/layer2/status_bar_content.tscn")
 
 var status_bar_content
 

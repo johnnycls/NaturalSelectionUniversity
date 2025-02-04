@@ -13,16 +13,14 @@ func _ready() -> void:
 		Main.change_ui(map_scene.instantiate())
 
 func _on_dialogic_signal(argument:Dictionary):
-	match argument.endpoint:
-		"intro_ended":
-			State.merge_progress({"is_intro_finished": true})
-			Dialogic.start("ceremony")
-		"ceremony_ended":
-			State.merge_progress({"is_ceremony_finished": true})
+	match argument.get("endpoint", ""):
 		"update_status":
-			Main.update_status(argument.body)
+			var body = JSON.parse_string(argument.get("body", {}))
+			if not body.is_empty():
+				Main.update_status(body)
 		"back_to_map":
+			Dialogic.end_timeline()
 			Main.change_ui(map_scene.instantiate())
 		var endpoint:
-			print(endpoint)
+			print("invalid endpoint: " + endpoint)
 	

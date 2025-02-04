@@ -1,0 +1,15 @@
+CEREMONY_0
+join principal center
+principal: CEREMONY_1
+principal: CEREMONY_2
+principal: CEREMONY_3
+principal: CEREMONY_4
+principal: CEREMONY_5
+principal: CEREMONY_6
+principal: CEREMONY_7
+leave principal
+join me center
+me: CEREMONY_8
+me: CEREMONY_9
+[signal arg_type="dict" arg="{"body": {"is_ceremony_finished": true},"endpoint":"update_status"}"]
+[signal arg_type="dict" arg="{"endpoint":"back_to_map"}"]
