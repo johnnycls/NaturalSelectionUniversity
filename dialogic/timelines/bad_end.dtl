@@ -1,0 +1,7 @@
+join doctor left
+join doctor_assistant right
+\doctor_assistant: BAD_END_0
+\doctor: BAD_END_1
+\doctor_assistant: BAD_END_2
+\doctor: BAD_END_3
+\doctor_assistant: BAD_END_4

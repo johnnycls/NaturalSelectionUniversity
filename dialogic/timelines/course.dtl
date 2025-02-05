@@ -1,0 +1,8 @@
+join me center
+if ranf() < Config.BAD_LECTURE_PROB:
+	me: LECTURE_3
+	[signal]
+else:
+	me: LECTURE_2
+	[signal]
+jump lecture/

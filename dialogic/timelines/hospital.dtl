@@ -3,20 +3,23 @@ join doctor center
 label choice
 - HOSPITAL_1
 	\doctor: HOSPITAL_6
-	[signal arg_type="dict" arg="{"body": {},"endpoint":"update_status"}"]
+	do Game.hospital.buy_liver()
 	\doctor: HOSPITAL_7
 - HOSPITAL_2
 	\doctor: HOSPITAL_6
-	[signal arg_type="dict" arg="{"body": {},"endpoint":"update_status"}"]
+	do Game.hospital.sell_liver()
 	\doctor: HOSPITAL_7
 - HOSPITAL_3
 	\doctor: HOSPITAL_6
-	\doctor: HOSPITAL_8
-	[signal arg_type="dict" arg="{"body": {},"endpoint":"update_status"}"]
+	if randf() < Game.hospital.chicken_blood_prob:
+		\doctor: HOSPITAL_8
+		do Game.hospital.buy_blood(true)
+	else:
+		do Game.hospital.buy_blood(false)
 	\doctor: HOSPITAL_7
 - HOSPITAL_4
 	\doctor: HOSPITAL_6
-	[signal arg_type="dict" arg="{"body": {},"endpoint":"update_status"}"]
+	do Game.hospital.sell_blood()
 	\doctor: HOSPITAL_7
 	jump choice
 - HOSPITAL_5

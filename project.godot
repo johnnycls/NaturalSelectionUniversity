@@ -23,6 +23,7 @@ State="*res://globals/state.tscn"
 BgmPlayer="*res://globals/bgm_player.tscn"
 Main="*res://globals/main.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Game="*res://game/game.tscn"
 
 [dialogic]
 
@@ -38,14 +39,16 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "bad_end": "res://dialogic/timelines/bad_end.dtl",
+"buy": "res://dialogic/timelines/buy.dtl",
 "ceremony": "res://dialogic/timelines/ceremony.dtl",
+"course": "res://dialogic/timelines/course.dtl",
 "eat": "res://dialogic/timelines/eat.dtl",
 "good_end": "res://dialogic/timelines/good_end.dtl",
+"home": "res://dialogic/timelines/home.dtl",
 "hospital": "res://dialogic/timelines/hospital.dtl",
 "intro": "res://dialogic/timelines/intro.dtl",
 "lecture": "res://dialogic/timelines/lecture.dtl",
 "paper": "res://dialogic/timelines/paper.dtl",
-"restaurant": "res://dialogic/timelines/restaurant.dtl",
 "sleep": "res://dialogic/timelines/sleep.dtl",
 "supermarket": "res://dialogic/timelines/supermarket.dtl"
 }
@@ -73,7 +76,8 @@ layout/style_list=["res://dialogic/styles/visual_novel_style.tres"]
 layout/default_style="res://dialogic/styles/visual_novel_style.tres"
 glossary/default_case_sensitive=true
 variables={
-"food": 0
+"selected_food": 0,
+"selected_item": 0
 }
 translation/enabled=false
 translation/original_locale="en"

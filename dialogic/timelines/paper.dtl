@@ -1,0 +1,7 @@
+join me center
+if randf() < Config.PAPER_BAD_PROB:
+	me: PAPER_2
+	me: PAPER_3
+else:
+	me: PAPER_1
+jump home/

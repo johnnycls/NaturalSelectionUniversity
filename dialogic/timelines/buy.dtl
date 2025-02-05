@@ -1,0 +1,4 @@
+sales: SUPERMARKET_2
+[signal arg_type="dict" arg="{"body": "{}"]
+sales: SUPERMARKET_4
+jump supermarket/choice

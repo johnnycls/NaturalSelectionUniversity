@@ -1,0 +1,8 @@
+join sales center
+sales: SUPERMARKET_0
+label choice
+- ITEM_0
+	set {item} = 0
+	jump buy/
+- SUPERMARKET_1
+sales: SUPERMARKET_3

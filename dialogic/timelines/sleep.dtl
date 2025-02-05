@@ -1,0 +1,6 @@
+join me center
+if randf() < Config.SLEEP_BAD_PROB:
+	me: SLEEP_2
+else:
+	me: SLEEP_1
+jump home/

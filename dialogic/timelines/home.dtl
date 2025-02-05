@@ -1,0 +1,8 @@
+join me center
+me: HOME_0
+- PAPER_0
+	jump paper/
+- SLEEP_0
+	jump sleep/
+- HOME_1
+	do 

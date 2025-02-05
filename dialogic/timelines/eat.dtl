@@ -1,20 +1,20 @@
-- RESTAURANT_8
+- RESTAURANT_8 | [if State.progress.bag.find(func(item): return item.id==0) != -1] [else="hide"]
 	mouse: RESTAURANT_10
-	if randf()  <  Config.FOOD_POISON_PROB:
+	if randf()  <  Game.restaurant.FOOD_POISON_PROB:
 		RESTAURANT_11
 		me: RESTAURANT_13
 	else:
 		RESTAURANT_12
 		me: RESTAURANT_14
 		me: RESTAURANT_3
-		[signal arg_type="dict" arg="{"body": "{}"]
+		do 
 - RESTAURANT_9
-	if randf()  <  Config.FOOD_POISON_PROB:
+	if randf()  <  Game.restaurant.FOOD_POISON_PROB:
 		me: RESTAURANT_5
 		me: RESTAURANT_6
 		me: RESTAURANT_7
-		[signal arg_type="dict" arg="{"body": "{}"]
+		do 
 	else:
 		me: RESTAURANT_3
-		[signal arg_type="dict" arg="{"body": "{}"]
+		do 
 jump restaurant/
