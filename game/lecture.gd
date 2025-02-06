@@ -42,3 +42,8 @@ func start_timeline():
 	var timeline : DialogicTimeline = DialogicTimeline.new()
 	timeline.events = timeline_events()
 	Dialogic.start(timeline)
+
+func attend_lecture(idx: int) -> bool: # good_lecture
+	var course = course_choices[idx]
+	Game.update_status(course.effect)
+	return true

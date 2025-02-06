@@ -28,7 +28,7 @@ func _save_json_file(path: String, data: Dictionary) -> bool:
 	return true
 
 func merge_progress(_progress: Dictionary) -> void:
-	progress.merge(_progress, true)
+	progress = _progress.merged(progress, true)
 	save_progress(progress)
 
 func save_progress(_progress: Dictionary) -> bool:
@@ -54,7 +54,7 @@ func _update_lang():
 	TranslationServer.set_locale(Config.LANG_IDS_TO_CODES[lang_id])
 
 func merge_record(_record: Dictionary) -> void:
-	record.merge(_record, true)
+	record = _record.merged(record, true)
 	save_record(record)
 
 func save_record(_record: Dictionary) -> bool:

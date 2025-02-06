@@ -1,8 +1,7 @@
 join me center
-if ranf() < Game.lecture.BAD_LECTURE_PROB:
+set {good_lecture} = Game.lecture.attend_lecture({selected_course})
+if {good_lecture}:
 	me: LECTURE_3
-	do Game.update_status()
 else:
 	me: LECTURE_2
-	do Game.update_status()
-jump lecture/
+do Game.lecture.start_timeline()

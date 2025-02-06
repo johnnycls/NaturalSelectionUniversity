@@ -1,9 +1,8 @@
 join me center
-if randf() < Config.PAPER_BAD_PROB:
-	do Game.update_status()
+set {good_paper} = Game.paper.write_paper()
+if good_paper:
+	me: PAPER_1
+else:
 	me: PAPER_2
 	me: PAPER_3
-else:
-	do Game.update_status()
-	me: PAPER_1
 jump home/

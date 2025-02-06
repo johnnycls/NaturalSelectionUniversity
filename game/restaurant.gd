@@ -3,14 +3,14 @@ class_name Restaurant
 const FOOD_POISON_PROB = 0.3
 
 var FOODS = [
-	{"name": "FOOD_0", "cost": 100, "effect": {}},
-	{"name": "FOOD_1", "cost": 100, "effect": {}},
-	{"name": "FOOD_2", "cost": 100, "effect": {}},
-	{"name": "FOOD_3", "cost": 100, "effect": {}},
-	{"name": "FOOD_4", "cost": 100, "effect": {}},
-	{"name": "FOOD_5", "cost": 100, "effect": {}},
-	{"name": "FOOD_6", "cost": 100, "effect": {}},
-	{"name": "FOOD_7", "cost": 100, "effect": {}}
+	{"name": "FOOD_0", "cost": 100, "effect": {}, "is_tasty": true},
+	{"name": "FOOD_1", "cost": 100, "effect": {}, "is_tasty": true},
+	{"name": "FOOD_2", "cost": 100, "effect": {}, "is_tasty": true},
+	{"name": "FOOD_3", "cost": 100, "effect": {}, "is_tasty": true},
+	{"name": "FOOD_4", "cost": 100, "effect": {}, "is_tasty": true},
+	{"name": "FOOD_5", "cost": 100, "effect": {}, "is_tasty": true},
+	{"name": "FOOD_6", "cost": 100, "effect": {}, "is_tasty": true},
+	{"name": "FOOD_7", "cost": 100, "effect": {}, "is_tasty": true}
 ]
 var date: int = -1
 var food_choices: Array = []
@@ -46,3 +46,17 @@ func start_timeline():
 	var timeline : DialogicTimeline = DialogicTimeline.new()
 	timeline.events = timeline_events()
 	Dialogic.start(timeline)
+
+func before_eat(is_mouse: bool) -> bool: # is_poison
+	if randf() < FOOD_POISON_PROB:
+		if is_mouse:
+			Game.update_status({})
+		else:
+			Game.update_status({})
+		return true
+	return false
+
+func eat(idx: int) -> bool: # is_tasty
+	var food = food_choices[idx]
+	Game.update_status(food.effect)
+	return food.is_tasty

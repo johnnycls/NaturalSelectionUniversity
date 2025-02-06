@@ -3,6 +3,7 @@ extends Node
 const PROGRESS_PATH = "user://progress.save"
 const RECORD_PATH = "user://record.save"
 const SETTINGS_PATH = "user://settings.save"
+const MISC_PATH = "user://misc.save"
 
 const LANG_IDS_TO_CODES: Dictionary = {0: "cmn", 1: "en", 2: "zh"}
 const LANG_NAMES = {"cmn": "简体中文", "en": "English", "zh": "繁體中文"}
