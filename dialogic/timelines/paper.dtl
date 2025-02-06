@@ -1,7 +1,9 @@
 join me center
 if randf() < Config.PAPER_BAD_PROB:
+	do Game.update_status()
 	me: PAPER_2
 	me: PAPER_3
 else:
+	do Game.update_status()
 	me: PAPER_1
 jump home/

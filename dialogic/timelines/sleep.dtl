@@ -1,6 +1,8 @@
 join me center
 if randf() < Config.SLEEP_BAD_PROB:
+	do Game.update_status()
 	me: SLEEP_2
 else:
+	do Game.update_status()
 	me: SLEEP_1
 jump home/

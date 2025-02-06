@@ -27,11 +27,6 @@ func _save_json_file(path: String, data: Dictionary) -> bool:
 	file.close()
 	return true
 
-func update_progress(delta: Dictionary) -> void:
-	for key in delta:
-		progress[key] = progress.get(key, 0) + delta[key]
-	save_progress(progress)
-
 func merge_progress(_progress: Dictionary) -> void:
 	progress.merge(_progress, true)
 	save_progress(progress)

@@ -32,10 +32,19 @@ func back_to_map():
 	Dialogic.end_timeline()
 	Main.change_ui(map_scene.instantiate())
 
+# delta: {"hp": -1, "bag": {0: -1}}
 func update_status(delta: Dictionary) -> void:
-	var new_delta = {}
+	var new_progress = {"bag": State.progress.get("bag", {})}
 	for key in delta:
-		new_delta[key] = min(Config.MAX_PROGRESS.get(key, 0), State.progress.get(key, 0) + delta[key])
-		if Config.END_GAME_PROGRESS.has(key) && State.progress.get(key, 0) + delta[key] < Config.END_GAME_PROGRESS[key]:
-			end_game()
-	State.update_progress(new_delta)
+		if key=="bag":
+			for item_id in delta[key]:
+				new_progress.bag[item_id] = new_progress.bag.get(item_id, 0) + delta[key][item_id]
+		else:
+			new_progress[key] = State.progress.get(key, 0) + delta[key]
+			
+			if Config.MAX_PROGRESS.has(key) && new_progress[key] > Config.MAX_PROGRESS[key]:
+				new_progress[key] = Config.MAX_PROGRESS[key]
+			
+			if ["hunger", "spirit", "hp"].has(key) && new_progress[key]<0:
+				pass # die
+	State.merge_progress(new_progress)

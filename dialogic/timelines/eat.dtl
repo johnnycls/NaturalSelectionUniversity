@@ -7,14 +7,14 @@
 		RESTAURANT_12
 		me: RESTAURANT_14
 		me: RESTAURANT_3
-		do 
+		do Game.update_status()
 - RESTAURANT_9
 	if randf()  <  Game.restaurant.FOOD_POISON_PROB:
 		me: RESTAURANT_5
 		me: RESTAURANT_6
 		me: RESTAURANT_7
-		do 
+		do Game.update_status()
 	else:
 		me: RESTAURANT_3
-		do 
+		do Game.update_status()
 jump restaurant/

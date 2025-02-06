@@ -1,6 +1,6 @@
 class_name Hospital
 
-const chicken_blood_prob = 0.1
+const CHICKEN_BLOOD_PROB = 0.1
 
 func liver_buy_price() -> float:
 	return 400.0

@@ -1,4 +1,4 @@
 sales: SUPERMARKET_2
-[signal arg_type="dict" arg="{"body": "{}"]
+do Game.update_status()
 sales: SUPERMARKET_4
 jump supermarket/choice

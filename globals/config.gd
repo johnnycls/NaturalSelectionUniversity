@@ -9,7 +9,6 @@ const LANG_NAMES = {"cmn": "简体中文", "en": "English", "zh": "繁體中文"
 const DEFAULT_LANG = 1
 
 const FOOD_NUM = 8
-const MARKET_CLOSE_PROB = 0.1
 const FOOD_POISON_PROB = 0.3
 const PAPER_BAD_PROB = 0.5
 
@@ -26,25 +25,14 @@ var INIT_PROGRESS = {
 	"inspiration": 0,
 	"date": 0,
 	"time": 0,
+	"bag": {},
 }
 
 var MAX_PROGRESS = {
-	"money": INF, 
 	"hunger": 100,
-	"paper": INF,
 	"hp": 100,
 	"spirit": 100,
 	"mood": 100,
 	"luck": 100,
 	"inspiration": 100,
-	"strength": INF,
-	"intelligence": INF,
-	"date": 0,
-	"time": 0,
-}
-
-var END_GAME_PROGRESS = {
-	"hunger": 0,
-	"hp": 0,
-	"spirit": 0,
 }

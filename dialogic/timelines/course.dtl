@@ -1,8 +1,8 @@
 join me center
-if ranf() < Config.BAD_LECTURE_PROB:
+if ranf() < Game.lecture.BAD_LECTURE_PROB:
 	me: LECTURE_3
-	[signal]
+	do Game.update_status()
 else:
 	me: LECTURE_2
-	[signal]
+	do Game.update_status()
 jump lecture/

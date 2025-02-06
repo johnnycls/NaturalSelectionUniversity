@@ -11,7 +11,7 @@ label choice
 	\doctor: HOSPITAL_7
 - HOSPITAL_3
 	\doctor: HOSPITAL_6
-	if randf() < Game.hospital.chicken_blood_prob:
+	if randf() < Game.hospital.CHICKEN_BLOOD_PROB:
 		\doctor: HOSPITAL_8
 		do Game.hospital.buy_blood(true)
 	else:

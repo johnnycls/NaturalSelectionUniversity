@@ -5,4 +5,4 @@ me: HOME_0
 - SLEEP_0
 	jump sleep/
 - HOME_1
-	do 
+	do Game.back_to_map()
