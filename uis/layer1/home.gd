@@ -12,9 +12,9 @@ func _ready() -> void:
 func init():
 	if State.progress.is_empty():
 		new_game_btn.grab_focus()
-		continue_btn.disabled = true
+		continue_btn.hide()
 	else:
-		continue_btn.disabled = false
+		continue_btn.show()
 		continue_btn.grab_focus()
 
 func _on_settings_btn_pressed() -> void:

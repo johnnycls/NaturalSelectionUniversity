@@ -1,4 +1,4 @@
-- RESTAURANT_8 | [if State.progress.bag.get(0, 0) > 0] [else="hide"]
+- RESTAURANT_8 | [if State.progress.bag.get(3, 0) > 0] [else="hide"]
 	mouse: RESTAURANT_10
 	set {is_poisoned} = Game.restaurant.before_eat(true)
 	if {is_poisoned}:

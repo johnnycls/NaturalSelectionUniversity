@@ -34,17 +34,39 @@ func back_to_map():
 
 # delta: {"hp": -1, "bag": {0: -1}}
 func update_status(delta: Dictionary) -> void:
-	var new_progress = {"bag": State.progress.get("bag", {})}
+	var new_progress = {"bag": State.progress.get("bag", {}).duplicate()}
+
 	for key in delta:
-		if key=="bag":
-			for item_id in delta[key]:
-				new_progress.bag[item_id] = new_progress.bag.get(item_id, 0) + delta[key][item_id]
-		else:
-			new_progress[key] = State.progress.get(key, 0) + delta[key]
-			
-			if Config.MAX_PROGRESS.has(key) && new_progress[key] > Config.MAX_PROGRESS[key]:
-				new_progress[key] = Config.MAX_PROGRESS[key]
-			
-			if ["hunger", "spirit", "hp"].has(key) && new_progress[key]<0:
-				pass # die
+		match key:
+			"bag":
+				update_bag(new_progress.bag, delta.bag)
+			"time":
+				update_time(new_progress, delta.time)
+			_:
+				update_stat(new_progress, key, delta[key])
+
 	State.merge_progress(new_progress)
+
+func update_bag(bag: Dictionary, delta_bag: Dictionary) -> void:
+	for item_id in delta_bag:
+		bag[item_id] = bag.get(item_id, 0) + delta_bag[item_id]
+
+func update_time(new_progress: Dictionary, delta_time: int) -> void:
+	var original_time = State.progress.get("time", 0)
+	var total_time = original_time + delta_time
+	new_progress.time = total_time % 24
+	var new_date = total_time / 24
+	if new_date != 0:
+		new_progress.date = new_date
+
+func update_stat(new_progress: Dictionary, key: String, delta_value: int) -> void:
+	new_progress[key] = State.progress.get(key, 0) + delta_value
+
+	if Config.MAX_PROGRESS.has(key):
+		new_progress[key] = min(new_progress[key], Config.MAX_PROGRESS[key])
+
+	if key in ["hunger", "spirit", "hp"] && new_progress[key] < 0:
+		handle_death()
+
+func handle_death() -> void:
+	pass  

@@ -3,14 +3,14 @@ class_name Restaurant
 const FOOD_POISON_PROB = 0.3
 
 var FOODS = [
-	{"name": "FOOD_0", "cost": 100, "effect": {}, "is_tasty": true},
-	{"name": "FOOD_1", "cost": 100, "effect": {}, "is_tasty": true},
-	{"name": "FOOD_2", "cost": 100, "effect": {}, "is_tasty": true},
-	{"name": "FOOD_3", "cost": 100, "effect": {}, "is_tasty": true},
-	{"name": "FOOD_4", "cost": 100, "effect": {}, "is_tasty": true},
-	{"name": "FOOD_5", "cost": 100, "effect": {}, "is_tasty": true},
-	{"name": "FOOD_6", "cost": 100, "effect": {}, "is_tasty": true},
-	{"name": "FOOD_7", "cost": 100, "effect": {}, "is_tasty": true}
+	{"name": "FOOD_0", "cost": 10, "effect": {"hunger": 50, "time": 1, "mood": -10}, "is_tasty": false},
+	{"name": "FOOD_1", "cost": 20, "effect": {"hunger": 30, "mood": 15}, "is_tasty": true},
+	{"name": "FOOD_2", "cost": 20, "effect": {"hunger": 20, "strength": 5, "mood": -5, "time": 1}, "is_tasty": false},
+	{"name": "FOOD_3", "cost": 20, "effect": {"hunger": 25, "intelligence": 7, "mood": -10, "time": 1}, "is_tasty": false},
+	{"name": "FOOD_4", "cost": 20, "effect": {"hunger": 20, "luck": 15, "mood": 15}, "is_tasty": true},
+	{"name": "FOOD_5", "cost": 20, "effect": {"hunger": 25, "spirit": 30}, "is_tasty": true},
+	{"name": "FOOD_6", "cost": 20, "effect": {"hunger": 25, "hp": 40}, "is_tasty": true},
+	{"name": "FOOD_7", "cost": 15, "effect": {"spirit": 50}, "is_tasty": true}
 ]
 var date: int = -1
 var food_choices: Array = []
@@ -41,6 +41,7 @@ func get_random_choices(choices: int) -> Array:
 	return all_choices.slice(0, choices)
 	
 func start_timeline():
+	Dialogic.end_timeline()
 	if State.progress.date != date:
 		food_choices = get_random_choices(3)
 	var timeline : DialogicTimeline = DialogicTimeline.new()
@@ -50,7 +51,7 @@ func start_timeline():
 func before_eat(is_mouse: bool) -> bool: # is_poison
 	if randf() < FOOD_POISON_PROB:
 		if is_mouse:
-			Game.update_status({})
+			Game.update_status({"bag": {3: -1}})
 		else:
 			Game.update_status({})
 		return true

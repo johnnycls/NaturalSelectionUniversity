@@ -7,7 +7,10 @@ var home_scene = load("res://uis/layer1/home.tscn")
 @onready var hud = $Hud
 
 var can_open_menu: bool = false
-	
+
+func clear_ui() -> void:
+	hud.clear_ui()
+
 func start_game() -> void:
 	hud.clear_ui()
 	Game.start_game()
