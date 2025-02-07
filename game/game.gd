@@ -2,11 +2,11 @@ extends Node2D
 
 var map_scene = preload("res://uis/layer1/map.tscn")
 var hospital = preload("res://game/hospital.gd").new()
-var lecture = preload("res://game/lecture.gd").new()
+var lecture = preload("res://game/lecture.gd").new(State.progress.get("lecture", {}))
 var paper = preload("res://game/paper.gd").new()
-var restaurant = preload("res://game/restaurant.gd").new()
+var restaurant = preload("res://game/restaurant.gd").new(State.progress.get("restaurant", {}))
 var sleep = preload("res://game/sleep.gd").new()
-var supermarket = preload("res://game/supermarket.gd").new()
+var supermarket = preload("res://game/supermarket.gd").new(State.progress.get("supermarket", {}))
 
 var _current_scene: Node
 
@@ -34,39 +34,44 @@ func back_to_map():
 
 # delta: {"hp": -1, "bag": {0: -1}}
 func update_status(delta: Dictionary) -> void:
-	var new_progress = {"bag": State.progress.get("bag", {}).duplicate()}
+	var new_progress = _compute_new_progress(State.progress, delta)
+	State.merge_progress(new_progress)
 
+func _compute_new_progress(current_progress: Dictionary, delta: Dictionary) -> Dictionary:
+	var new_progress = current_progress.duplicate(true)
 	for key in delta:
 		match key:
 			"bag":
-				update_bag(new_progress.bag, delta.bag)
+				new_progress.bag = _update_bag(new_progress.get("bag", {}), delta.bag)
 			"time":
-				update_time(new_progress, delta.time)
+				new_progress = _update_time(new_progress, delta.time)
 			_:
-				update_stat(new_progress, key, delta[key])
+				new_progress[key] = _update_stat(new_progress.get(key, 0), delta[key], key)
+	return new_progress
 
-	State.merge_progress(new_progress)
-
-func update_bag(bag: Dictionary, delta_bag: Dictionary) -> void:
+func _update_bag(current_bag: Dictionary, delta_bag: Dictionary) -> Dictionary:
+	var new_bag = current_bag.duplicate()
 	for item_id in delta_bag:
-		bag[item_id] = bag.get(item_id, 0) + delta_bag[item_id]
+		new_bag[item_id] = new_bag.get(item_id, 0) + delta_bag[item_id]
+	return new_bag
 
-func update_time(new_progress: Dictionary, delta_time: int) -> void:
-	var original_time = State.progress.get("time", 0)
+func _update_time(current_progress: Dictionary, delta_time: int) -> Dictionary:
+	var new_progress = current_progress.duplicate()
+	var original_time = current_progress.get("time", 0)
 	var total_time = original_time + delta_time
 	new_progress.time = total_time % 24
 	var new_date = total_time / 24
 	if new_date != 0:
 		new_progress.date = new_date
+	return new_progress
 
-func update_stat(new_progress: Dictionary, key: String, delta_value: int) -> void:
-	new_progress[key] = State.progress.get(key, 0) + delta_value
-
+func _update_stat(current_value: int, delta_value: int, key: String) -> int:
+	var new_value = current_value + delta_value
 	if Config.MAX_PROGRESS.has(key):
-		new_progress[key] = min(new_progress[key], Config.MAX_PROGRESS[key])
-
-	if key in ["hunger", "spirit", "hp"] && new_progress[key] < 0:
+		new_value = min(new_value, Config.MAX_PROGRESS[key])
+	if key in ["hunger", "spirit", "hp"] and new_value < 0:
 		handle_death()
+	return new_value
 
 func handle_death() -> void:
-	pass  
+	pass

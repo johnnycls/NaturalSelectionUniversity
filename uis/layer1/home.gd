@@ -10,7 +10,7 @@ func _ready() -> void:
 	init()
 
 func init():
-	if State.progress.is_empty():
+	if not State.progress.get("is_intro_finished", false):
 		new_game_btn.grab_focus()
 		continue_btn.hide()
 	else:
@@ -21,7 +21,7 @@ func _on_settings_btn_pressed() -> void:
 	Main.change_ui(settings_scene.instantiate())
 
 func _on_new_game_btn_pressed() -> void:
-	State.save_progress({})
+	State.save_progress(Config.INIT_PROGRESS)
 	Main.start_game()
 
 func _on_continue_btn_pressed() -> void:

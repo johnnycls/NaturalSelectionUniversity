@@ -13,6 +13,10 @@ var COURSES = [
 var date: int = -1
 var course_choices: Array = []
 
+func _init(saved_dict: Dictionary) -> void:
+	date = saved_dict.get("date", -1)
+	course_choices = saved_dict.get("course_choices", [])
+
 func timeline_events() -> Array:
 	return ("""join me center
 me: LECTURE_0
@@ -30,7 +34,10 @@ me: LECTURE_0
 func get_random_choices(choices: int) -> Array:
 	var all_choices = COURSES.duplicate(true)
 	all_choices.shuffle()
-	return all_choices.slice(0, choices)
+	var random_choices = all_choices.slice(0, choices)
+	date = State.progress.date
+	State.merge_progress({"lecture": {"date": State.progress.date, "course_choices": random_choices}})
+	return random_choices
 	
 func start_timeline():
 	Dialogic.end_timeline()

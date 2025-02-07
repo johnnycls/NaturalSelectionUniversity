@@ -15,6 +15,10 @@ var FOODS = [
 var date: int = -1
 var food_choices: Array = []
 
+func _init(saved_dict: Dictionary) -> void:
+	date = saved_dict.get("date", -1)
+	food_choices = saved_dict.get("food_choices", [])
+
 func timeline_events() -> Array:
 	return ("""
 join waiter center
@@ -38,7 +42,10 @@ waiter: RESTAURANT_2""" % [
 func get_random_choices(choices: int) -> Array:
 	var all_choices = FOODS.duplicate(true)
 	all_choices.shuffle()
-	return all_choices.slice(0, choices)
+	var random_choices = all_choices.slice(0, choices)
+	date = State.progress.date
+	State.merge_progress({"restaurant": {"date": State.progress.date, "item_choices": random_choices}})
+	return random_choices
 	
 func start_timeline():
 	Dialogic.end_timeline()

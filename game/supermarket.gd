@@ -1,19 +1,22 @@
 class_name Supermarket
 
 var ITEMS = [
-	{"name": "ITEM_0", "cost": 250, "id": 0},
-	{"name": "ITEM_1", "cost": 100, "id": 1},
-	{"name": "ITEM_2", "cost": 350, "id": 2},
-	{"name": "ITEM_3", "cost": 75, "id": 3},
-	{"name": "ITEM_4", "cost": 50, "id": 4},
-	{"name": "ITEM_5", "cost": 100, "id": 5},
-	{"name": "ITEM_6", "cost": 100, "id": 6},
-	{"name": "ITEM_7", "cost": 250, "id": 7},
-	{"name": "ITEM_8", "cost": 800, "id": 8},
-	{"name": "ITEM_9", "cost": 500, "id": 9},
+	{"name": "ITEM_0", "cost": 10, "id": 0},
+	{"name": "ITEM_1", "cost": 20, "id": 1},
+	{"name": "ITEM_2", "cost": 50, "id": 2},
+	{"name": "ITEM_3", "cost": 35, "id": 3},
+	{"name": "ITEM_4", "cost": 35, "id": 4},
+	{"name": "ITEM_5", "cost": 35, "id": 5},
+	{"name": "ITEM_6", "cost": 60, "id": 6},
+	{"name": "ITEM_7", "cost": 30, "id": 7},
+	{"name": "ITEM_8", "cost": 400, "id": 8},
 ]
 var date: int = -1
 var item_choices: Array = []
+
+func _init(saved_dict: Dictionary) -> void:
+	date = saved_dict.get("date", -1)
+	item_choices = saved_dict.get("item_choices", [])
 
 func timeline_events() -> Array:
 	return ("""
@@ -45,7 +48,10 @@ sales: SUPERMARKET_3""" % [
 func get_random_choices(choices: int) -> Array:
 	var all_choices = ITEMS.duplicate(true)
 	all_choices.shuffle()
-	return all_choices.slice(0, choices)
+	var random_choices = all_choices.slice(0, choices)
+	date = State.progress.date
+	State.merge_progress({"supermarket": {"date": State.progress.date, "item_choices": random_choices}})
+	return random_choices
 	
 func start_timeline():
 	if State.progress.date != date:
