@@ -1,7 +1,13 @@
 join me center
-set {good_sleep} = Game.sleep.sleep()
-if good_sleep:
-	me: SLEEP_1
+if State.progress.bag.get(4, 0)>0:
+	- SLEEP_1
+		set {good_sleep} = Game.sleep.sleep(true)
+	- SLEEP_2
+		set {good_sleep} = Game.sleep.sleep(false)
 else:
-	me: SLEEP_2
+	set {good_sleep} = Game.sleep.sleep(false)
+if good_sleep:
+	me: SLEEP_3
+else:
+	me: SLEEP_4
 jump home/
