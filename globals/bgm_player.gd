@@ -1,6 +1,15 @@
 extends AudioStreamPlayer
 
 var bgm_list = [
+	preload("res://assets/bgm/bad_end_seijakunohoshizora.mp3"),
+	preload("res://assets/bgm/cafe_picopicodisco.mp3"),
+	preload("res://assets/bgm/home_houkagonoumibe.mp3"),
+	preload("res://assets/bgm/hospital_fjordnosundakaze.mp3"),
+	preload("res://assets/bgm/intro_good_end_nagagutsudeodekake.mp3"),
+	preload("res://assets/bgm/lecture_natsuironocampus.mp3"),
+	preload("res://assets/bgm/map_konekonoosanpo.mp3"),
+	preload("res://assets/bgm/start_akiironooka.mp3"),
+	preload("res://assets/bgm/supermarket_wintercarnival.mp3"),
 ]
 
 var current_bgm: int = -1

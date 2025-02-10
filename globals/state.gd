@@ -1,5 +1,7 @@
 extends Node
 
+signal progress_updated
+
 var progress: Dictionary = {}
 var settings: Dictionary = {}
 var record: Dictionary = {}
@@ -31,8 +33,9 @@ func merge_progress(_progress: Dictionary) -> void:
 	progress = _progress.merged(progress, true)
 	save_progress(progress)
 
-func save_progress(_progress: Dictionary) -> bool:
-	return _save_json_file(Config.PROGRESS_PATH, _progress)
+func save_progress(_progress: Dictionary) -> void:
+	_save_json_file(Config.PROGRESS_PATH, _progress)
+	progress_updated.emit()
 
 func _delete_progress() -> bool:
 	return DirAccess.remove_absolute(Config.PROGRESS_PATH) == OK if FileAccess.file_exists(Config.PROGRESS_PATH) else true

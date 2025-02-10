@@ -1,26 +1,29 @@
 join doctor center
 \doctor: HOSPITAL_0
+\doctor: HOSPITAL_1
+\doctor: HOSPITAL_2
+\doctor: HOSPITAL_3
 label choice
-- HOSPITAL_1 % Game.hospital.liver_buy_price()
-	\doctor: HOSPITAL_6
+- HOSPITAL_4 % Game.hospital.liver_buy_price()
+	\doctor: HOSPITAL_9
 	do Game.hospital.buy_liver()
-	\doctor: HOSPITAL_7
-- HOSPITAL_2 % Game.hospital.liver_sell_price()
-	\doctor: HOSPITAL_6
+	\doctor: HOSPITAL_10
+- HOSPITAL_5 % Game.hospital.liver_sell_price()
+	\doctor: HOSPITAL_9
 	do Game.hospital.sell_liver()
-	\doctor: HOSPITAL_7
-- HOSPITAL_3 % Game.hospital.blood_buy_price()
-	\doctor: HOSPITAL_6
+	\doctor: HOSPITAL_10
+- HOSPITAL_6 % Game.hospital.blood_buy_price()
+	\doctor: HOSPITAL_9
 	if randf() < Game.hospital.CHICKEN_BLOOD_PROB:
-		\doctor: HOSPITAL_8
+		\doctor: HOSPITAL_11
 		do Game.hospital.buy_blood(true)
 	else:
 		do Game.hospital.buy_blood(false)
-	\doctor: HOSPITAL_7
-- HOSPITAL_4 % Game.hospital.blood_sell_price()
-	\doctor: HOSPITAL_6
+	\doctor: HOSPITAL_10
+- HOSPITAL_7 % Game.hospital.blood_sell_price()
+	\doctor: HOSPITAL_9
 	do Game.hospital.sell_blood()
-	\doctor: HOSPITAL_7
+	\doctor: HOSPITAL_10
 	jump choice
-- HOSPITAL_5
-\doctor: HOSPITAL_9
+- HOSPITAL_8
+\doctor: HOSPITAL_12

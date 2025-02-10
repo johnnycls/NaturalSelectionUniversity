@@ -14,23 +14,58 @@ func _remove_scene() -> void:
 	if Global.is_node_valid(_current_scene):
 		_current_scene.queue_free()
 		_current_scene = null
+		
+func start_intro() -> void:
+	BgmPlayer.play_bgm(4)
+	State.merge_progress(Config.INIT_PROGRESS)
+	Dialogic.start("intro")
+
+func start_ceremony() -> void:
+	BgmPlayer.play_bgm(5)
+	Dialogic.start("ceremony")
+	
+func back_to_map() -> void:
+	Dialogic.end_timeline()
+	BgmPlayer.play_bgm(6)
+	Main.change_ui(map_scene.instantiate())
+	Main.show_status_bar()
+	
+func start_hospital() -> void:
+	BgmPlayer.play_bgm(3)
+	Dialogic.start("hospital")
+	Main.clear_ui()
+	
+func start_restaurant() -> void:
+	BgmPlayer.play_bgm(1)
+	restaurant.start_timeline()
+	Main.clear_ui()
+	
+func start_home() -> void:
+	BgmPlayer.play_bgm(2)
+	Dialogic.start("home")
+	Main.clear_ui()
+	
+func start_supermarket() -> void:
+	BgmPlayer.play_bgm(8)
+	supermarket.start_timeline()
+	Main.clear_ui()
+	
+func start_lecture() -> void:
+	BgmPlayer.play_bgm(5)
+	lecture.start_timeline()
+	Main.clear_ui()
 	
 func start_game() -> void:
 	if not State.progress.get("is_intro_finished", false):
-		State.merge_progress(Config.INIT_PROGRESS)
-		Dialogic.start("intro")
+		start_intro()
 	elif not State.progress.get("is_ceremony_finished", false):
-		Dialogic.start("ceremony")
+		start_ceremony()
 	else:
-		Main.change_ui(map_scene.instantiate())
+		back_to_map()
 		
 func end_game() -> void:
 	Dialogic.end_timeline()
-	_remove_scene()
-
-func back_to_map():
-	Dialogic.end_timeline()
-	Main.change_ui(map_scene.instantiate())
+	Main.back_to_home_screen()
 
 # delta: {"hp": -1, "bag": {0: -1}}
 func update_status(delta: Dictionary) -> void:
@@ -74,4 +109,4 @@ func _update_stat(current_value: int, delta_value: int, key: String) -> int:
 	return new_value
 
 func handle_death() -> void:
-	pass
+	end_game()

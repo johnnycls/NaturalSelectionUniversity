@@ -19,12 +19,24 @@ func start_game() -> void:
 func back_to_home_screen() -> void:
 	Game.end_game()
 	change_ui(home_scene.instantiate())
-	BgmPlayer.play_bgm(0,0)
+	Main.hide_status_bar()
 	can_open_menu = false
 
 func change_ui(page: Control) -> void:
 	hud.change_ui(page)
 	ui_changed.emit()
+	
+func show_status_bar() -> void:
+	hud.show_status_bar()
+	
+func hide_status_bar() -> void:
+	hud.hide_status_bar()
+
+func popup(page: Control) -> void:
+	hud.popup(page)
+	
+func close_popup() -> void:
+	hud.close_popup()
 
 func open_menu() -> void:
 	hud.open_menu()
