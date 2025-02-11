@@ -20,5 +20,4 @@ me: INTRO_16
 friend: INTRO_17
 me: INTRO_18
 friend: INTRO_19
-[signal arg_type="dict" arg="{"body": {"is_intro_finished": true},"endpoint":"update_status"}"]
-jump ceremony/
+do Game.start_ceremony()

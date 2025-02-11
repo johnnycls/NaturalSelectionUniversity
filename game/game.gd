@@ -21,8 +21,13 @@ func start_intro() -> void:
 	Dialogic.start("intro")
 
 func start_ceremony() -> void:
+	State.merge_progress({"is_intro_finished": true})
 	BgmPlayer.play_bgm(5)
 	Dialogic.start("ceremony")
+	
+func ended_ceremony() -> void:
+	State.merge_progress({"is_ceremony_finished": true})
+	back_to_map()
 	
 func back_to_map() -> void:
 	Dialogic.end_timeline()

@@ -29,39 +29,31 @@ func _save_json_file(path: String, data: Dictionary) -> bool:
 	file.close()
 	return true
 
+func delete_file(path: String) -> void:
+	if FileAccess.file_exists(path):
+		DirAccess.remove_absolute(path)
+
 func merge_progress(_progress: Dictionary) -> void:
-	progress = _progress.merged(progress, true)
-	save_progress(progress)
+	var new_progress = _progress.merged(progress)
+	save_progress(new_progress)
 
 func save_progress(_progress: Dictionary) -> void:
 	_save_json_file(Config.PROGRESS_PATH, _progress)
+	progress = _progress
 	progress_updated.emit()
-
-func _delete_progress() -> bool:
-	return DirAccess.remove_absolute(Config.PROGRESS_PATH) == OK if FileAccess.file_exists(Config.PROGRESS_PATH) else true
-
-func save_settings(_settings) -> bool:
-	var file = FileAccess.open(Config.SETTINGS_PATH, FileAccess.WRITE)
-	if not file:
-		return false
-	file.store_var(_settings)
-	file.close()
+	
+func save_settings(_settings) -> void:
+	_save_json_file(Config.SETTINGS_PATH, _settings)
+	settings = _settings
 	_update_lang()
-	return true
-
-func _read_settings() -> Dictionary:	
-	return _read_json_file(Config.SETTINGS_PATH)
 	
 func _update_lang():
 	var lang_id: int = settings.get("language", Config.DEFAULT_LANG)
 	TranslationServer.set_locale(Config.LANG_IDS_TO_CODES[lang_id])
 
 func merge_record(_record: Dictionary) -> void:
-	record = _record.merged(record, true)
+	record = _record.merged(record)
 	save_record(record)
 
 func save_record(_record: Dictionary) -> bool:
 	return _save_json_file(Config.RECORD_PATH, _record)
-
-func _delete_record() -> bool:
-	return DirAccess.remove_absolute(Config.RECORD_PATH) == OK if FileAccess.file_exists(Config.RECORD_PATH) else true

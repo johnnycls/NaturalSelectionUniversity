@@ -12,5 +12,4 @@ leave principal
 join me center
 me: CEREMONY_9
 me: CEREMONY_10
-[signal arg_type="dict" arg="{"body": {"is_ceremony_finished": true},"endpoint":"update_status"}"]
-[signal arg_type="dict" arg="{"endpoint":"back_to_map"}"]
+do Game.ended_ceremony()

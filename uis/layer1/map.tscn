@@ -16,7 +16,38 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="TextureButton" parent="."]
+[node name="HospitalButton" type="Button" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+text = "HOSPITAL"
+
+[node name="RestaurantButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "RESTAURANT"
+
+[node name="HomeButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "HOME"
+
+[node name="SupermarketButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "SUPERMARKET"
+
+[node name="LectureButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+text = "LECTURE_HALL"
+
+[connection signal="pressed" from="HospitalButton" to="." method="_on_hospital_button_pressed"]
+[connection signal="pressed" from="RestaurantButton" to="." method="_on_restaurant_button_pressed"]
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="SupermarketButton" to="." method="_on_supermarket_button_pressed"]
+[connection signal="pressed" from="LectureButton" to="." method="_on_lecture_button_pressed"]

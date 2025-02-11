@@ -12,7 +12,7 @@
 },
 "default_portrait": "normal",
 "description": "",
-"display_name": "principal",
+"display_name": "PRINCIPAL",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
@@ -24,7 +24,7 @@
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "res://addons/dialogic/Modules/HighlightPortrait/simple_highlight_portrait.tscn"
 }
 },
 "scale": 1.0
