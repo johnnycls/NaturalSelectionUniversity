@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/start_akiironooka.mp3-bd0e52a95bb4b5b5c345cf3
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

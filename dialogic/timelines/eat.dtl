@@ -24,4 +24,4 @@
 			me: RESTAURANT_3
 		else:
 			me: RESTAURANT_4
-do Game.restaurant.start_timeline()
+do Game.start_restaurant()

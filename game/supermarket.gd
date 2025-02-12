@@ -39,10 +39,11 @@ label choice
 	sales: SUPERMARKET_4
 	jump choice
 - SUPERMARKET_1
-sales: SUPERMARKET_3""" % [
-	"%s: $%s" % [item_choices[0].name, item_choices[0].cost], item_choices[0].cost,
-	"%s: $%s" % [item_choices[1].name, item_choices[1].cost], item_choices[1].cost, 
-	"%s: $%s" % [item_choices[2].name, item_choices[2].cost], item_choices[2].cost, 
+	sales: SUPERMARKET_3
+	do Game.back_to_map()""" % [
+	"%s: $%s" % [tr(item_choices[0].name), item_choices[0].cost], item_choices[0].cost,
+	"%s: $%s" % [tr(item_choices[1].name), item_choices[1].cost], item_choices[1].cost, 
+	"%s: $%s" % [tr(item_choices[2].name), item_choices[2].cost], item_choices[2].cost, 
 ]).split("\n")
 
 func get_random_choices(choices: int) -> Array:

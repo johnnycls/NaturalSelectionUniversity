@@ -5,7 +5,7 @@ const BAD_LECTURE_PROB = 0.2
 var COURSES = [
 	{"name": "COURSE_0", "effect": {"intelligence": 4, "luck": 40, "time": 3, "spirit": -30, "hunger": -30}},
 	{"name": "COURSE_1", "effect": {"strength": 12, "hp": -10, "time": 3, "spirit": -40, "hunger": -40}},
-	{"name": "COURSE_0", "effect": {"intelligence": 3, "mood": 35, "time": 3, "spirit": -25, "hunger": -25}},
+	{"name": "COURSE_2", "effect": {"intelligence": 3, "mood": 35, "time": 3, "spirit": -25, "hunger": -25}},
 	{"name": "COURSE_3", "effect": {"intelligence": 4, "time": 2, "spirit": -20, "hunger": -20}},
 	{"name": "COURSE_4", "effect": {"strength": 8, "time": 2, "spirit": -30, "hunger": -30}},
 	{"name": "COURSE_5", "effect": {"intelligence": 4, "mood": 15, "time": 2, "spirit": -20, "hunger": -20}},
@@ -28,7 +28,7 @@ me: LECTURE_0
 	jump course/
 - LECTURE_1
 	do Game.back_to_map()""" % [
-		course_choices[0].name, course_choices[1].name, course_choices[2].name
+		course_choices[0].name, course_choices[1].name
 	]).split("\n")
 
 func get_random_choices(choices: int) -> Array:
@@ -40,7 +40,6 @@ func get_random_choices(choices: int) -> Array:
 	return random_choices
 	
 func start_timeline():
-	Dialogic.end_timeline()
 	if State.progress.date != date:
 		course_choices = get_random_choices(2)
 	var timeline : DialogicTimeline = DialogicTimeline.new()

@@ -60,6 +60,11 @@ func start_lecture() -> void:
 	lecture.start_timeline()
 	Main.clear_ui()
 	
+func start_bad_end() -> void:
+	BgmPlayer.play_bgm(0)
+	Dialogic.start("bad_end")
+	Main.clear_ui()
+	
 func start_game() -> void:
 	if not State.progress.get("is_intro_finished", false):
 		start_intro()
@@ -70,7 +75,6 @@ func start_game() -> void:
 		
 func end_game() -> void:
 	Dialogic.end_timeline()
-	Main.back_to_home_screen()
 
 # delta: {"hp": -1, "bag": {0: -1}}
 func update_status(delta: Dictionary) -> void:
@@ -98,7 +102,7 @@ func _update_bag(current_bag: Dictionary, delta_bag: Dictionary) -> Dictionary:
 func _update_time(current_progress: Dictionary, delta_time: int) -> Dictionary:
 	var new_progress = current_progress.duplicate()
 	var original_time = current_progress.get("time", 0)
-	var total_time = original_time + delta_time
+	var total_time = int(original_time + delta_time)
 	new_progress.time = total_time % 24
 	var new_date = total_time / 24
 	if new_date != 0:
@@ -114,4 +118,4 @@ func _update_stat(current_value: int, delta_value: int, key: String) -> int:
 	return new_value
 
 func handle_death() -> void:
-	end_game()
+	start_bad_end()
