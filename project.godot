@@ -46,6 +46,7 @@ directories/dtl_directory={
 "home": "res://dialogic/timelines/home.dtl",
 "hospital": "res://dialogic/timelines/hospital.dtl",
 "intro": "res://dialogic/timelines/intro.dtl",
+"normal_end": "res://dialogic/timelines/normal_end.dtl",
 "paper": "res://dialogic/timelines/paper.dtl",
 "sleep": "res://dialogic/timelines/sleep.dtl"
 }
@@ -87,7 +88,7 @@ translation/file_mode=1
 translation/translation_folder=""
 translation/save_mode=0
 translation/add_separator=false
-text/autoadvance_fixed_delay=0.1
+text/autoadvance_fixed_delay=0.0
 text/autoadvance_enabled=false
 
 [display]

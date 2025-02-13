@@ -1,13 +1,13 @@
 class_name Supermarket
 
 var ITEMS = [
-	{"name": "ITEM_0", "cost": 10, "id": 0},
-	{"name": "ITEM_1", "cost": 20, "id": 1},
-	{"name": "ITEM_2", "cost": 50, "id": 2},
-	{"name": "ITEM_3", "cost": 35, "id": 3},
-	{"name": "ITEM_4", "cost": 35, "id": 4},
-	{"name": "ITEM_5", "cost": 35, "id": 5},
-	{"name": "ITEM_6", "cost": 60, "id": 6},
+	{"name": "ITEM_0", "cost": 15, "id": 0},
+	{"name": "ITEM_1", "cost": 25, "id": 1},
+	{"name": "ITEM_2", "cost": 60, "id": 2},
+	{"name": "ITEM_3", "cost": 40, "id": 3},
+	{"name": "ITEM_4", "cost": 40, "id": 4},
+	{"name": "ITEM_5", "cost": 40, "id": 5},
+	{"name": "ITEM_6", "cost": 85, "id": 6},
 	{"name": "ITEM_7", "cost": 30, "id": 7},
 	{"name": "ITEM_8", "cost": 400, "id": 8},
 ]
@@ -23,17 +23,17 @@ func timeline_events() -> Array:
 join sales center
 sales: SUPERMARKET_0
 label choice
-- %s | [if {State.progress.money} >= %s] [else="disabled"]
+- %s | [if {State.progress.money} >= %s and not Game.is_bag_full()] [else="disabled"]
 	sales: SUPERMARKET_2
 	do Game.supermarket.buy_item(0)
 	sales: SUPERMARKET_4
 	jump choice
-- %s | [if {State.progress.money} >= %s] [else="disabled"]
+- %s | [if {State.progress.money} >= %s and not Game.is_bag_full()] [else="disabled"]
 	sales: SUPERMARKET_2
 	do Game.supermarket.buy_item(1)
 	sales: SUPERMARKET_4
 	jump choice
-- %s | [if {State.progress.money} >= %s] [else="disabled"]
+- %s | [if {State.progress.money} >= %s and not Game.is_bag_full()] [else="disabled"]
 	sales: SUPERMARKET_2
 	do Game.supermarket.buy_item(2)
 	sales: SUPERMARKET_4

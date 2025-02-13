@@ -2,14 +2,14 @@ class_name Hospital
 
 const CHICKEN_BLOOD_PROB = 0.2
 
-func liver_buy_price() -> float:
-	return 200.0
-func liver_sell_price() -> float:
-	return 100.0
-func blood_buy_price() -> float:
-	return 200.0
-func blood_sell_price() -> float:
-	return 100.0
+func liver_buy_price() -> int:
+	return 100
+func liver_sell_price() -> int:
+	return 75
+func blood_buy_price() -> int:
+	return 100
+func blood_sell_price() -> int:
+	return 75
 	
 func buy_liver() -> void:
 	Game.update_status({"spirit": 100, "money": -liver_buy_price()})

@@ -8,6 +8,8 @@ const LANG_IDS_TO_CODES: Dictionary = {0: "cmn", 1: "en", 2: "zh"}
 const LANG_NAMES = {"cmn": "简体中文", "en": "English", "zh": "繁體中文"}
 const DEFAULT_LANG = 1
 
+const BAG_VOLUME = 8
+
 var INIT_PROGRESS = {
 	"is_intro_finished": false,
 	"is_ceremony_finished": false,

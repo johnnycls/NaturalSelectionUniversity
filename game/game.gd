@@ -65,6 +65,16 @@ func start_bad_end() -> void:
 	Dialogic.start("bad_end")
 	Main.clear_ui()
 	
+func start_good_end() -> void:
+	BgmPlayer.play_bgm(4)
+	Dialogic.start("good_end")
+	Main.clear_ui()
+	
+func start_normal_end() -> void:
+	BgmPlayer.play_bgm(2)
+	Dialogic.start("normal_end")
+	Main.clear_ui()
+	
 func start_game() -> void:
 	if not State.progress.get("is_intro_finished", false):
 		start_intro()
@@ -78,44 +88,52 @@ func end_game() -> void:
 
 # delta: {"hp": -1, "bag": {0: -1}}
 func update_status(delta: Dictionary) -> void:
-	var new_progress = _compute_new_progress(State.progress, delta)
+	var new_progress = _compute_new_progress(delta)
 	State.merge_progress(new_progress)
+	if new_progress.get("hunger", 0) < 0 or new_progress.get("spirit", 0) < 0 or new_progress.get("hp", 0) < 0:
+		start_bad_end()
+	elif new_progress.get("date", 0) >= 100 and new_progress.paper>=100:
+		start_good_end()
+	elif new_progress.get("date", 0) >= 100:
+		start_normal_end()
 
-func _compute_new_progress(current_progress: Dictionary, delta: Dictionary) -> Dictionary:
-	var new_progress = current_progress.duplicate(true)
+func _compute_new_progress(delta: Dictionary) -> Dictionary:
+	var new_progress = State.progress.duplicate(true)
 	for key in delta:
 		match key:
 			"bag":
-				new_progress.bag = _update_bag(new_progress.get("bag", {}), delta.bag)
+				new_progress.bag = _updated_bag(new_progress.get("bag", {}), delta.bag)
 			"time":
-				new_progress = _update_time(new_progress, delta.time)
+				var new_datetime = _updated_datetime(new_progress, delta.time)
+				new_progress.date = new_datetime.date
+				new_progress.time = new_datetime.time
 			_:
-				new_progress[key] = _update_stat(new_progress.get(key, 0), delta[key], key)
+				new_progress[key] = _updated_stat(new_progress.get(key, 0), delta[key], key)
 	return new_progress
 
-func _update_bag(current_bag: Dictionary, delta_bag: Dictionary) -> Dictionary:
-	var new_bag = current_bag.duplicate()
+func _updated_bag(current_bag: Dictionary, delta_bag: Dictionary) -> Dictionary:
+	var new_bag = current_bag.duplicate(true)
 	for item_id in delta_bag:
 		new_bag[item_id] = new_bag.get(item_id, 0) + delta_bag[item_id]
 	return new_bag
 
-func _update_time(current_progress: Dictionary, delta_time: int) -> Dictionary:
-	var new_progress = current_progress.duplicate()
+func _updated_datetime(current_progress: Dictionary, delta_time: int) -> Dictionary:
+	var original_date = current_progress.get("date", 0)
 	var original_time = current_progress.get("time", 0)
 	var total_time = int(original_time + delta_time)
-	new_progress.time = total_time % 24
-	var new_date = total_time / 24
-	if new_date != 0:
-		new_progress.date = new_date
-	return new_progress
+	var new_date = original_date + total_time / 24
+	var new_time = total_time % 24
+	return {"date": new_date, "time": new_time}
 
-func _update_stat(current_value: int, delta_value: int, key: String) -> int:
+func _updated_stat(current_value: int, delta_value: int, key: String) -> int:
 	var new_value = current_value + delta_value
 	if Config.MAX_PROGRESS.has(key):
 		new_value = min(new_value, Config.MAX_PROGRESS[key])
-	if key in ["hunger", "spirit", "hp"] and new_value < 0:
-		handle_death()
 	return new_value
 
-func handle_death() -> void:
-	start_bad_end()
+func is_bag_full() -> bool:
+	var bag = State.progress.get("bag", {})
+	var total_items = 0
+	for item_id in bag:
+		total_items += bag[item_id]
+	return total_items > Config.BAG_VOLUME
