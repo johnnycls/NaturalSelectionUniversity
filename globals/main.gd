@@ -43,3 +43,9 @@ func open_menu() -> void:
 	
 func close_menu() -> void:
 	hud.close_menu()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("auto_advance"):
+		Dialogic.Inputs.auto_advance.enabled_until_user_input = true
+	elif event.is_action_released("auto_advance"):
+		Dialogic.Inputs.auto_advance.enabled_until_user_input = false
