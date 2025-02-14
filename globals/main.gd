@@ -8,6 +8,9 @@ var home_scene = load("res://uis/layer1/home.tscn")
 
 var can_open_menu: bool = false
 
+func _ready() -> void:
+	change_ui(home_scene.instantiate())
+
 func clear_ui() -> void:
 	hud.clear_ui()
 
@@ -45,7 +48,7 @@ func close_menu() -> void:
 	hud.close_menu()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("auto_advance"):
-		Dialogic.Inputs.auto_advance.enabled_until_user_input = true
-	elif event.is_action_released("auto_advance"):
-		Dialogic.Inputs.auto_advance.enabled_until_user_input = false
+	if event.is_action_pressed("auto_skip"):
+		Dialogic.Inputs.auto_skip.enabled = true
+	elif event.is_action_released("auto_skip"):
+		Dialogic.Inputs.auto_skip.enabled = false

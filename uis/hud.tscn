@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctgyq10dlxu46"]
+[gd_scene load_steps=5 format=3 uid="uid://ctgyq10dlxu46"]
 
 [ext_resource type="Script" path="res://uis/hud.gd" id="1_hqj21"]
-[ext_resource type="PackedScene" uid="uid://7i2ltxhfe2tn" path="res://uis/layer1/home.tscn" id="2_1urqo"]
 [ext_resource type="PackedScene" uid="uid://cb1hvsdau44m3" path="res://uis/layer2/status_bar.tscn" id="3_iiych"]
 [ext_resource type="PackedScene" uid="uid://cdbf1f7w6rewp" path="res://uis/layer3/popup_layer.tscn" id="4_3p783"]
 [ext_resource type="PackedScene" uid="uid://b3q3m5cestqii" path="res://uis/layer4/menu.tscn" id="4_bq5jc"]
@@ -10,12 +9,10 @@
 script = ExtResource("1_hqj21")
 
 [node name="UILayer" type="CanvasLayer" parent="."]
-layer = -50
-
-[node name="Home" parent="UILayer" instance=ExtResource("2_1urqo")]
-offset_top = -498.0
+layer = 35
 
 [node name="StatusBar" parent="." instance=ExtResource("3_iiych")]
+layer = 35
 
 [node name="PopupLayer" parent="." instance=ExtResource("4_3p783")]
 

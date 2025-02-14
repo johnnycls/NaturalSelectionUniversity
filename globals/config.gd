@@ -24,10 +24,11 @@ var INIT_PROGRESS = {
 	"intelligence": 0,
 	"date": 0,
 	"time": 0,
-	"bag": {},
+	"bag": [],
 	"supermarket": {},
 	"lecture": {},
-	"restaurant": {}
+	"restaurant": {},
+	"go_out": {}
 }
 
 var MAX_PROGRESS = {

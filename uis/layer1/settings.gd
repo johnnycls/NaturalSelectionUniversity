@@ -5,9 +5,6 @@ const home := preload("res://uis/layer1/home.tscn")
 @onready var back_btn: Button = $BackBtn
 @onready var lang_select: OptionButton = $LangSelect
 
-func init() -> void:
-	lang_select.grab_focus()
-
 func _ready() -> void:
 	Main.ui_changed.connect(init)
 	
@@ -15,6 +12,9 @@ func _ready() -> void:
 		lang_select.add_item(Config.LANG_NAMES[Config.LANG_IDS_TO_CODES[lang_id]], lang_id)
 	lang_select.selected = State.settings.get("language", Config.DEFAULT_LANG)
 
+func init() -> void:
+	lang_select.grab_focus()
+	
 func _save_settings() -> void:
 	var settings: Dictionary = {
 		"language": lang_select.selected

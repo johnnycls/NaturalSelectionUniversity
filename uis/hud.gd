@@ -1,6 +1,6 @@
 extends Node
 
-var select_sound = preload("res://assets/audio/select.wav")
+var select_sound = preload("res://assets/audio/select.mp3")
 
 @onready var ui: CanvasLayer = $UILayer
 @onready var status_bar: CanvasLayer = $StatusBar
@@ -17,7 +17,9 @@ func _ready() -> void:
 	
 func add_sound_effects_for_btns(node: Node) -> void:
 	if node is Button:
-		node.pressed.connect(select)
+		node.mouse_entered.connect(select)
+		node.focus_entered.connect(select)
+		node.button_down.connect(select)
 	for child in node.get_children():
 		add_sound_effects_for_btns(child)
 		

@@ -1,6 +1,7 @@
 extends Node2D
 
 var map_scene = preload("res://uis/layer1/map.tscn")
+var go_out = preload("res://game/go_out.gd").new(State.progress.get("go_out", {}))
 var hospital = preload("res://game/hospital.gd").new()
 var lecture = preload("res://game/lecture.gd").new(State.progress.get("lecture", {}))
 var paper = preload("res://game/paper.gd").new()
@@ -60,6 +61,26 @@ func start_lecture() -> void:
 	lecture.start_timeline()
 	Main.clear_ui()
 	
+func start_steal() -> void:
+	BgmPlayer.play_bgm(2)
+	Dialogic.start("steal")
+	Main.clear_ui()
+	
+func start_bully() -> void:
+	BgmPlayer.play_bgm(2)
+	Dialogic.start("bully")
+	Main.clear_ui()
+	
+func start_insurance() -> void:
+	BgmPlayer.play_bgm(2)
+	Dialogic.start("insurance")
+	Main.clear_ui()
+	
+func start_merchant() -> void:
+	BgmPlayer.play_bgm(2)
+	Dialogic.start("merchant")
+	Main.clear_ui()
+	
 func start_bad_end() -> void:
 	BgmPlayer.play_bgm(0)
 	Dialogic.start("bad_end")
@@ -91,7 +112,13 @@ func update_status(delta: Dictionary) -> void:
 	var new_progress = _compute_new_progress(delta)
 	State.merge_progress(new_progress)
 	if new_progress.get("hunger", 0) < 0 or new_progress.get("spirit", 0) < 0 or new_progress.get("hp", 0) < 0:
-		start_bad_end()
+		if new_progress.get("bag", []).find(8):
+			var hp_delta = abs(new_progress.get("hp", 0))+1 if new_progress.get("hp", 0)<0 else 0
+			var spirit_delta = abs(new_progress.get("spirit", 0))+1 if new_progress.get("spirit", 0)<0 else 0
+			var hunger_delta = abs(new_progress.get("hunger", 0))+1 if new_progress.get("hunger", 0)<0 else 0
+			update_status({"bag": {8: -1}, "hp": hp_delta, "spirit": spirit_delta, "hunger": hunger_delta})
+		else:
+			start_bad_end()
 	elif new_progress.get("date", 0) >= 100 and new_progress.paper>=100:
 		start_good_end()
 	elif new_progress.get("date", 0) >= 100:
@@ -102,7 +129,7 @@ func _compute_new_progress(delta: Dictionary) -> Dictionary:
 	for key in delta:
 		match key:
 			"bag":
-				new_progress.bag = _updated_bag(new_progress.get("bag", {}), delta.bag)
+				new_progress.bag = _updated_bag(new_progress.get("bag", []), delta.bag)
 			"time":
 				var new_datetime = _updated_datetime(new_progress, delta.time)
 				new_progress.date = new_datetime.date
@@ -113,8 +140,13 @@ func _compute_new_progress(delta: Dictionary) -> Dictionary:
 
 func _updated_bag(current_bag: Dictionary, delta_bag: Dictionary) -> Dictionary:
 	var new_bag = current_bag.duplicate(true)
-	for item_id in delta_bag:
-		new_bag[item_id] = new_bag.get(item_id, 0) + delta_bag[item_id]
+	for item_id in delta_bag.keys():
+		var delta = delta_bag[item_id]
+		if delta > 0:
+			new_bag += [item_id] * delta
+		elif delta < 0:
+			for _i in abs(delta):
+				new_bag.erase(item_id)
 	return new_bag
 
 func _updated_datetime(current_progress: Dictionary, delta_time: int) -> Dictionary:
@@ -132,8 +164,4 @@ func _updated_stat(current_value: int, delta_value: int, key: String) -> int:
 	return new_value
 
 func is_bag_full() -> bool:
-	var bag = State.progress.get("bag", {})
-	var total_items = 0
-	for item_id in bag:
-		total_items += bag[item_id]
-	return total_items > Config.BAG_VOLUME
+	return State.progress.get("bag", []).size() > Config.BAG_VOLUME
