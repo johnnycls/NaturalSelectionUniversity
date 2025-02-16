@@ -1,0 +1,25 @@
+join robber right
+robber: STEAL_0
+join me left
+- STEAL_1
+	robber: STEAL_12
+	do Game.go_out.steal(0, -1)
+- STEAL_2
+	robber: STEAL_13
+	do Game.go_out.steal(1, -1)
+- STEAL_3
+	robber: STEAL_14
+	do Game.go_out.steal(2, -1)
+- STEAL_4
+	- STEAL_5
+		robber: STEAL_11
+		do Game.go_out.steal(3, -1)
+	- STEAL_6 | [if 0 in State.progress.bag] [else="hide"]
+		robber: STEAL_10
+		do Game.go_out.steal(3, 0)
+	- STEAL_7 | [if 1 in State.progress.bag] [else="hide"]
+		robber: STEAL_10
+		do Game.go_out.steal(3, 1)
+	- STEAL_8 | [if 7 in State.progress.bag] [else="hide"]
+		robber: STEAL_9
+		do Game.go_out.steal(3, 7)

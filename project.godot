@@ -28,12 +28,15 @@ Game="*res://game/game.tscn"
 [dialogic]
 
 directories/dch_directory={
+"bullied": "res://dialogic/characters/bullied.dch",
+"bully": "res://dialogic/characters/bully.dch",
 "doctor": "res://dialogic/characters/doctor.dch",
 "doctor_assistant": "res://dialogic/characters/doctor_assistant.dch",
 "friend": "res://dialogic/characters/friend.dch",
 "me": "res://dialogic/characters/me.dch",
 "mouse": "res://dialogic/characters/mouse.dch",
 "principal": "res://dialogic/characters/principal.dch",
+"robber": "res://dialogic/characters/robber.dch",
 "sales": "res://dialogic/characters/sales.dch",
 "waiter": "res://dialogic/characters/waiter.dch"
 }
@@ -46,9 +49,7 @@ directories/dtl_directory={
 "good_end": "res://dialogic/timelines/good_end.dtl",
 "home": "res://dialogic/timelines/home.dtl",
 "hospital": "res://dialogic/timelines/hospital.dtl",
-"insurance": "res://dialogic/timelines/insurance.dtl",
 "intro": "res://dialogic/timelines/intro.dtl",
-"merchant": "res://dialogic/timelines/merchant.dtl",
 "normal_end": "res://dialogic/timelines/normal_end.dtl",
 "paper": "res://dialogic/timelines/paper.dtl",
 "sleep": "res://dialogic/timelines/sleep.dtl",
