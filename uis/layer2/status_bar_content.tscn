@@ -1,12 +1,235 @@
-[gd_scene load_steps=2 format=3 uid="uid://davt8kbskdh00"]
+[gd_scene load_steps=15 format=3 uid="uid://davt8kbskdh00"]
 
 [ext_resource type="Script" path="res://uis/layer2/status_bar_content.gd" id="1_ntxo1"]
+[ext_resource type="Texture2D" uid="uid://bun0hj6bl1bc3" path="res://assets/ui_sprites/status/pause.png" id="2_xnn1x"]
+[ext_resource type="Texture2D" uid="uid://wvc7kp5oocjc" path="res://assets/ui_sprites/status/hp.png" id="3_ay8lv"]
+[ext_resource type="Texture2D" uid="uid://2p34b8cdoiab" path="res://assets/ui_sprites/status/hunger2.png" id="4_g558d"]
+[ext_resource type="Texture2D" uid="uid://dkvc5emkt67lj" path="res://assets/ui_sprites/status/paper.png" id="5_q5448"]
+[ext_resource type="Texture2D" uid="uid://b524er2i4dxyj" path="res://assets/ui_sprites/status/spirit.png" id="6_ibngn"]
+[ext_resource type="Texture2D" uid="uid://bqo2ata3ddrhk" path="res://assets/ui_sprites/status/mood.png" id="7_7sikv"]
+[ext_resource type="Texture2D" uid="uid://da3my2jmochyu" path="res://assets/ui_sprites/status/luck.png" id="8_8wcmh"]
+[ext_resource type="Texture2D" uid="uid://cgxash85bo6u3" path="res://assets/ui_sprites/status/money.png" id="9_syjll"]
+[ext_resource type="Texture2D" uid="uid://0vhtvtgybq2w" path="res://assets/ui_sprites/status/unfilled_bar.png" id="10_g2fns"]
+[ext_resource type="Texture2D" uid="uid://dss3yo6vqpvjn" path="res://assets/ui_sprites/status/rounded_bg.png" id="11_omb00"]
+[ext_resource type="Texture2D" uid="uid://ca6iy1q1msh16" path="res://assets/ui_sprites/status/calendar.png" id="12_8ixsg"]
 
-[node name="MenuContent" type="GridContainer"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uuayp"]
+texture = ExtResource("11_omb00")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wy7pt"]
+texture = ExtResource("12_8ixsg")
+
+[node name="MenuContent" type="Control"]
 process_mode = 3
+layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_ntxo1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 139.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_xnn1x")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HP" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = -25
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HP"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_ay8lv")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/HP"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"StatusBar"
+value = 50.0
+
+[node name="Hunger" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = -25
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Hunger"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.1
+texture = ExtResource("4_g558d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Hunger"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"StatusBar"
+value = 50.0
+
+[node name="Paper" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = -40
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Paper"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_q5448")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Paper"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"StatusBar"
+value = 50.0
+
+[node name="Spirit" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = -125
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Spirit"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_ibngn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Spirit"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"StatusBar"
+value = 50.0
+
+[node name="Mood" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = -20
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Mood"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_7sikv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Mood"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"StatusBar"
+value = 50.0
+
+[node name="Luck" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = -40
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Luck"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("8_8wcmh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Luck"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"StatusBar"
+value = 50.0
+
+[node name="Money" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.8
+theme_override_constants/separation = -40
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Money"]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("9_syjll")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Money"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Money/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+texture = ExtResource("10_g2fns")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Money/MarginContainer"]
+z_index = 2
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "1"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+theme_override_styles/panel = SubResource("StyleBoxTexture_uuayp")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="PanelContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wy7pt")

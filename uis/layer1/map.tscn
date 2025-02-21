@@ -1,6 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfehn7rtnr13f"]
+[gd_scene load_steps=14 format=3 uid="uid://cfehn7rtnr13f"]
 
 [ext_resource type="Script" path="res://uis/layer1/map.gd" id="1_lhalm"]
+[ext_resource type="Texture2D" uid="uid://bicrckpguahx6" path="res://assets/ui_sprites/home/background.png" id="2_6orwn"]
+[ext_resource type="Texture2D" uid="uid://2ovxqw1joq6a" path="res://assets/ui_sprites/map/map.png" id="3_in1ud"]
+[ext_resource type="StyleBox" uid="uid://dhyr58ykmflcs" path="res://assets/ui_sprites/map/red_focus.tres" id="4_6er4o"]
+[ext_resource type="StyleBox" uid="uid://clwmwmrela86g" path="res://assets/ui_sprites/map/red_normal.tres" id="5_qhlpo"]
+[ext_resource type="StyleBox" uid="uid://d28y1p5khykvq" path="res://assets/ui_sprites/map/blue_focus.tres" id="6_2pq5v"]
+[ext_resource type="StyleBox" uid="uid://k5jiujqfspa4" path="res://assets/ui_sprites/map/blue_normal.tres" id="7_kuayt"]
+[ext_resource type="StyleBox" uid="uid://cemnw2fx4s531" path="res://assets/ui_sprites/map/yellow_focus.tres" id="8_pfw4o"]
+[ext_resource type="StyleBox" uid="uid://dej3lpocda1wi" path="res://assets/ui_sprites/map/yellow_normal.tres" id="9_8xksr"]
+[ext_resource type="StyleBox" uid="uid://nyiciqns2tim" path="res://assets/ui_sprites/map/green_focus.tres" id="10_vvv4m"]
+[ext_resource type="StyleBox" uid="uid://ca2r2yn0ofxxm" path="res://assets/ui_sprites/map/green_normal.tres" id="11_aexiv"]
+[ext_resource type="StyleBox" uid="uid://cslg3rthbjnf8" path="res://assets/ui_sprites/map/brown_focus.tres" id="12_llf4c"]
+[ext_resource type="StyleBox" uid="uid://dtwwd5sjsbxps" path="res://assets/ui_sprites/map/brown_normal.tres" id="13_yr7ll"]
 
 [node name="Map" type="Control"]
 layout_mode = 3
@@ -12,52 +24,114 @@ grow_vertical = 2
 script = ExtResource("1_lhalm")
 
 [node name="Background" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6orwn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Backdrop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+
+[node name="Map" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -636.0
+offset_top = -830.0
+offset_right = 614.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_in1ud")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="HospitalButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 282.0
-offset_top = 700.0
-offset_right = 582.0
-offset_bottom = 794.0
-text = "HOSPITAL"
-
-[node name="RestaurantButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 999.0
-offset_top = 661.0
-offset_right = 1397.0
-offset_bottom = 755.0
-text = "RESTAURANT"
+offset_left = 525.0
+offset_top = 260.0
+offset_right = 525.0
+offset_bottom = 290.0
+theme_type_variation = &"MapButton"
+theme_override_styles/focus = ExtResource("4_6er4o")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_6er4o")
+theme_override_styles/hover_pressed = ExtResource("4_6er4o")
+theme_override_styles/hover = ExtResource("4_6er4o")
+theme_override_styles/pressed = ExtResource("4_6er4o")
+theme_override_styles/normal = ExtResource("5_qhlpo")
 
 [node name="HomeButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 97.0
-offset_top = 235.0
-offset_right = 281.0
-offset_bottom = 329.0
-text = "HOME"
+offset_left = 750.0
+offset_top = 215.0
+offset_right = 750.0
+offset_bottom = 245.0
+theme_type_variation = &"MapButton"
+theme_override_styles/focus = ExtResource("6_2pq5v")
+theme_override_styles/hover_pressed_mirrored = ExtResource("6_2pq5v")
+theme_override_styles/hover_pressed = ExtResource("6_2pq5v")
+theme_override_styles/hover = ExtResource("6_2pq5v")
+theme_override_styles/pressed = ExtResource("6_2pq5v")
+theme_override_styles/normal = ExtResource("7_kuayt")
+
+[node name="RestaurantButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 890.0
+offset_top = 375.0
+offset_right = 890.0
+offset_bottom = 405.0
+theme_type_variation = &"MapButton"
+theme_override_styles/focus = ExtResource("8_pfw4o")
+theme_override_styles/hover_pressed_mirrored = ExtResource("8_pfw4o")
+theme_override_styles/hover_pressed = ExtResource("8_pfw4o")
+theme_override_styles/hover = ExtResource("8_pfw4o")
+theme_override_styles/pressed = ExtResource("8_pfw4o")
+theme_override_styles/normal = ExtResource("9_8xksr")
 
 [node name="SupermarketButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 894.0
-offset_top = 180.0
-offset_right = 1346.0
-offset_bottom = 274.0
-text = "SUPERMARKET"
+offset_left = 740.0
+offset_top = 445.0
+offset_right = 740.0
+offset_bottom = 475.0
+theme_type_variation = &"MapButton"
+theme_override_styles/focus = ExtResource("10_vvv4m")
+theme_override_styles/hover_pressed_mirrored = ExtResource("10_vvv4m")
+theme_override_styles/hover_pressed = ExtResource("10_vvv4m")
+theme_override_styles/hover = ExtResource("10_vvv4m")
+theme_override_styles/pressed = ExtResource("10_vvv4m")
+theme_override_styles/normal = ExtResource("11_aexiv")
 
 [node name="LectureButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 394.0
-offset_top = 384.0
-offset_right = 859.0
-offset_bottom = 478.0
-text = "LECTURE_HALL"
+offset_left = 800.0
+offset_top = 550.0
+offset_right = 800.0
+offset_bottom = 580.0
+theme_type_variation = &"MapButton"
+theme_override_styles/focus = ExtResource("12_llf4c")
+theme_override_styles/hover_pressed_mirrored = ExtResource("12_llf4c")
+theme_override_styles/hover_pressed = ExtResource("12_llf4c")
+theme_override_styles/hover = ExtResource("12_llf4c")
+theme_override_styles/pressed = ExtResource("12_llf4c")
+theme_override_styles/normal = ExtResource("13_yr7ll")
 
 [connection signal="pressed" from="HospitalButton" to="." method="_on_hospital_button_pressed"]
-[connection signal="pressed" from="RestaurantButton" to="." method="_on_restaurant_button_pressed"]
 [connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="RestaurantButton" to="." method="_on_restaurant_button_pressed"]
 [connection signal="pressed" from="SupermarketButton" to="." method="_on_supermarket_button_pressed"]
 [connection signal="pressed" from="LectureButton" to="." method="_on_lecture_button_pressed"]

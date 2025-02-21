@@ -153,6 +153,7 @@ func _updated_datetime(current_progress: Dictionary, delta_time: int) -> Diction
 	var original_date = current_progress.get("date", 0)
 	var original_time = current_progress.get("time", 0)
 	var total_time = int(original_time + delta_time)
+	@warning_ignore("integer_division")
 	var new_date = original_date + total_time / 24
 	var new_time = total_time % 24
 	return {"date": new_date, "time": new_time}
