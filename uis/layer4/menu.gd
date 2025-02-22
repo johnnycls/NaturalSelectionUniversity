@@ -12,7 +12,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			open_menu()
 
 func close_menu() -> void:
-	menu_content.queue_free()
+	menu_content.close()
 	menu_content = null
 
 func open_menu() -> void:

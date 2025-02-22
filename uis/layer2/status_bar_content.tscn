@@ -1,62 +1,71 @@
-[gd_scene load_steps=15 format=3 uid="uid://davt8kbskdh00"]
+[gd_scene load_steps=18 format=3 uid="uid://davt8kbskdh00"]
 
 [ext_resource type="Script" path="res://uis/layer2/status_bar_content.gd" id="1_ntxo1"]
 [ext_resource type="Texture2D" uid="uid://bun0hj6bl1bc3" path="res://assets/ui_sprites/status/pause.png" id="2_xnn1x"]
 [ext_resource type="Texture2D" uid="uid://wvc7kp5oocjc" path="res://assets/ui_sprites/status/hp.png" id="3_ay8lv"]
-[ext_resource type="Texture2D" uid="uid://2p34b8cdoiab" path="res://assets/ui_sprites/status/hunger2.png" id="4_g558d"]
+[ext_resource type="Texture2D" uid="uid://du4q1tg2hgn1" path="res://assets/ui_sprites/status/pause_hover.png" id="3_no8uw"]
+[ext_resource type="Texture2D" uid="uid://2p34b8cdoiab" path="res://assets/ui_sprites/status/hunger.png" id="4_g558d"]
 [ext_resource type="Texture2D" uid="uid://dkvc5emkt67lj" path="res://assets/ui_sprites/status/paper.png" id="5_q5448"]
 [ext_resource type="Texture2D" uid="uid://b524er2i4dxyj" path="res://assets/ui_sprites/status/spirit.png" id="6_ibngn"]
 [ext_resource type="Texture2D" uid="uid://bqo2ata3ddrhk" path="res://assets/ui_sprites/status/mood.png" id="7_7sikv"]
 [ext_resource type="Texture2D" uid="uid://da3my2jmochyu" path="res://assets/ui_sprites/status/luck.png" id="8_8wcmh"]
 [ext_resource type="Texture2D" uid="uid://cgxash85bo6u3" path="res://assets/ui_sprites/status/money.png" id="9_syjll"]
 [ext_resource type="Texture2D" uid="uid://0vhtvtgybq2w" path="res://assets/ui_sprites/status/unfilled_bar.png" id="10_g2fns"]
-[ext_resource type="Texture2D" uid="uid://dss3yo6vqpvjn" path="res://assets/ui_sprites/status/rounded_bg.png" id="11_omb00"]
 [ext_resource type="Texture2D" uid="uid://ca6iy1q1msh16" path="res://assets/ui_sprites/status/calendar.png" id="12_8ixsg"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uuayp"]
-texture = ExtResource("11_omb00")
+[ext_resource type="Texture2D" uid="uid://cor0a8gflx57w" path="res://assets/ui_sprites/status/round_bg.png" id="12_kmpju"]
+[ext_resource type="Texture2D" uid="uid://dut086sbl102u" path="res://assets/ui_sprites/status/intelligence.png" id="13_1jp0c"]
+[ext_resource type="Texture2D" uid="uid://15rs3y28i8jc" path="res://assets/ui_sprites/status/strength.png" id="13_gvaht"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wy7pt"]
 texture = ExtResource("12_8ixsg")
 
-[node name="MenuContent" type="Control"]
-process_mode = 3
-layout_mode = 3
-anchors_preset = 10
-anchor_right = 1.0
-grow_horizontal = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("1_ntxo1")
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b0x8h"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 8.0
+texture = ExtResource("12_kmpju")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
+[node name="StatusBarContent" type="MarginContainer"]
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 139.0
+offset_bottom = 469.0
 grow_horizontal = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 25
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 25
+script = ExtResource("1_ntxo1")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+process_mode = 3
 layout_mode = 2
-theme_override_constants/separation = 10
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 25
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer"]
+[node name="TopBar" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PauseButton" type="TextureButton" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("2_xnn1x")
+texture_pressed = ExtResource("3_no8uw")
+texture_hover = ExtResource("3_no8uw")
+texture_focused = ExtResource("3_no8uw")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="HP" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="HP" type="HBoxContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-theme_override_constants/separation = -25
+size_flags_stretch_ratio = 1.75
+theme_override_constants/separation = -40
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/HP"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TopBar/HP"]
 z_index = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -64,20 +73,20 @@ texture = ExtResource("3_ay8lv")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/HP"]
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TopBar/HP"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"StatusBar"
 value = 50.0
 
-[node name="Hunger" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="Hunger" type="HBoxContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-theme_override_constants/separation = -25
+size_flags_stretch_ratio = 1.8
+theme_override_constants/separation = -15
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Hunger"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TopBar/Hunger"]
 z_index = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -86,20 +95,20 @@ texture = ExtResource("4_g558d")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Hunger"]
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TopBar/Hunger"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"StatusBar"
 value = 50.0
 
-[node name="Paper" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="Paper" type="HBoxContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-theme_override_constants/separation = -40
+size_flags_stretch_ratio = 1.6
+theme_override_constants/separation = -65
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Paper"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TopBar/Paper"]
 z_index = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -107,20 +116,20 @@ texture = ExtResource("5_q5448")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Paper"]
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TopBar/Paper"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"StatusBar"
 value = 50.0
 
-[node name="Spirit" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="Spirit" type="HBoxContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
-theme_override_constants/separation = -125
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = -90
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Spirit"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TopBar/Spirit"]
 z_index = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -128,20 +137,20 @@ texture = ExtResource("6_ibngn")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Spirit"]
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TopBar/Spirit"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"StatusBar"
 value = 50.0
 
-[node name="Mood" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="Mood" type="HBoxContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 1.75
 theme_override_constants/separation = -20
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Mood"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TopBar/Mood"]
 z_index = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -149,20 +158,20 @@ texture = ExtResource("7_7sikv")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Mood"]
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TopBar/Mood"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"StatusBar"
 value = 50.0
 
-[node name="Luck" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="Luck" type="HBoxContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.0
+size_flags_stretch_ratio = 1.75
 theme_override_constants/separation = -40
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Luck"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TopBar/Luck"]
 z_index = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -170,20 +179,20 @@ texture = ExtResource("8_8wcmh")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/Luck"]
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TopBar/Luck"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"StatusBar"
 value = 50.0
 
-[node name="Money" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="Money" type="HBoxContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 2.8
+size_flags_stretch_ratio = 2.5
 theme_override_constants/separation = -40
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Money"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TopBar/Money"]
 z_index = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -192,44 +201,104 @@ texture = ExtResource("9_syjll")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Money"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/TopBar/Money"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_top = 25
 theme_override_constants/margin_bottom = 25
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/Money/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/TopBar/Money/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.7
 texture = ExtResource("10_g2fns")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Money/MarginContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/TopBar/Money/MarginContainer"]
 z_index = 2
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "1"
+text = "12345678"
 horizontal_alignment = 1
 
-[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer"]
+[node name="DateTime" type="PanelContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
-theme_override_styles/panel = SubResource("StyleBoxTexture_uuayp")
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 3
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 10
-
-[node name="Panel" type="PanelContainer" parent="MarginContainer/HBoxContainer/Panel/MarginContainer"]
-layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_wy7pt")
+
+[node name="Label" type="Label" parent="VBoxContainer/TopBar/DateTime"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/line_spacing = -10
+theme_override_font_sizes/font_size = 32
+text = "123
+12:32"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="LeftBar" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Gap" type="Control" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="RightBar" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 12
+
+[node name="Strength" type="PanelContainer" parent="VBoxContainer/HBoxContainer/RightBar"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_b0x8h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/RightBar/Strength"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -8
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/RightBar/Strength/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("13_gvaht")
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/RightBar/Strength/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/line_spacing = -10
+theme_override_font_sizes/font_size = 32
+text = "123"
+horizontal_alignment = 1
+
+[node name="Intelligence" type="PanelContainer" parent="VBoxContainer/HBoxContainer/RightBar"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_b0x8h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/RightBar/Intelligence"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = -8
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/RightBar/Intelligence/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("13_1jp0c")
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/RightBar/Intelligence/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/line_spacing = -10
+theme_override_font_sizes/font_size = 32
+text = "123"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/TopBar/PauseButton" to="." method="_on_pause_button_pressed"]

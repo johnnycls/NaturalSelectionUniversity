@@ -22,7 +22,7 @@ func start_game() -> void:
 func back_to_home_screen() -> void:
 	Game.end_game()
 	change_ui(home_scene.instantiate())
-	Main.hide_status_bar()
+	hide_status_bar()
 	can_open_menu = false
 
 func change_ui(page: Control) -> void:
