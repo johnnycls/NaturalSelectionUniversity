@@ -17,3 +17,5 @@ me: GOOD_END_13
 friend: GOOD_END_14
 me: GOOD_END_15
 friend: GOOD_END_16
+do State.save_progress(Config.INIT_PROGRESS)
+do Main.back_to_home_screen()

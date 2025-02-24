@@ -11,11 +11,13 @@ func _ready() -> void:
 
 func init():
 	if not State.progress.get("is_intro_finished", false):
-		new_game_btn.grab_focus()
 		continue_btn.hide()
+		if Global.controller != "mouse_keyboard" and Global.controller != "touch_screen":
+			new_game_btn.grab_focus()
 	else:
 		continue_btn.show()
-		continue_btn.grab_focus()
+		if Global.controller != "mouse_keyboard" and Global.controller != "touch_screen":
+			continue_btn.grab_focus()
 
 func _on_settings_btn_pressed() -> void:
 	Main.change_ui(settings_scene.instantiate())

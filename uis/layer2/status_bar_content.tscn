@@ -269,7 +269,7 @@ mouse_filter = 2
 texture = ExtResource("13_gvaht")
 stretch_mode = 5
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/RightBar/Strength/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/RightBar/Strength/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/line_spacing = -10
@@ -293,7 +293,7 @@ mouse_filter = 2
 texture = ExtResource("13_1jp0c")
 stretch_mode = 5
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/RightBar/Intelligence/VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/RightBar/Intelligence/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/line_spacing = -10

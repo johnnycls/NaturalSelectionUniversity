@@ -54,3 +54,19 @@ func get_input_type(): # not supporting html5
 			return "touch_screen"
 		else:
 			return "mouse_keyboard"
+
+func minutes_to_dddhhmm(minutes: int) -> String:
+	var total_hours = minutes / 60
+	var days = total_hours / 24
+	var hours = total_hours % 24
+	var remaining_minutes = minutes % 60	    
+	return "%s\n%02d:%02d" % [days, hours, remaining_minutes]
+
+func get_date() -> int:
+	var minutes = State.progress.get("time", 0)
+	return m2d(minutes)
+
+func m2d(minutes: int) -> int:
+	var total_hours = minutes / 60
+	var days = total_hours / 24
+	return days

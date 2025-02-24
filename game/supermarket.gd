@@ -14,7 +14,7 @@ var ITEMS = [
 var date: int = -1
 var item_choices: Array = []
 
-func _init(saved_dict: Dictionary) -> void:
+func init(saved_dict: Dictionary) -> void:
 	date = saved_dict.get("date", -1)
 	item_choices = saved_dict.get("item_choices", [])
 
@@ -50,12 +50,12 @@ func get_random_choices(choices: int) -> Array:
 	var all_choices = ITEMS.duplicate(true)
 	all_choices.shuffle()
 	var random_choices = all_choices.slice(0, choices)
-	date = State.progress.date
-	State.merge_progress({"supermarket": {"date": State.progress.date, "item_choices": random_choices}})
+	date = Global.get_date()
+	State.merge_progress({"supermarket": {"date": date, "item_choices": random_choices}})
 	return random_choices
 	
 func start_timeline():
-	if State.progress.date != date:
+	if Global.get_date() != date:
 		item_choices = get_random_choices(3)
 	var timeline : DialogicTimeline = DialogicTimeline.new()
 	timeline.events = timeline_events()

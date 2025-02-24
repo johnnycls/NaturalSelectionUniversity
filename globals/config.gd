@@ -9,6 +9,7 @@ const LANG_NAMES = {"cmn": "简体中文", "en": "English", "zh": "繁體中文"
 const DEFAULT_LANG = 1
 
 const BAG_VOLUME = 8
+const TOTAL_DAYS = 100
 
 var INIT_PROGRESS = {
 	"is_intro_finished": false,
@@ -22,8 +23,7 @@ var INIT_PROGRESS = {
 	"luck": 100,
 	"strength": 0,
 	"intelligence": 0,
-	"date": 0,
-	"time": 0,
+	"time": 0, 
 	"bag": [],
 	"supermarket": {},
 	"lecture": {},

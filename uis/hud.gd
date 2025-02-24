@@ -49,3 +49,4 @@ func open_menu() -> void:
 	
 func close_menu() -> void:
 	menu.close_menu()
+	

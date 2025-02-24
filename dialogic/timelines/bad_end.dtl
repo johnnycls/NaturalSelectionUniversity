@@ -5,3 +5,5 @@ join doctor_assistant right
 \doctor_assistant: BAD_END_2
 \doctor: BAD_END_3
 \doctor_assistant: BAD_END_4
+do State.save_progress(Config.INIT_PROGRESS)
+do Main.back_to_home_screen()

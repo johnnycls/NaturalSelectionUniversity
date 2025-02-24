@@ -19,12 +19,12 @@ func choose_event() -> String:
 			return event
 	return ""
 
-func _init(saved_dict: Dictionary) -> void:
+func init(saved_dict: Dictionary) -> void:
 	date = saved_dict.get("date", -1)
 
 func go_out() -> void:
-	if date<State.progress.get(date, 0):
-		State.merge_progress({"go_out": {"date": State.progress.date}})
+	if date<Global.get_date():
+		State.merge_progress({"go_out": {"date": Global.get_date()}})
 		var event = choose_event()
 		match event:
 			"steal":

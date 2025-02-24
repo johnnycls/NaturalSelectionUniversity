@@ -1,13 +1,13 @@
 extends Node2D
 
 var map_scene = preload("res://uis/layer1/map.tscn")
-var go_out = preload("res://game/go_out.gd").new(State.progress.get("go_out", {}))
+var go_out = preload("res://game/go_out.gd").new()
 var hospital = preload("res://game/hospital.gd").new()
-var lecture = preload("res://game/lecture.gd").new(State.progress.get("lecture", {}))
+var lecture = preload("res://game/lecture.gd").new()
 var paper = preload("res://game/paper.gd").new()
-var restaurant = preload("res://game/restaurant.gd").new(State.progress.get("restaurant", {}))
+var restaurant = preload("res://game/restaurant.gd").new()
 var sleep = preload("res://game/sleep.gd").new()
-var supermarket = preload("res://game/supermarket.gd").new(State.progress.get("supermarket", {}))
+var supermarket = preload("res://game/supermarket.gd").new()
 
 var _current_scene: Node
 
@@ -18,7 +18,6 @@ func _remove_scene() -> void:
 		
 func start_intro() -> void:
 	BgmPlayer.play_bgm(4)
-	State.merge_progress(Config.INIT_PROGRESS)
 	Dialogic.start("intro")
 
 func start_ceremony() -> void:
@@ -97,6 +96,11 @@ func start_normal_end() -> void:
 	Main.clear_ui()
 	
 func start_game() -> void:
+	go_out.init(State.progress.get("go_out", {}))
+	lecture.init(State.progress.get("lecture", {}))
+	restaurant.init(State.progress.get("restaurant", {}))
+	supermarket.init(State.progress.get("supermarket", {}))
+	
 	if not State.progress.get("is_intro_finished", false):
 		start_intro()
 	elif not State.progress.get("is_ceremony_finished", false):
@@ -111,17 +115,18 @@ func end_game() -> void:
 func update_status(delta: Dictionary) -> void:
 	var new_progress = _compute_new_progress(delta)
 	State.merge_progress(new_progress)
+	var new_date = Global.m2d(new_progress.get("time", 0))
 	if new_progress.get("hunger", 0) < 0 or new_progress.get("spirit", 0) < 0 or new_progress.get("hp", 0) < 0:
-		if new_progress.get("bag", []).find(8):
+		if 8 in new_progress.get("bag", []):
 			var hp_delta = abs(new_progress.get("hp", 0))+1 if new_progress.get("hp", 0)<0 else 0
 			var spirit_delta = abs(new_progress.get("spirit", 0))+1 if new_progress.get("spirit", 0)<0 else 0
 			var hunger_delta = abs(new_progress.get("hunger", 0))+1 if new_progress.get("hunger", 0)<0 else 0
 			update_status({"bag": {8: -1}, "hp": hp_delta, "spirit": spirit_delta, "hunger": hunger_delta})
 		else:
 			start_bad_end()
-	elif new_progress.get("date", 0) >= 100 and new_progress.paper>=100:
+	elif new_date >= Config.TOTAL_DAYS and new_progress.paper>=100:
 		start_good_end()
-	elif new_progress.get("date", 0) >= 100:
+	elif new_date >= Config.TOTAL_DAYS:
 		start_normal_end()
 
 func _compute_new_progress(delta: Dictionary) -> Dictionary:
@@ -130,15 +135,11 @@ func _compute_new_progress(delta: Dictionary) -> Dictionary:
 		match key:
 			"bag":
 				new_progress.bag = _updated_bag(new_progress.get("bag", []), delta.bag)
-			"time":
-				var new_datetime = _updated_datetime(new_progress, delta.time)
-				new_progress.date = new_datetime.date
-				new_progress.time = new_datetime.time
 			_:
 				new_progress[key] = _updated_stat(new_progress.get(key, 0), delta[key], key)
 	return new_progress
 
-func _updated_bag(current_bag: Dictionary, delta_bag: Dictionary) -> Dictionary:
+func _updated_bag(current_bag: Array, delta_bag: Dictionary) -> Dictionary:
 	var new_bag = current_bag.duplicate(true)
 	for item_id in delta_bag.keys():
 		var delta = delta_bag[item_id]
@@ -148,15 +149,6 @@ func _updated_bag(current_bag: Dictionary, delta_bag: Dictionary) -> Dictionary:
 			for _i in abs(delta):
 				new_bag.erase(item_id)
 	return new_bag
-
-func _updated_datetime(current_progress: Dictionary, delta_time: int) -> Dictionary:
-	var original_date = current_progress.get("date", 0)
-	var original_time = current_progress.get("time", 0)
-	var total_time = int(original_time + delta_time)
-	@warning_ignore("integer_division")
-	var new_date = original_date + total_time / 24
-	var new_time = total_time % 24
-	return {"date": new_date, "time": new_time}
 
 func _updated_stat(current_value: int, delta_value: int, key: String) -> int:
 	var new_value = current_value + delta_value

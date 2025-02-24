@@ -9,3 +9,5 @@ me: NORMAL_END_6
 me: NORMAL_END_7
 me: NORMAL_END_8
 me: NORMAL_END_9
+do State.save_progress(Config.INIT_PROGRESS)
+do Main.back_to_home_screen()

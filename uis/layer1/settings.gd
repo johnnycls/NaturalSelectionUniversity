@@ -13,7 +13,8 @@ func _ready() -> void:
 	lang_select.selected = State.settings.get("language", Config.DEFAULT_LANG)
 
 func init() -> void:
-	lang_select.grab_focus()
+	if Global.controller != "mouse_keyboard" and Global.controller != "touch_screen":
+		lang_select.grab_focus()
 	
 func _save_settings() -> void:
 	var settings: Dictionary = {

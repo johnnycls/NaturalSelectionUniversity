@@ -16,6 +16,7 @@ func open() -> void:
 	if status_bar_content == null:
 		status_bar_content = status_bar_content_scene.instantiate()
 		add_child(status_bar_content)
+		update_status()
 
 func update_status() -> void:
 	if status_bar_content!=null:

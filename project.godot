@@ -79,7 +79,6 @@ layout/style_list=["res://dialogic/styles/visual_novel_style.tres"]
 layout/default_style="res://dialogic/styles/visual_novel_style.tres"
 glossary/default_case_sensitive=true
 variables={
-"good_lecture": false,
 "good_paper": false,
 "good_sleep": false,
 "is_poisoned": false,
