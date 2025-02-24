@@ -1,6 +1,5 @@
 join me center
-set {good_paper} = Game.paper.write_paper()
-if good_paper:
+if Game.paper.write_paper():
 	me: PAPER_1
 else:
 	me: PAPER_2

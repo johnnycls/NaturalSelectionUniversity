@@ -25,3 +25,4 @@ bully: BULLY_2
 	join me center
 	me: BULLY_6
 	do Game.go_out.bully(1, -1)
+do Game.back_to_map()

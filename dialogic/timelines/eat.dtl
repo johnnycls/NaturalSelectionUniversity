@@ -1,6 +1,6 @@
-- RESTAURANT_8 | [if State.progress.bag.get(2, 0) > 0] [else="hide"]
+- RESTAURANT_8 | [if 2 in State.progress.bag] [else="hide"]
 	mouse: RESTAURANT_10
-	set {is_poisoned} = Game.restaurant.before_eat(true)
+	set {is_poisoned} = Game.restaurant.before_eat(true, {selected_food})
 	if {is_poisoned}:
 		RESTAURANT_11
 		me: RESTAURANT_13
@@ -13,7 +13,7 @@
 		else:
 			me: RESTAURANT_4
 - RESTAURANT_9
-	set {is_poisoned} = Game.restaurant.before_eat(false)
+	set {is_poisoned} = Game.restaurant.before_eat(false, {selected_food})
 	if {is_poisoned}:
 		me: RESTAURANT_5
 		me: RESTAURANT_6

@@ -63,4 +63,4 @@ func start_timeline():
 
 func buy_item(idx: int):
 	var item = item_choices[idx]
-	Game.update_status({"money": -item.money, "bag": {item.id: 1}})
+	Game.update_status({"money": -item.cost, "bag": {item.id: 1}})

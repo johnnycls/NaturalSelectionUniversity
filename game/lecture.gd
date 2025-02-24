@@ -4,7 +4,7 @@ const BAD_LECTURE_PROB = 0.2
 
 var COURSES = [
 	{"name": "COURSE_0", "effect": {"intelligence": 4, "luck": 40, "time": 180, "spirit": -30, "hunger": -30}},
-	{"name": "COURSE_1", "effect": {"strength": 12, "hp": -10, "time": 180, "spirit": -40, "hunger": -40}},
+	{"name": "COURSE_1", "effect": {"strength": 10, "hp": -10, "time": 180, "spirit": -40, "hunger": -40}},
 	{"name": "COURSE_2", "effect": {"intelligence": 3, "mood": 35, "time": 180, "spirit": -25, "hunger": -25}},
 	{"name": "COURSE_3", "effect": {"intelligence": 4, "time": 120, "spirit": -20, "hunger": -20}},
 	{"name": "COURSE_4", "effect": {"strength": 8, "time": 120, "spirit": -30, "hunger": -30}},

@@ -56,7 +56,9 @@ func get_input_type(): # not supporting html5
 			return "mouse_keyboard"
 
 func minutes_to_dddhhmm(minutes: int) -> String:
+	@warning_ignore("integer_division")
 	var total_hours = minutes / 60
+	@warning_ignore("integer_division")
 	var days = total_hours / 24
 	var hours = total_hours % 24
 	var remaining_minutes = minutes % 60	    
@@ -67,6 +69,8 @@ func get_date() -> int:
 	return m2d(minutes)
 
 func m2d(minutes: int) -> int:
+	@warning_ignore("integer_division")
 	var total_hours = minutes / 60
+	@warning_ignore("integer_division")
 	var days = total_hours / 24
 	return days

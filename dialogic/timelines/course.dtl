@@ -1,6 +1,6 @@
 join me center
 if Game.lecture.attend_lecture({selected_course}):
-	me: LECTURE_3
-else:
 	me: LECTURE_2
+else:
+	me: LECTURE_3
 do Game.lecture.start_timeline()

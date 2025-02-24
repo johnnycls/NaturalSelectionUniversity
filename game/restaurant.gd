@@ -1,16 +1,16 @@
 class_name Restaurant
 
-const FOOD_POISON_PROB = 0.3
+const FOOD_POISON_PROB = 0.2
 
 var FOODS = [
-	{"name": tr("FOOD_0"), "cost": 15, "effect": {"hunger": 50, "time": 60, "mood": -10}, "is_tasty": false},
-	{"name": tr("FOOD_1"), "cost": 25, "effect": {"hunger": 30, "mood": 15}, "is_tasty": true},
-	{"name": tr("FOOD_2"), "cost": 25, "effect": {"hunger": 20, "strength": 5, "mood": -5, "time": 60}, "is_tasty": false},
-	{"name": tr("FOOD_3"), "cost": 25, "effect": {"hunger": 25, "intelligence": 7, "mood": -10, "time": 60}, "is_tasty": false},
-	{"name": tr("FOOD_4"), "cost": 25, "effect": {"hunger": 20, "luck": 15, "mood": 15}, "is_tasty": true},
-	{"name": tr("FOOD_5"), "cost": 25, "effect": {"hunger": 25, "spirit": 30}, "is_tasty": true},
-	{"name": tr("FOOD_6"), "cost": 25, "effect": {"hunger": 25, "hp": 40}, "is_tasty": true},
-	{"name": tr("FOOD_7"), "cost": 20, "effect": {"spirit": 50}, "is_tasty": true}
+	{"name": tr("FOOD_0"), "cost": 15, "effect": {"hunger": 50, "time": 60, "mood": -20}, "is_tasty": false},
+	{"name": tr("FOOD_1"), "cost": 20, "effect": {"hunger": 30, "mood": 20, "time": 15}, "is_tasty": true},
+	{"name": tr("FOOD_2"), "cost": 25, "effect": {"hunger": 30, "strength": 4, "mood": -10, "time": 60}, "is_tasty": false},
+	{"name": tr("FOOD_3"), "cost": 25, "effect": {"hunger": 30, "intelligence": 4, "mood": -10, "time": 60}, "is_tasty": false},
+	{"name": tr("FOOD_4"), "cost": 30, "effect": {"hunger": 20, "luck": 20, "mood": 20, "time": 15}, "is_tasty": true},
+	{"name": tr("FOOD_5"), "cost": 30, "effect": {"hunger": 30, "spirit": 25, "mood": 5, "time": 30}, "is_tasty": true},
+	{"name": tr("FOOD_6"), "cost": 30, "effect": {"hunger": 30, "hp": 25, "time": 30}, "is_tasty": true},
+	{"name": tr("FOOD_7"), "cost": 25, "effect": {"spirit": 30, "time": 15}, "is_tasty": true}
 ]
 var date: int = -1
 var food_choices: Array = []
@@ -45,7 +45,7 @@ func get_random_choices(choices: int) -> Array:
 	all_choices.shuffle()
 	var random_choices = all_choices.slice(0, choices)
 	date = Global.get_date()
-	State.merge_progress({"restaurant": {"date": date, "item_choices": random_choices}})
+	State.merge_progress({"restaurant": {"date": date, "food_choices": random_choices}})
 	return random_choices
 	
 func start_timeline():
@@ -55,12 +55,13 @@ func start_timeline():
 	timeline.events = timeline_events()
 	Dialogic.start(timeline)
 
-func before_eat(is_mouse: bool) -> bool: # is_poison
+func before_eat(is_mouse: bool, idx: int) -> bool: # is_poison
+	var food = food_choices[idx]
 	if randf() < FOOD_POISON_PROB:
 		if is_mouse:
-			Game.update_status({"bag": {3: -1}})
+			Game.update_status({"money": food.cost}.merged({"bag": {3: -1}}))
 		else:
-			Game.update_status({})
+			Game.update_status({"money": -300-food.cost, "time": 180})
 		return true
 	return false
 

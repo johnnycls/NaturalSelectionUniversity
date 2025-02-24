@@ -116,7 +116,7 @@ func update_status(delta: Dictionary) -> void:
 	var new_progress = _compute_new_progress(delta)
 	State.merge_progress(new_progress)
 	var new_date = Global.m2d(new_progress.get("time", 0))
-	if new_progress.get("hunger", 0) < 0 or new_progress.get("spirit", 0) < 0 or new_progress.get("hp", 0) < 0:
+	if new_progress.get("hunger", 0) <= 0 or new_progress.get("spirit", 0) <= 0 or new_progress.get("hp", 0) <= 0:
 		if 8 in new_progress.get("bag", []):
 			var hp_delta = abs(new_progress.get("hp", 0))+1 if new_progress.get("hp", 0)<0 else 0
 			var spirit_delta = abs(new_progress.get("spirit", 0))+1 if new_progress.get("spirit", 0)<0 else 0
@@ -139,14 +139,15 @@ func _compute_new_progress(delta: Dictionary) -> Dictionary:
 				new_progress[key] = _updated_stat(new_progress.get(key, 0), delta[key], key)
 	return new_progress
 
-func _updated_bag(current_bag: Array, delta_bag: Dictionary) -> Dictionary:
+func _updated_bag(current_bag: Array, delta_bag: Dictionary) -> Array:
 	var new_bag = current_bag.duplicate(true)
 	for item_id in delta_bag.keys():
 		var delta = delta_bag[item_id]
 		if delta > 0:
-			new_bag += [item_id] * delta
+			for _i in range(delta):
+				new_bag.append(item_id)
 		elif delta < 0:
-			for _i in abs(delta):
+			for _i in range(abs(delta)):
 				new_bag.erase(item_id)
 	return new_bag
 
