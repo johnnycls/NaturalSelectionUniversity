@@ -105,8 +105,8 @@ value = 50.0
 [node name="Paper" type="HBoxContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.6
-theme_override_constants/separation = -65
+size_flags_stretch_ratio = 1.8
+theme_override_constants/separation = -50
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/TopBar/Paper"]
 z_index = 1
@@ -116,13 +116,48 @@ texture = ExtResource("5_q5448")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TopBar/Paper"]
+[node name="Control" type="Control" parent="VBoxContainer/TopBar/Paper"]
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer/TopBar/Paper/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -24.0
+offset_right = 69.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"StatusBar"
+max_value = 10000.0
+value = 5000.0
 allow_greater = true
 allow_lesser = true
+show_percentage = false
+
+[node name="Label" type="Label" parent="VBoxContainer/TopBar/Paper/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.5
+offset_top = -47.0
+offset_right = 53.5
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Spirit" type="HBoxContainer" parent="VBoxContainer/TopBar"]
 layout_mode = 2

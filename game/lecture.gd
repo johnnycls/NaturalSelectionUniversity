@@ -1,7 +1,5 @@
 class_name Lecture
 
-const BAD_LECTURE_PROB = 0.2
-
 var COURSES = [
 	{"name": "COURSE_0", "effect": {"intelligence": 4, "luck": 40, "time": 180, "spirit": -30, "hunger": -30}},
 	{"name": "COURSE_1", "effect": {"strength": 10, "hp": -10, "time": 180, "spirit": -40, "hunger": -40}},
@@ -16,7 +14,10 @@ var course_choices: Array = []
 func init(saved_dict: Dictionary) -> void:
 	date = saved_dict.get("date", -1)
 	course_choices = saved_dict.get("course_choices", [])
-
+	
+func bad_lecture_prob() -> float:
+	return (100 - State.progress.get("luck", 0)) / 200
+		
 func timeline_events() -> Array:
 	return ("""join me center
 me: LECTURE_0
@@ -48,7 +49,7 @@ func start_timeline():
 
 func attend_lecture(idx: int) -> bool: # good_lecture
 	var course = course_choices[idx]
-	if randf()<BAD_LECTURE_PROB:
+	if randf()<bad_lecture_prob():
 		var effect = {}
 		for key in course.effect:
 			effect[key] = course.effect[key] if key in ["time", "hunger", "spirit"] else course.effect[key]/2

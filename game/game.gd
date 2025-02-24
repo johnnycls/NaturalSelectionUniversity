@@ -116,6 +116,7 @@ func update_status(delta: Dictionary) -> void:
 	var new_progress = _compute_new_progress(delta)
 	State.merge_progress(new_progress)
 	var new_date = Global.m2d(new_progress.get("time", 0))
+	
 	if new_progress.get("hunger", 0) <= 0 or new_progress.get("spirit", 0) <= 0 or new_progress.get("hp", 0) <= 0:
 		if 8 in new_progress.get("bag", []):
 			var hp_delta = abs(new_progress.get("hp", 0))+1 if new_progress.get("hp", 0)<0 else 0
@@ -124,7 +125,7 @@ func update_status(delta: Dictionary) -> void:
 			update_status({"bag": {8: -1}, "hp": hp_delta, "spirit": spirit_delta, "hunger": hunger_delta})
 		else:
 			start_bad_end()
-	elif new_date >= Config.TOTAL_DAYS and new_progress.paper>=100:
+	elif new_date >= Config.TOTAL_DAYS and new_progress.paper>=10000:
 		start_good_end()
 	elif new_date >= Config.TOTAL_DAYS:
 		start_normal_end()

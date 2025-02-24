@@ -1,16 +1,17 @@
 class_name Restaurant
 
-const FOOD_POISON_PROB = 0.2
+func food_poison_prob() -> float:
+	return (110 - State.progress.get("luck", 0)) / 200
 
 var FOODS = [
-	{"name": tr("FOOD_0"), "cost": 15, "effect": {"hunger": 50, "time": 60, "mood": -20}, "is_tasty": false},
-	{"name": tr("FOOD_1"), "cost": 20, "effect": {"hunger": 30, "mood": 20, "time": 15}, "is_tasty": true},
-	{"name": tr("FOOD_2"), "cost": 25, "effect": {"hunger": 30, "strength": 4, "mood": -10, "time": 60}, "is_tasty": false},
-	{"name": tr("FOOD_3"), "cost": 25, "effect": {"hunger": 30, "intelligence": 4, "mood": -10, "time": 60}, "is_tasty": false},
-	{"name": tr("FOOD_4"), "cost": 30, "effect": {"hunger": 20, "luck": 20, "mood": 20, "time": 15}, "is_tasty": true},
-	{"name": tr("FOOD_5"), "cost": 30, "effect": {"hunger": 30, "spirit": 25, "mood": 5, "time": 30}, "is_tasty": true},
-	{"name": tr("FOOD_6"), "cost": 30, "effect": {"hunger": 30, "hp": 25, "time": 30}, "is_tasty": true},
-	{"name": tr("FOOD_7"), "cost": 25, "effect": {"spirit": 30, "time": 15}, "is_tasty": true}
+	{"name": tr("FOOD_0"), "cost": 15, "effect": {"hunger": 60, "time": 60, "mood": -20}, "is_tasty": false},
+	{"name": tr("FOOD_1"), "cost": 20, "effect": {"hunger": 40, "mood": 20, "time": 15}, "is_tasty": true},
+	{"name": tr("FOOD_2"), "cost": 25, "effect": {"hunger": 40, "strength": 4, "mood": -10, "time": 60}, "is_tasty": false},
+	{"name": tr("FOOD_3"), "cost": 25, "effect": {"hunger": 40, "intelligence": 4, "mood": -10, "time": 60}, "is_tasty": false},
+	{"name": tr("FOOD_4"), "cost": 30, "effect": {"hunger": 30, "luck": 20, "mood": 20, "time": 15}, "is_tasty": true},
+	{"name": tr("FOOD_5"), "cost": 30, "effect": {"hunger": 40, "spirit": 25, "mood": 5, "time": 30}, "is_tasty": true},
+	{"name": tr("FOOD_6"), "cost": 30, "effect": {"hunger": 40, "hp": 25, "time": 30}, "is_tasty": true},
+	{"name": tr("FOOD_7"), "cost": 25, "effect": {"spirit": 25, "time": 30}, "is_tasty": true}
 ]
 var date: int = -1
 var food_choices: Array = []
@@ -57,12 +58,13 @@ func start_timeline():
 
 func before_eat(is_mouse: bool, idx: int) -> bool: # is_poison
 	var food = food_choices[idx]
-	if randf() < FOOD_POISON_PROB:
+	if randf() < food_poison_prob():
 		if is_mouse:
-			Game.update_status({"money": food.cost}.merged({"bag": {3: -1}}))
+			Game.update_status({"money": -food.cost}.merged({"bag": {3: -1}, "luck": 10}))
 		else:
-			Game.update_status({"money": -300-food.cost, "time": 180})
+			Game.update_status({"money": -300-food.cost, "time": 180, "luck": 10})
 		return true
+	Game.update_status({"money": -food.cost})
 	return false
 
 func eat(idx: int) -> bool: # is_tasty
