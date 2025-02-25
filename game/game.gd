@@ -1,5 +1,7 @@
 extends Node2D
 
+var bell_sound = preload("res://assets/audio/bell.mp3")
+
 var map_scene = preload("res://uis/layer1/map.tscn")
 var go_out = preload("res://game/go_out.gd").new()
 var hospital = preload("res://game/hospital.gd").new()
@@ -82,6 +84,7 @@ func start_merchant() -> void:
 	
 func start_bad_end() -> void:
 	BgmPlayer.play_bgm(0)
+	Global.play_sound(bell_sound)
 	Dialogic.start("bad_end")
 	Main.clear_ui()
 	
@@ -125,7 +128,7 @@ func update_status(delta: Dictionary) -> void:
 			update_status({"bag": {8: -1}, "hp": hp_delta, "spirit": spirit_delta, "hunger": hunger_delta})
 		else:
 			start_bad_end()
-	elif new_date >= Config.TOTAL_DAYS and new_progress.paper>=10000:
+	elif new_date >= Config.TOTAL_DAYS and new_progress.paper>=100000:
 		start_good_end()
 	elif new_date >= Config.TOTAL_DAYS:
 		start_normal_end()

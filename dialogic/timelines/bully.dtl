@@ -10,19 +10,19 @@ bully: BULLY_2
 	bully: BULLY_8
 	me: BULLY_9
 	- BULLY_10
-		bully: BULLY_14
 		do Game.go_out.bully(0, -1)
+		bully: BULLY_14
 		bullied: BULLY_15
 	- BULLY_11 | [if 0 in State.progress.bag] [else="hide"]
-		bully: BULLY_14
 		do Game.go_out.bully(0, 0)
+		bully: BULLY_14
 		bullied: BULLY_15
 	- BULLY_12 | [if 1 in State.progress.bag] [else="hide"]
-		bully: BULLY_13
 		do Game.go_out.bully(0, 1)
+		bully: BULLY_13
 		bullied: BULLY_15
 - BULLY_4
 	join me center
-	me: BULLY_6
 	do Game.go_out.bully(1, -1)
+	me: BULLY_6
 do Game.back_to_map()

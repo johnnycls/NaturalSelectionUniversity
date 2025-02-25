@@ -9,7 +9,7 @@ var select_sound = preload("res://assets/audio/select.mp3")
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func select() -> void:
-	Global.play_sound(audio_player, select_sound)
+	Global.play_sound(select_sound, audio_player)
 
 func _ready() -> void:
 	add_sound_effects_for_btns(ui)

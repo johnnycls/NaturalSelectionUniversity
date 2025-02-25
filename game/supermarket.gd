@@ -1,5 +1,7 @@
 class_name Supermarket
 
+var buy_sound = preload("res://assets/audio/buy.mp3")
+
 var date: int = -1
 var item_choices: Array = []
 
@@ -51,5 +53,6 @@ func start_timeline():
 	Dialogic.start(timeline)
 
 func buy_item(idx: int):
+	Global.play_sound(buy_sound)
 	var item = item_choices[idx]
 	Game.update_status({"money": -item.cost, "bag": {item.id: 1}})

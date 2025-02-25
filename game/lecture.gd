@@ -1,12 +1,15 @@
 class_name Lecture
 
+var sigh_sound = preload("res://assets/audio/sigh.mp3")
+var woo_sound = preload("res://assets/audio/woo.mp3")
+var yay_sound = preload("res://assets/audio/yay.mp3")
+
 var COURSES = [
-	{"name": "COURSE_0", "effect": {"intelligence": 4, "luck": 40, "time": 180, "spirit": -30, "hunger": -30}},
-	{"name": "COURSE_1", "effect": {"strength": 10, "hp": -10, "time": 180, "spirit": -40, "hunger": -40}},
-	{"name": "COURSE_2", "effect": {"intelligence": 3, "mood": 35, "time": 180, "spirit": -25, "hunger": -25}},
-	{"name": "COURSE_3", "effect": {"intelligence": 4, "time": 120, "spirit": -20, "hunger": -20}},
-	{"name": "COURSE_4", "effect": {"strength": 8, "time": 120, "spirit": -30, "hunger": -30}},
-	{"name": "COURSE_5", "effect": {"intelligence": 4, "mood": 15, "time": 120, "spirit": -20, "hunger": -20}},
+	{"name": "COURSE_0", "effect": {"intelligence": 2, "luck": 20, "time": 180, "spirit": -30, "hunger": -30}},
+	{"name": "COURSE_1", "effect": {"strength": 4, "hp": -20, "time": 180, "spirit": -40, "hunger": -40}},
+	{"name": "COURSE_2", "effect": {"intelligence": 1, "mood": 30, "time": 180, "spirit": -15, "hunger": -30}},
+	{"name": "COURSE_3", "effect": {"intelligence": 3, "time": 180, "spirit": -30, "hunger": -30}},
+	{"name": "COURSE_4", "effect": {"strength": 3, "time": 180, "spirit": -40, "hunger": -40}},
 ]
 var date: int = -1
 var course_choices: Array = []
@@ -50,10 +53,12 @@ func start_timeline():
 func attend_lecture(idx: int) -> bool: # good_lecture
 	var course = course_choices[idx]
 	if randf()<bad_lecture_prob():
+		Global.play_sound(sigh_sound)
 		var effect = {}
 		for key in course.effect:
 			effect[key] = course.effect[key] if key in ["time", "hunger", "spirit"] else course.effect[key]/2
 		Game.update_status(effect)
 		return false
+	Global.play_sound(yay_sound if randf() < 0.5 else woo_sound)
 	Game.update_status(course.effect)
 	return true

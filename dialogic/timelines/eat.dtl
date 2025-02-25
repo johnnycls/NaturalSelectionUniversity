@@ -18,6 +18,7 @@
 		me: RESTAURANT_5
 		me: RESTAURANT_6
 		me: RESTAURANT_7
+		do Game.restaurant.cry()
 	else:
 		set {is_tasty} = Game.restaurant.eat({selected_food})
 		if {is_tasty}:

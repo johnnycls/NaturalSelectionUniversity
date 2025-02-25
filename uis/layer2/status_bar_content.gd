@@ -19,7 +19,7 @@ func update_status() -> void:
 	hp_bar.value = State.progress.get("hp", 0)
 	hunger_bar.value = State.progress.get("hunger", 0)
 	paper_bar.value = State.progress.get("paper", 0.0)
-	paper_label.text = "%.1f%%" % (State.progress.get("paper", 0.0)/100.0)
+	paper_label.text = "%.1f%%" % (State.progress.get("paper", 0.0)/1000.0)
 	spirit_bar.value = State.progress.get("spirit", 0)
 	mood_bar.value = State.progress.get("mood", 0)
 	luck_bar.value = State.progress.get("luck", 0)

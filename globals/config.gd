@@ -23,7 +23,7 @@ var INIT_PROGRESS = {
 	"luck": 100,
 	"strength": 0,
 	"intelligence": 0,
-	"time": 0, 
+	"time": 1440, 
 	"bag": [],
 	"supermarket": {},
 	"lecture": {},
