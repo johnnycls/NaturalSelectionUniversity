@@ -17,7 +17,7 @@ label choice
 	jump choice
 - {tr("HOSPITAL_6") % Game.hospital.blood_buy_price()} | [if State.progress.get("money", 0)>=Game.hospital.blood_buy_price()] [else="disable"]
 	\doctor: HOSPITAL_9
-	if randf() < Game.hospital.CHICKEN_BLOOD_PROB:
+	if randf() < Game.hospital.chicken_blood_prob():
 		\doctor: HOSPITAL_11
 		do Game.hospital.buy_blood(true)
 	else:

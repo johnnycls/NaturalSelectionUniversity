@@ -7,17 +7,17 @@ var woo_sound = preload("res://assets/audio/woo.mp3")
 var yay_sound = preload("res://assets/audio/yay.mp3")
 
 func food_poison_prob() -> float:
-	return 0.3
+	return 0.25
 
 var FOODS = [
-	{"name": tr("FOOD_0"), "cost": 15, "effect": {"hunger": 60, "time": 60, "mood": -20}, "is_tasty": false},
-	{"name": tr("FOOD_1"), "cost": 20, "effect": {"hunger": 40, "mood": 20, "time": 15}, "is_tasty": true},
-	{"name": tr("FOOD_2"), "cost": 25, "effect": {"hunger": 40, "strength": 2, "mood": -10, "time": 60}, "is_tasty": false},
-	{"name": tr("FOOD_3"), "cost": 25, "effect": {"hunger": 40, "intelligence": 2, "mood": -10, "time": 60}, "is_tasty": false},
-	{"name": tr("FOOD_4"), "cost": 30, "effect": {"hunger": 30, "luck": 20, "mood": 20, "time": 15}, "is_tasty": true},
-	{"name": tr("FOOD_5"), "cost": 30, "effect": {"hunger": 40, "spirit": 25, "mood": 5, "time": 30}, "is_tasty": true},
-	{"name": tr("FOOD_6"), "cost": 30, "effect": {"hunger": 40, "hp": 25, "time": 30}, "is_tasty": true},
-	{"name": tr("FOOD_7"), "cost": 25, "effect": {"spirit": 25, "time": 30}, "is_tasty": true}
+	{"name": "FOOD_0", "cost": 15, "effect": {"hunger": 60, "time": 60, "mood": -20}, "is_tasty": false},
+	{"name": "FOOD_1", "cost": 20, "effect": {"hunger": 40, "mood": 20, "time": 15}, "is_tasty": true},
+	{"name": "FOOD_2", "cost": 25, "effect": {"hunger": 40, "strength": 2, "mood": -10, "time": 60}, "is_tasty": false},
+	{"name": "FOOD_3", "cost": 25, "effect": {"hunger": 40, "intelligence": 2, "mood": -10, "time": 60}, "is_tasty": false},
+	{"name": "FOOD_4", "cost": 30, "effect": {"hunger": 30, "luck": 20, "mood": 20, "time": 15}, "is_tasty": true},
+	{"name": "FOOD_5", "cost": 30, "effect": {"hunger": 40, "spirit": 25, "mood": 5, "time": 30}, "is_tasty": true},
+	{"name": "FOOD_6", "cost": 30, "effect": {"hunger": 40, "hp": 25, "time": 30}, "is_tasty": true},
+	{"name": "FOOD_7", "cost": 25, "effect": {"spirit": 25, "time": 30}, "is_tasty": true}
 ]
 var date: int = -1
 var food_choices: Array = []
@@ -47,9 +47,9 @@ waiter: RESTAURANT_2
 leave me
 leave waiter
 do Game.back_to_map()""" % [
-	"%s: $%s" % [food_choices[0].name, food_choices[0].cost], food_choices[0].cost, 
-	"%s: $%s" % [food_choices[1].name, food_choices[1].cost], food_choices[1].cost, 
-	"%s: $%s" % [food_choices[2].name, food_choices[2].cost], food_choices[2].cost, 
+	"%s: $%s" % [tr(food_choices[0].name), food_choices[0].cost], food_choices[0].cost, 
+	"%s: $%s" % [tr(food_choices[1].name), food_choices[1].cost], food_choices[1].cost, 
+	"%s: $%s" % [tr(food_choices[2].name), food_choices[2].cost], food_choices[2].cost, 
 ]).split("\n")
 
 func get_random_choices(choices: int) -> Array:

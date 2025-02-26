@@ -4,7 +4,8 @@ var buy_sound = preload("res://assets/audio/buy.mp3")
 var woo_sound = preload("res://assets/audio/woo.mp3")
 var yay_sound = preload("res://assets/audio/yay.mp3")
 
-const CHICKEN_BLOOD_PROB = 0.1
+func chicken_blood_prob() -> float:
+	return float(State.progress.get("luck", 0)) / 500.0
 
 func liver_buy_price() -> int:
 	return 100

@@ -53,12 +53,12 @@ func steal(desire: int, item_id: int):
 		3: # all
 			match item_id:
 				-1: # fist
-					var robber_strength = randi_range(10, 15) * Global.get_date()
+					var robber_strength = randi_range(7, 10) * Global.get_date()
 					var damage = max(robber_strength-State.progress.get("strength", 0), 0)
 					Global.play_sound(punch_sound)
 					Game.update_status({"hp": -damage, "luck": 10})
 				0: # knife
-					var robber_strength = randi_range(10, 15) * Global.get_date()
+					var robber_strength = randi_range(7, 10) * Global.get_date()
 					var damage = max(robber_strength-(State.progress.get("strength", 0)*2), 0)
 					Global.play_sound(draw_sword_sound)
 					var new_bag = Game.remove_bag_item(0)
@@ -76,12 +76,12 @@ func bully(decision: int, item_id: int):
 		0: # help
 			match item_id:
 				-1: # fist
-					var robber_strength = randi_range(5, 10) * Global.get_date()
+					var robber_strength = randi_range(5, 8) * Global.get_date()
 					var damage = max(robber_strength-State.progress.get("strength", 0), 0)
 					Global.play_sound(punch_sound)
 					Game.update_status({"hp": -damage, "luck": 20, "mood": 20, "time": 30})
 				0: # knife
-					var robber_strength = randi_range(5, 10) * Global.get_date()
+					var robber_strength = randi_range(5, 8) * Global.get_date()
 					var damage = max(robber_strength-(State.progress.get("strength", 0)*2), 0)
 					Global.play_sound(draw_sword_sound)
 					var new_bag = Game.remove_bag_item(0)

@@ -6,7 +6,7 @@ var yay_sound = preload("res://assets/audio/yay.mp3")
 
 var COURSES = [
 	{"name": "COURSE_0", "effect": {"intelligence": 2, "luck": 20, "time": 180, "spirit": -30, "hunger": -30}},
-	{"name": "COURSE_1", "effect": {"strength": 4, "hp": -20, "time": 180, "spirit": -40, "hunger": -40}},
+	{"name": "COURSE_1", "effect": {"strength": 5, "hp": -20, "time": 180, "spirit": -40, "hunger": -40}},
 	{"name": "COURSE_2", "effect": {"intelligence": 1, "mood": 30, "time": 180, "spirit": -15, "hunger": -30}},
 	{"name": "COURSE_3", "effect": {"intelligence": 3, "time": 180, "spirit": -30, "hunger": -30}},
 	{"name": "COURSE_4", "effect": {"strength": 3, "time": 180, "spirit": -40, "hunger": -40}},
