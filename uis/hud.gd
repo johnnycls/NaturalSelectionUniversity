@@ -47,7 +47,7 @@ func popup(page: Control) -> void:
 	popup_layer.popup(page)
 	
 func close_popup() -> void:
-	popup_layer.close()
+	popup_layer.close_popup()
 
 func open_menu() -> void:
 	menu.open_menu()

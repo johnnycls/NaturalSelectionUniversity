@@ -30,15 +30,15 @@ func timeline_events() -> Array:
 	return ("""[background arg="res://assets/environment_sprites/restaurant.jpg" fade="0.0"]
 join waiter center
 waiter: RESTAURANT_0
-- %s | [if {State.progress.money} >= %s] [else="disabled"]
+- %s | [if {State.progress.money} >= %s] [else="disable"]
 	do Game.restaurant.play_buy_sound()
 	set {selected_food} = 0
 	jump eat/
-- %s | [if {State.progress.money} >= %s] [else="disabled"]
+- %s | [if {State.progress.money} >= %s] [else="disable"]
 	do Game.restaurant.play_buy_sound()
 	set {selected_food} = 1
 	jump eat/
-- %s | [if {State.progress.money} >= %s] [else="disabled"]
+- %s | [if {State.progress.money} >= %s] [else="disable"]
 	do Game.restaurant.play_buy_sound()
 	set {selected_food} = 2
 	jump eat/
@@ -71,9 +71,10 @@ func before_eat(is_mouse: bool, idx: int) -> bool: # is_poison
 	var food = food_choices[idx]
 	if randf() < food_poison_prob():
 		if is_mouse:
-			Game.update_status({"money": -food.cost}.merged({"bag": {3: -1}, "luck": 10}))
+			var new_bag = Game.remove_bag_item(3)
+			Game.update_status({"money": -food.cost, "bag": new_bag, "luck": 10})
 		else:
-			Game.update_status({"money": -300-food.cost, "time": 180, "luck": 10, "mood": -5})
+			Game.update_status({"money": -300-food.cost, "time": 180, "luck": 15, "mood": -15})
 		return true
 	Game.update_status({"money": -food.cost})
 	return false

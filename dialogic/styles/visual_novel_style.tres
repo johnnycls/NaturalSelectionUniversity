@@ -45,7 +45,7 @@ overrides = {
 "box_panel": "\"res://dialogic/styles/vn_textbox_default_panel.tres\"",
 "box_size": "Vector2(1770, 200)",
 "name_label_box_modulate": "Color(1, 1, 1, 1)",
-"name_label_box_offset": "Vector2(100, -7)",
+"name_label_box_offset": "Vector2(100, -16)",
 "name_label_box_panel": "\"res://dialogic/styles/vn_textbox_name_label_panel.tres\"",
 "name_label_box_use_global_color": "false",
 "name_label_custom_font_size": "32.0",
@@ -73,7 +73,9 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_sal78"]
 script = ExtResource("2_8jw60")
 scene = ExtResource("8_vlys7")
-overrides = {}
+overrides = {
+"text_color_disabled": "Color(0.662745, 0.662745, 0.662745, 0.784314)"
+}
 
 [sub_resource type="Resource" id="Resource_0s07a"]
 script = ExtResource("2_8jw60")
@@ -102,4 +104,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("2_8jw60")]([])
-metadata/_latest_layer = "17"
+metadata/_latest_layer = "13"

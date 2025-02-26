@@ -30,10 +30,11 @@ func update_status() -> void:
 	
 	for n in left_bar.get_children():
 		n.queue_free()
-	for idx in range(State.progress.get("bag", []).size()):
+	for idx in range(Config.BAG_VOLUME):
 		var item_button = item_button_scene.instantiate()
 		left_bar.add_child(item_button)
-		item_button.init(State.progress.bag[idx], idx)
+		if idx<State.progress.get("bag", []).size():
+			item_button.init(State.progress.bag[idx], idx)
 
 func _on_pause_button_pressed() -> void:
 	Main.open_menu()

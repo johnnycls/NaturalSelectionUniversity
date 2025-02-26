@@ -61,12 +61,15 @@ func steal(desire: int, item_id: int):
 					var robber_strength = randi_range(10, 15) * Global.get_date()
 					var damage = max(robber_strength-(State.progress.get("strength", 0)*2), 0)
 					Global.play_sound(draw_sword_sound)
-					Game.update_status({"hp": -damage, "luck": 10, "bag": {0: -1}})
+					var new_bag = Game.remove_bag_item(0)
+					Game.update_status({"hp": -damage, "luck": 10, "bag": new_bag})
 				1: # grenade
 					Global.play_sound(explosion_sound)
-					Game.update_status({"hp": -10, "luck": 10, "bag": {1: -1}})
+					var new_bag = Game.remove_bag_item(1)
+					Game.update_status({"hp": -10, "luck": 10, "bag": new_bag})
 				7: # cloak
-					Game.update_status({"luck": 10, "bag": {7: -1}})
+					var new_bag = Game.remove_bag_item(7)
+					Game.update_status({"luck": 10, "bag": new_bag})
 
 func bully(decision: int, item_id: int):
 	match decision:
@@ -81,9 +84,11 @@ func bully(decision: int, item_id: int):
 					var robber_strength = randi_range(5, 10) * Global.get_date()
 					var damage = max(robber_strength-(State.progress.get("strength", 0)*2), 0)
 					Global.play_sound(draw_sword_sound)
-					Game.update_status({"hp": -damage, "luck": 20, "bag": {0: -1}, "mood": 20, "time": 30})
+					var new_bag = Game.remove_bag_item(0)
+					Game.update_status({"hp": -damage, "luck": 20, "bag": new_bag, "mood": 20, "time": 30})
 				1: # grenade
 					Global.play_sound(explosion_sound)
-					Game.update_status({"hp": -10, "luck": 20, "bag": {1: -1}, "mood": 20, "time": 30})
+					var new_bag = Game.remove_bag_item(1)
+					Game.update_status({"hp": -10, "luck": 20, "bag": new_bag, "mood": 20, "time": 30})
 		1: # not help
 			Game.update_status({"luck": -25, "mood": -10})

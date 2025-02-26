@@ -17,7 +17,7 @@ content_margin_top = 15.0
 content_margin_right = 15.0
 content_margin_bottom = 15.0
 texture = ExtResource("1_cpxps")
-modulate_color = Color(1, 1, 1, 0.686275)
+modulate_color = Color(0.7, 0.7, 0.7, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_82753"]
 content_margin_left = 15.0
@@ -28,18 +28,18 @@ texture = ExtResource("1_cpxps")
 modulate_color = Color(0.7, 0.7, 0.7, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xeifm"]
-content_margin_left = 15.0
-content_margin_top = 15.0
-content_margin_right = 15.0
-content_margin_bottom = 15.0
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
 texture = ExtResource("1_cpxps")
 modulate_color = Color(0.85, 0.85, 0.85, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ivoci"]
-content_margin_left = 15.0
-content_margin_top = 15.0
-content_margin_right = 15.0
-content_margin_bottom = 15.0
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
 texture = ExtResource("1_cpxps")
 modulate_color = Color(0.7, 0.7, 0.7, 1)
 
@@ -51,7 +51,7 @@ content_margin_bottom = 15.0
 texture = ExtResource("1_cpxps")
 
 [node name="Item" type="Button"]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(80, 80)
 offset_right = 100.0
 offset_bottom = 100.0
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
@@ -59,13 +59,14 @@ theme_override_colors/icon_focus_color = Color(0.85, 0.85, 0.85, 1)
 theme_override_colors/icon_pressed_color = Color(0.7, 0.7, 0.7, 1)
 theme_override_colors/icon_hover_color = Color(0.85, 0.85, 0.85, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0.7, 0.7, 0.7, 1)
-theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.686275)
+theme_override_colors/icon_disabled_color = Color(0.7, 0.7, 0.7, 0.686275)
 theme_override_styles/focus = SubResource("StyleBoxTexture_6epnd")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_s7yoj")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_82753")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xeifm")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ivoci")
 theme_override_styles/normal = SubResource("StyleBoxTexture_1sdl4")
+disabled = true
 icon_alignment = 1
 expand_icon = true
 script = ExtResource("2_2ysaj")

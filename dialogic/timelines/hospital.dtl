@@ -5,7 +5,7 @@ join doctor center
 \doctor: HOSPITAL_2
 \doctor: HOSPITAL_3
 label choice
-- {tr("HOSPITAL_4") % Game.hospital.liver_buy_price()}
+- {tr("HOSPITAL_4") % Game.hospital.liver_buy_price()} | [if State.progress.get("money", 0)>=Game.hospital.liver_buy_price()] [else="disable"]
 	\doctor: HOSPITAL_9
 	do Game.hospital.buy_liver()
 	\doctor: HOSPITAL_10
@@ -15,7 +15,7 @@ label choice
 	do Game.hospital.sell_liver()
 	\doctor: HOSPITAL_10
 	jump choice
-- {tr("HOSPITAL_6") % Game.hospital.blood_buy_price()}
+- {tr("HOSPITAL_6") % Game.hospital.blood_buy_price()} | [if State.progress.get("money", 0)>=Game.hospital.blood_buy_price()] [else="disable"]
 	\doctor: HOSPITAL_9
 	if randf() < Game.hospital.CHICKEN_BLOOD_PROB:
 		\doctor: HOSPITAL_11

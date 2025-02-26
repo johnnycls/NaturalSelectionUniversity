@@ -14,19 +14,14 @@ func timeline_events() -> Array:
 join sales center
 sales: SUPERMARKET_0
 label choice
-- %s | [if State.progress.money >= %s and not Game.is_bag_full()] [else="disabled"]
+- %s | [if State.progress.money >= %s and not Game.is_bag_full()] [else="disable"]
 	sales: SUPERMARKET_2
 	do Game.supermarket.buy_item(0)
 	sales: SUPERMARKET_4
 	jump choice
-- %s | [if State.progress.money >= %s and not Game.is_bag_full()] [else="disabled"]
+- %s | [if State.progress.money >= %s and not Game.is_bag_full()] [else="disable"]
 	sales: SUPERMARKET_2
 	do Game.supermarket.buy_item(1)
-	sales: SUPERMARKET_4
-	jump choice
-- %s | [if State.progress.money >= %s and not Game.is_bag_full()] [else="disabled"]
-	sales: SUPERMARKET_2
-	do Game.supermarket.buy_item(2)
 	sales: SUPERMARKET_4
 	jump choice
 - SUPERMARKET_1
@@ -36,7 +31,6 @@ label choice
 	do Game.back_to_map()""" % [
 	"%s: $%s" % [tr(item_choices[0].name), item_choices[0].cost], item_choices[0].cost,
 	"%s: $%s" % [tr(item_choices[1].name), item_choices[1].cost], item_choices[1].cost, 
-	"%s: $%s" % [tr(item_choices[2].name), item_choices[2].cost], item_choices[2].cost, 
 ]).split("\n")
 
 func get_random_choices(choices: int) -> Array:
@@ -49,7 +43,7 @@ func get_random_choices(choices: int) -> Array:
 	
 func start_timeline():
 	if Global.get_date() != date:
-		item_choices = get_random_choices(3)
+		item_choices = get_random_choices(2)
 	var timeline : DialogicTimeline = DialogicTimeline.new()
 	timeline.events = timeline_events()
 	Dialogic.start(timeline)
@@ -57,4 +51,4 @@ func start_timeline():
 func buy_item(idx: int):
 	Global.play_sound(buy_sound)
 	var item = item_choices[idx]
-	Game.update_status({"money": -item.cost, "bag": {item.id: 1}})
+	Game.update_status({"money": -item.cost, "bag": State.progress.get("bag", []) + [item.id]})

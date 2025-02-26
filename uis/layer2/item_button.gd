@@ -16,7 +16,9 @@ func use_item() -> void:
 		new_bag.remove_at(idx)
 		State.merge_progress({"hp": randi_range(5,100), "hunger": randi_range(5,100), "spirit": randi_range(5,100), "mood": randi_range(5,100), "bag": new_bag})
 	else:
-		Game.update_status(item.effect.merged({"bag": {item.id: -1}}))
+		var new_bag = State.progress.get("bag", []).duplicate(true).map(func(n): return int(n))
+		new_bag.remove_at(idx)
+		Game.update_status(item.effect.merged({"bag": new_bag}))
 
 func _on_pressed():
 	use_item()

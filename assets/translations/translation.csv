@@ -5,6 +5,7 @@ SETTINGS,Settings,設定,设置
 NEW_GAME,New Game,新遊戲,新游戏
 CONTINUE_GAME,Continue Game,繼續遊戲,继续游戏
 QUIT_GAME,Exit Game,離開遊戲,离开游戏
+GUIDE_SKIP_STORY,Hold the right mouse button to skip the story,長按右鍵以跳過劇情,长按右键以跳过剧情
 ME,Serena,塞雷娜,塞雷娜
 FRIEND,Ellie,艾莉,艾莉
 PRINCIPAL,Principal,校長,校长
@@ -107,7 +108,7 @@ RESTAURANT_14,I can eat it now!,可以吃了！,可以吃了！
 RESTAURANT_15,Want more?,還要吃嗎？,还要吃吗？
 HOME_0,What should I do next?,做什麼好呢？,做什么好呢？
 HOME_1,Go out.,外出,外出
-PAPER_0,Write the thesis.,寫論文。,写论文
+PAPER_0,Write the thesis.,寫論文,写论文
 PAPER_1,Ha! Made some good progress today.,哈！今天進度還挺好。,哈！今天进度还挺不错
 PAPER_2,Ugh! I’ve been writing for so long and still haven’t gotten anywhere.,哎！怎麼寫了這麼久都沒寫出什麼呢？,哎！怎么写了这么久都没写出什么呢？
 PAPER_3,Is it a lack of inspiration? Energy? Or something else?,是沒靈感？沒精神？還是什麼原因呢？,是没灵感？没精神？还是什么原因呢？
