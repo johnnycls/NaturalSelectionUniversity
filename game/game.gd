@@ -144,7 +144,7 @@ func _compute_new_progress(delta: Dictionary) -> Dictionary:
 	return new_progress
 
 func _updated_bag(current_bag: Array, delta_bag: Dictionary) -> Array:
-	var new_bag = current_bag.duplicate(true)
+	var new_bag = current_bag.duplicate(true).map(func(n): return int(n))
 	for item_id in delta_bag.keys():
 		var delta = delta_bag[item_id]
 		if delta > 0:

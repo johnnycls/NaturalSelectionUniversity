@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://uis/layer1/home.gd" id="1_blhe6"]
 [ext_resource type="Texture2D" uid="uid://bicrckpguahx6" path="res://assets/ui_sprites/home/background.png" id="2_4k6a2"]
-[ext_resource type="Texture2D" uid="uid://ccebgp4qxnaeu" path="res://assets/ui_sprites/home/logo2.png" id="2_5dnfn"]
+[ext_resource type="Texture2D" uid="uid://by8wlrhae0vkj" path="res://assets/ui_sprites/home/traditional_logo.png" id="3_niurl"]
 
 [node name="Home" type="Control"]
 layout_mode = 3
@@ -23,11 +23,11 @@ stretch_mode = 4
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 870.0
-offset_bottom = 440.0
-texture = ExtResource("2_5dnfn")
+offset_right = 869.0
+offset_bottom = 425.0
+texture = ExtResource("3_niurl")
 expand_mode = 1
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="Buttons" type="VBoxContainer" parent="."]
 layout_mode = 1

@@ -9,9 +9,9 @@ var date: int = -1
 
 func events() -> Dictionary:
 	return {
-		"steal": 15,
-		"bully": 15,
-		"": 70,
+		"steal": 25,
+		"bully": 25,
+		"": 50,
 	}
 
 func choose_event() -> String:
@@ -45,21 +45,21 @@ func go_out() -> void:
 func steal(desire: int, item_id: int):
 	match desire:
 		0: # money
-			Game.update_status({"paper": -2000, "hp": -20, "luck": 10, "mood": -5})
+			Game.update_status({"paper": -2000, "hp": -20, "luck": 10, "mood": -10})
 		1: # hp
-			Game.update_status({"paper": -2000, "money": -500, "luck": 10, "mood": -5})
+			Game.update_status({"paper": -2000, "money": -500, "luck": 10, "mood": -10})
 		2: # paper
-			Game.update_status({"hp": -20, "money": -500, "luck": 10, "mood": -5})
+			Game.update_status({"hp": -20, "money": -500, "luck": 10, "mood": -10})
 		3: # all
 			match item_id:
 				-1: # fist
-					var robber_strength = randi_range(25, 45) * Global.get_date()
-					var damage = max(State.progress.get("strength", 0)-robber_strength, 0)
+					var robber_strength = randi_range(10, 15) * Global.get_date()
+					var damage = max(robber_strength-State.progress.get("strength", 0), 0)
 					Global.play_sound(punch_sound)
 					Game.update_status({"hp": -damage, "luck": 10})
 				0: # knife
-					var robber_strength = randi_range(25, 45) * Global.get_date()
-					var damage = max(State.progress.get("strength", 0)*2-robber_strength, 0)
+					var robber_strength = randi_range(10, 15) * Global.get_date()
+					var damage = max(robber_strength-(State.progress.get("strength", 0)*2), 0)
 					Global.play_sound(draw_sword_sound)
 					Game.update_status({"hp": -damage, "luck": 10, "bag": {0: -1}})
 				1: # grenade
@@ -73,13 +73,13 @@ func bully(decision: int, item_id: int):
 		0: # help
 			match item_id:
 				-1: # fist
-					var robber_strength = randi_range(25, 45) * Global.get_date()
-					var damage = max(State.progress.get("strength", 0)-robber_strength, 0)
+					var robber_strength = randi_range(5, 10) * Global.get_date()
+					var damage = max(robber_strength-State.progress.get("strength", 0), 0)
 					Global.play_sound(punch_sound)
 					Game.update_status({"hp": -damage, "luck": 20, "mood": 20, "time": 30})
 				0: # knife
-					var robber_strength = randi_range(25, 45) * Global.get_date()
-					var damage = max(State.progress.get("strength", 0)*2-robber_strength, 0)
+					var robber_strength = randi_range(5, 10) * Global.get_date()
+					var damage = max(robber_strength-(State.progress.get("strength", 0)*2), 0)
 					Global.play_sound(draw_sword_sound)
 					Game.update_status({"hp": -damage, "luck": 20, "bag": {0: -1}, "mood": 20, "time": 30})
 				1: # grenade

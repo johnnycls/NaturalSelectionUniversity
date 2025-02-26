@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/hospital.jpg" fade="0.0"]
 join doctor center
 \doctor: HOSPITAL_0
 \doctor: HOSPITAL_1
@@ -30,4 +31,6 @@ label choice
 	jump choice
 - HOSPITAL_8
 \doctor: HOSPITAL_12
+leave me
+leave doctor
 do Game.back_to_map()

@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/home.jpg" fade="0.0"]
 join me left
 join friend right
 me: INTRO_0
@@ -20,4 +21,6 @@ me: INTRO_16
 friend: INTRO_17
 me: INTRO_18
 friend: INTRO_19
+leave me
+leave friend
 do Game.start_ceremony()

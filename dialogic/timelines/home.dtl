@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/home.jpg" fade="0.0"]
 join me center
 me: HOME_0
 - PAPER_0
@@ -5,4 +6,5 @@ me: HOME_0
 - SLEEP_0
 	jump sleep/
 - HOME_1
+	leave me
 	do Game.go_out.go_out()

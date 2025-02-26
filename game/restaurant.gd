@@ -27,7 +27,7 @@ func init(saved_dict: Dictionary) -> void:
 	food_choices = saved_dict.get("food_choices", [])
 
 func timeline_events() -> Array:
-	return ("""
+	return ("""[background arg="res://assets/environment_sprites/restaurant.jpg" fade="0.0"]
 join waiter center
 waiter: RESTAURANT_0
 - %s | [if {State.progress.money} >= %s] [else="disabled"]
@@ -44,6 +44,8 @@ waiter: RESTAURANT_0
 	jump eat/
 - RESTAURANT_1
 waiter: RESTAURANT_2
+leave me
+leave waiter
 do Game.back_to_map()""" % [
 	"%s: $%s" % [food_choices[0].name, food_choices[0].cost], food_choices[0].cost, 
 	"%s: $%s" % [food_choices[1].name, food_choices[1].cost], food_choices[1].cost, 

@@ -13,7 +13,7 @@ extends MarginContainer
 @onready var intelligence_label = $VBoxContainer/HBoxContainer/RightBar/Intelligence/VBoxContainer/Label
 @onready var left_bar = $VBoxContainer/HBoxContainer/LeftBar
 
-var item_button_scene = preload("res://uis/layer2/item.tscn")
+var item_button_scene = preload("res://uis/layer2/item_button.tscn")
 
 func update_status() -> void:
 	hp_bar.value = State.progress.get("hp", 0)
@@ -30,10 +30,10 @@ func update_status() -> void:
 	
 	for n in left_bar.get_children():
 		n.queue_free()
-	for item_id in State.progress.get("bag", []):
+	for idx in range(State.progress.get("bag", []).size()):
 		var item_button = item_button_scene.instantiate()
-		item_button.init(item_id)
 		left_bar.add_child(item_button)
+		item_button.init(State.progress.bag[idx], idx)
 
 func _on_pause_button_pressed() -> void:
 	Main.open_menu()

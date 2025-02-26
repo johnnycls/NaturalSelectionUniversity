@@ -14,12 +14,16 @@ func select() -> void:
 func _ready() -> void:
 	add_sound_effects_for_btns(ui)
 	add_sound_effects_for_btns(menu)
+	State.progress_updated.connect(update_status)
 	
 func add_sound_effects_for_btns(node: Node) -> void:
-	if node is Button:
-		node.mouse_entered.connect(select)
-		node.focus_entered.connect(select)
-		node.button_down.connect(select)
+	if node is Button or node is TextureButton:
+		if not node.mouse_entered.is_connected(select):
+			node.mouse_entered.connect(select)
+		if not node.focus_entered.is_connected(select):
+			node.focus_entered.connect(select)
+		if not node.button_down.is_connected(select):
+			node.button_down.connect(select)
 	for child in node.get_children():
 		add_sound_effects_for_btns(child)
 		
@@ -34,6 +38,7 @@ func change_ui(page: Control) -> void:
 	
 func show_status_bar() -> void:
 	status_bar.open()
+	update_status()
 	
 func hide_status_bar() -> void:
 	status_bar.close()
@@ -50,3 +55,6 @@ func open_menu() -> void:
 func close_menu() -> void:
 	menu.close_menu()
 	
+func update_status() -> void:
+	status_bar.update_status()
+	add_sound_effects_for_btns(status_bar)

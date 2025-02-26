@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/lecture_hall.jpg" fade="0.0"]
 join me center
 if Game.lecture.attend_lecture({selected_course}):
 	me: LECTURE_2

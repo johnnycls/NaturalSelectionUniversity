@@ -19,11 +19,11 @@
 "portraits": {
 "normal": {
 "export_overrides": {
-"image": ""
+"image": "\"res://assets/character_sprites/man_shadow.png\""
 },
 "mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
+"offset": Vector2(-215, 600),
+"scale": 1.25,
 "scene": ""
 }
 },

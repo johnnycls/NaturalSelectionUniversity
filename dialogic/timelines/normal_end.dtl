@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/home.jpg" fade="0.0"]
 join me center
 me: NORMAL_END_0
 me: NORMAL_END_1

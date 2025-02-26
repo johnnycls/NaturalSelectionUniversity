@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/supermarket.png" fade="0.0"]
 GOOD_END_0
 join me left
 join friend right
@@ -17,5 +18,7 @@ me: GOOD_END_13
 friend: GOOD_END_14
 me: GOOD_END_15
 friend: GOOD_END_16
+leave me
+leave friend
 do State.save_progress(Config.INIT_PROGRESS)
 do Main.back_to_home_screen()

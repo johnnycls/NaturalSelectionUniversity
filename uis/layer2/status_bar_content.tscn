@@ -50,8 +50,8 @@ layout_mode = 2
 theme_override_constants/separation = 12
 
 [node name="PauseButton" type="TextureButton" parent="VBoxContainer/TopBar"]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-size_flags_horizontal = 3
 texture_normal = ExtResource("2_xnn1x")
 texture_pressed = ExtResource("3_no8uw")
 texture_hover = ExtResource("3_no8uw")
@@ -277,6 +277,8 @@ mouse_filter = 2
 
 [node name="LeftBar" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 0
+theme_override_constants/separation = 12
 
 [node name="Gap" type="Control" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2

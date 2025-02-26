@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/lecture_hall.jpg" fade="0.0"]
 CEREMONY_0
 join principal center
 principal: CEREMONY_1
@@ -12,4 +13,5 @@ leave principal
 join me center
 me: CEREMONY_9
 me: CEREMONY_10
+leave me
 do Game.ended_ceremony()

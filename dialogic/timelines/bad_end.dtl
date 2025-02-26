@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/hospital.jpg" fade="0.0"]
 join doctor left
 join doctor_assistant right
 \doctor_assistant: BAD_END_0
@@ -5,5 +6,7 @@ join doctor_assistant right
 \doctor_assistant: BAD_END_2
 \doctor: BAD_END_3
 \doctor_assistant: BAD_END_4
+leave doctor
+leave doctor_assistant
 do State.save_progress(Config.INIT_PROGRESS)
 do Main.back_to_home_screen()

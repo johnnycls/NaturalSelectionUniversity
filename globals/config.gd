@@ -40,13 +40,13 @@ var MAX_PROGRESS = {
 }
 
 var ITEMS = [
-	{"id": 0, "name": "ITEM_0", "cost": 15, "effect": {}, "usable": false},
-	{"id": 1, "name": "ITEM_1", "cost": 25, "effect": {}, "usable": false},
-	{"id": 2, "name": "ITEM_2", "cost": 60, "effect": {}, "usable": false},
-	{"id": 3, "name": "ITEM_3", "cost": 40, "effect": {"spirit": 60}, "usable": true},
-	{"id": 4, "name": "ITEM_4", "cost": 40, "effect": {}, "usable": false},
-	{"id": 5, "name": "ITEM_5", "cost": 40, "effect": {"mood": 65}, "usable": true},
-	{"id": 6, "name": "ITEM_6", "cost": 85, "effect": {}, "usable": true},
-	{"id": 7, "name": "ITEM_7", "cost": 30, "effect": {}, "usable": false},
-	{"id": 8, "name": "ITEM_8", "cost": 400, "effect": {}, "usable": false},
+	{"id": 0, "name": "ITEM_0", "cost": 15, "effect": {}, "usable": false, "img": preload("res://assets/object_sprites/knife.png")},
+	{"id": 1, "name": "ITEM_1", "cost": 25, "effect": {}, "usable": false, "img": preload("res://assets/object_sprites/grenade.png")},
+	{"id": 2, "name": "ITEM_2", "cost": 60, "effect": {}, "usable": false, "img": preload("res://assets/object_sprites/mouse.png")},
+	{"id": 3, "name": "ITEM_3", "cost": 40, "effect": {"spirit": 60}, "usable": true, "img": preload("res://assets/object_sprites/redbull.png")},
+	{"id": 4, "name": "ITEM_4", "cost": 40, "effect": {}, "usable": false, "img": preload("res://assets/object_sprites/pills.png")},
+	{"id": 5, "name": "ITEM_5", "cost": 40, "effect": {"mood": 65}, "usable": true, "img": preload("res://assets/object_sprites/alcohol.png")},
+	{"id": 6, "name": "ITEM_6", "cost": 85, "effect": {}, "usable": true, "img": preload("res://assets/object_sprites/potion.png")},
+	{"id": 7, "name": "ITEM_7", "cost": 30, "effect": {}, "usable": false, "img": preload("res://assets/object_sprites/cloak.png")},
+	{"id": 8, "name": "ITEM_8", "cost": 400, "effect": {}, "usable": false, "img": preload("res://assets/object_sprites/amulet.png")},
 ]

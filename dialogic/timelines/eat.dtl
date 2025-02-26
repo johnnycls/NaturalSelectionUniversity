@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/restaurant.jpg" fade="0.0"]
 - RESTAURANT_8 | [if 2 in State.progress.bag] [else="hide"]
 	mouse: RESTAURANT_10
 	set {is_poisoned} = Game.restaurant.before_eat(true, {selected_food})

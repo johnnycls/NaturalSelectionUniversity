@@ -1,3 +1,4 @@
+[background arg="res://assets/ui_sprites/map/map.png" fade="0.0"]
 join bully left
 bully: BULLY_0
 join bullied right
@@ -25,4 +26,7 @@ bully: BULLY_2
 	join me center
 	do Game.go_out.bully(1, -1)
 	me: BULLY_6
+leave bullied
+leave bully
+leave me
 do Game.back_to_map()

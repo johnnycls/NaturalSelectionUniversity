@@ -22,7 +22,8 @@ func bad_lecture_prob() -> float:
 	return (100 - State.progress.get("luck", 0)) / 200
 		
 func timeline_events() -> Array:
-	return ("""join me center
+	return ("""[background arg="res://assets/environment_sprites/lecture_hall.jpg" fade="0.0"]
+join me center
 me: LECTURE_0
 - %s
 	set {selected_course} = 0
@@ -31,6 +32,7 @@ me: LECTURE_0
 	set {selected_course} = 1
 	jump course/
 - LECTURE_1
+	leave me
 	do Game.back_to_map()""" % [
 		course_choices[0].name, course_choices[1].name
 	]).split("\n")

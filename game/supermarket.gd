@@ -10,7 +10,7 @@ func init(saved_dict: Dictionary) -> void:
 	item_choices = saved_dict.get("item_choices", [])
 
 func timeline_events() -> Array:
-	return ("""
+	return ("""[background arg="res://assets/environment_sprites/supermarket.png" fade="0.0"]
 join sales center
 sales: SUPERMARKET_0
 label choice
@@ -31,6 +31,8 @@ label choice
 	jump choice
 - SUPERMARKET_1
 	sales: SUPERMARKET_3
+	leave sales
+	leave me
 	do Game.back_to_map()""" % [
 	"%s: $%s" % [tr(item_choices[0].name), item_choices[0].cost], item_choices[0].cost,
 	"%s: $%s" % [tr(item_choices[1].name), item_choices[1].cost], item_choices[1].cost, 

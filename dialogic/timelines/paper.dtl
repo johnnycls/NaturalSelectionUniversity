@@ -1,3 +1,4 @@
+[background arg="res://assets/environment_sprites/home.jpg" fade="0.0"]
 join me center
 if Game.paper.write_paper():
 	me: PAPER_1
