@@ -1,203 +1,203 @@
-keys,en,zh,cmn
-BACK,Back,返回,返回
-HOMEPAGE,Back to Homepage,返回主頁,返回主页
-SETTINGS,Settings,設定,设置
-NEW_GAME,New Game,新遊戲,新游戏
-CONTINUE_GAME,Continue Game,繼續遊戲,继续游戏
-QUIT_GAME,Exit Game,離開遊戲,离开游戏
-GUIDE_SKIP_STORY,Hold the right mouse button to skip the story,長按右鍵以跳過劇情,长按右键以跳过剧情
-ME,Serena,塞雷娜,塞雷娜
-FRIEND,Ellie,艾莉,艾莉
-PRINCIPAL,Principal,校長,校长
-DOCTOR,Doctor,醫生,医生
-DOCTOR_ASSISTANT,Doctor’s Assistant,醫生助手,医生助手
-WAITER,Waiter,服務員,服务员
-SALES,Shopkeeper,售貨員,售货员
-ROBBER,Robber,強盜,强盗
-BULLY,Bully,惡霸,恶霸
-BULLIED,Ordinary Student,普通學生,普通学生
-INSURANCE_AGENT,Insurance Agent,保險經紀,保险经纪
-MERCHANT,Merchant,商人,商人
-HOSPITAL,Hospital,醫院,医院
-HOME,Dormitory,宿舍,宿舍
-LECTURE_HALL,Lecture Hall,講堂,讲堂
-SUPERMARKET,Supermarket,超市,超市
-RESTAURANT,Restaurant,餐廳,餐厅
-ITEM_0,Knife,刀,刀
-ITEM_1,Grenade,手榴彈,手榴弹
-ITEM_2,Rat,老鼠,老鼠
-ITEM_3,Red Bull,紅牛,红牛
-ITEM_4,Sleeping Pills,安眠藥,安眠药
-ITEM_5,Alcohol,酒,酒
-ITEM_6,Mysterious Potion,神秘藥水,神秘药水
-ITEM_7,Invisibility Cloak,隱形斗篷,隐身斗篷
-ITEM_8,Amulet,護身符,护身符
-FOOD_0,Fresh Soil,新鮮泥土,新鲜泥土
-FOOD_1,Strawberry Cake,草莓蛋糕,草莓蛋糕
-FOOD_2,Power Greens,大力菜,大力菜
-FOOD_3,Pig Brain,豬腦,猪脑
-FOOD_4,Fortune Cookie,幸運餅乾,幸运饼干
-FOOD_5,Foie Gras,鵝肝,鹅肝
-FOOD_6,Duck Blood,鴨血,鸭血
-FOOD_7,Coffee,咖啡,咖啡
-COURSE_0,Feng Shui Secrets,風水秘籍,风水秘籍
-COURSE_1,Knife Mastery,刀具使用大法,刀具使用大法
-COURSE_2,Meditation Training,冥想訓練,冥想训练
-COURSE_3,Seeing Through the Essence of the Universe,看穿宇宙本質,看穿宇宙本质
-COURSE_4,Basic Fitness Training,基礎體能訓練,基础体能训练
-COURSE_5,"Fall, Mortal!",墮落吧凡人！,堕落吧凡人！
-INTRO_0,"Hey, Ellie! I’ve got some good news for you!",喂艾莉！告訴你個好消息！,喂艾莉！告诉你个好消息！
-INTRO_1,What’s up?,怎麼了？,怎么了？
-INTRO_2,I’m going to Natural Selection University next month!,我下個月就要去自然選擇大學上學了！,我下个月就要去自然选择大学上学了！
-INTRO_3,What? You got accepted into Natural Selection University?,什麼？你被自然選擇大學錄取了？,什么？你被自然选择大学录取了？
-INTRO_4,"Surprising, right?",意想不到吧！,意想不到吧！
-INTRO_5,"Wow! That’s amazing, Serena! You got into such a tough school!",哇！厲害了我的塞雷娜！這麼難考的大學都被你考到了！,哇！厉害了我的塞雷娜！这么难考的大学都被你考到
-INTRO_6,Hehe! But I’m so nervous! They say only 1% of students graduate from there.,嘻嘻！不過我好緊張啊！據說這間大學只有1%的人能畢業。,嘻嘻！不过我好紧张啊！据说这间大学只有1%的人能毕业
-INTRO_7,1%?! Did I hear that right?,1%？！我沒聽錯吧！,1%？！我没听错吧！
-INTRO_8,Yep! You heard me right! Just 1%!,是的！你沒聽錯！就是1%！,是的！你没听错！就是1%！
-INTRO_9,They say 99% of students either repeat the year or drop out.,據說99%的學生要麼繼續留級，要麼就退學了。,据说99%的学生要么继续留级，要么就退学了
-INTRO_10,But that 1% who make it through end up becoming incredible people. Several graduates are on the global rich list.,不過剩下的1%畢業之後都成為了非常厲害的人物。全球富豪排行榜裡有好幾位都是自然選擇大學的畢業生。,不过剩下的1%毕业后都成为了非常厉害的人物。全球富豪排行榜里有好几位都是自然选择大学的毕业生
-INTRO_11,"Well, when you get rich in six months, don’t forget to take care of me!",那半年後發財了記得關照我啊！,那半年后发财了记得关照我啊！
-INTRO_12,Ha! I’m not even sure I’ll graduate!,哎！能不能畢業都說不準呢！,哎！能不能毕业都说不准呢！
-INTRO_13,I know you can do it!,我知道你一定能行的！,我知道你一定能行的！
-INTRO_14,"Hey! I’m going to eat now, let’s talk later!",哎！我要吃飯了，之後再說吧！,哎！我要吃饭了，之后再说吧！
-INTRO_15,Sure! I need to plan my schedule anyway.,嗯嗯！我也要編排行程了。,嗯嗯！我也要编排行程了
-INTRO_16,There’s only this one school on Natural Selection Island. I have to fly to the U.S. and then take a boat arranged by the school to get there. I need to register for the boat.,自然選擇島上就只有這座學校，要坐飛機到美國再乘學校安排的船才能到達，我要去登記船了。,自然选择岛上就只有这座学校，要坐飞机到美国再乘学校安排的船才能到达，我要去登记船了
-INTRO_17,Wow! That’s so far! But it sounds pretty cool.,哇！這麼遠啊！不過好像很厲害的樣子。,哇！这么远啊！不过好像很厉害的样子
-INTRO_18,Right? I’ll talk to you later then!,是吧！不跟你說了，下次再說吧！,是吧！不跟你说了，下次再说吧！
-INTRO_19,Yep! Bye-bye!,嗯嗯！拜拜！,嗯嗯！拜拜！
-CEREMONY_0,Opening Ceremony,開學典禮,开学典礼
-CEREMONY_1,"Dear new students and repeaters, welcome to Natural Selection University!",各位新生以及留級生，歡迎來到自然選擇大學！,各位新生以及留级生，欢迎来到自然选择大学！
-CEREMONY_2,"Natural Selection University is not your average institution. There are no traditional classrooms, no fixed rules, not even so-called ""standard answers."" Our only principle is—survival and victory.",自然選擇大學不是一所普通的學府，這裡沒有傳統的課堂，沒有固定的規則，甚至沒有所謂的「標準答案」。我們唯一的宗旨是——生存與勝利。,自然选择大学不是一所普通的学府，这里没有传统的课堂，没有固定的规则，甚至没有所谓的「标准答案」。我们唯一的宗旨是——生存与胜利。
-CEREMONY_3,"Here, you have one goal: complete a thesis within 100 days. This thesis can be on any topic and can be completed by any means.",在這裡，你們的目標只有一個：在100天內完成一篇論文。這篇論文可以是任何主題，可以用任何方法完成。,在这里，你们的目标只有一个：在100天内完成一篇论文。这篇论文可以是任何主题，可以用任何方法完成。
-CEREMONY_4,"Yes, any means. There are no laws on Natural Selection Island, and the only rule at this university is that you cannot contact the outside world. We won’t interfere with your methods; we only care about results.",是的，是任何方法。自然選擇島上並沒有任何法律，自然選擇大學的唯一校規，就是你們不得與外界聯絡。我們不會干涉你們的手段，我們只在乎結果。,是的，是任何方法。自然选择岛上并没有任何法律，自然选择大学的唯一校规，就是你们不得与外界联络。我们不会干涉你们的手段，我们只在乎结果。
-CEREMONY_5,No contact?! Can I still call Ellie?,不能聯絡？！我還能跟艾莉打電話嗎？,不能联络？！我还能跟艾莉打电话吗？
-CEREMONY_6,"In the past, 99% of students failed this challenge—they either repeated or dropped out. But the 1% who succeeded became world-changers.",過去，99%的學生未能完成這項挑戰，他們要麼留級，要麼退學。但剩下的1%，他們成為了改變世界的人。,过去，99%的学生未能完成这项挑战，他们要么留级，要么退学。但剩下的1%，他们成为了改变世界的人。
-CEREMONY_7,"In 100 days, there are only two outcomes: graduation or elimination. Your choices will determine your future.",100天後，只有兩種結果：畢業，或是淘汰。你們的選擇將決定你們的未來。,100天后，只有两种结果：毕业，或是淘汰。你们的选择将决定你们的未来。
-CEREMONY_8,"Lastly, good luck to you all.",最後，祝你們好運。,最后，祝你们好运
-CEREMONY_9,That’s it?,這就完了？,这就完了？
-CEREMONY_10,What do I do next?,我之後該幹什麼呢？,我之后该干什么呢？
-HOSPITAL_0,Welcome to Natural Selection Hospital,歡迎來到自然選擇醫院,欢迎来到自然选择医院
-HOSPITAL_1,"Here, you can forget all your troubles",在這裡，你可以忘記任何煩惱，,在这里，你可以忘记任何烦恼
-HOSPITAL_2,and relax as if you were one with nature.,就像置身於大自然那樣的放鬆。,就像置身于大自然那样的放松
-HOSPITAL_3,May I ask what service you need?,請問，需要什麼服務嗎？,请问，需要什么服务吗？
-HOSPITAL_4,Buy a liver ($%s),買肝（$%s）,买肝（$%s）
-HOSPITAL_5,Sell a liver ($%s),賣肝（$%s）,卖肝（$%s）
-HOSPITAL_6,Blood transfusion ($%s),輸血（$%s）,输血（$%s）
-HOSPITAL_7,Sell blood ($%s),賣血（$%s）,卖血（$%s）
-HOSPITAL_8,No thanks.,不用了，謝謝。,不用了，谢谢
-HOSPITAL_9,"Alright! This way, please~",好的！這邊請~,好的！这边请~
-HOSPITAL_10,Anything else you need?,還需要什麼嗎？,还需要什么吗？
-HOSPITAL_11,(Whispering) Ugh! We’re out of human blood. How about some chicken blood?,（小聲）哎！人血用光了，來點雞血吧！,（小声）哎！人血用光了，来点鸡血吧！
-HOSPITAL_12,Wishing you good health~,祝你身體健康哦~,祝你身体健康哦~
-RESTAURANT_0,What do you feel like eating?,想吃啥？,想吃啥？
-RESTAURANT_1,"Nothing, thanks.",不用了。,不用了
-RESTAURANT_2,Eat up and head out then.,吃完就走吧。,吃完就走吧
-RESTAURANT_3,Ha! I’m full!,哈！吃飽了！,哈！吃饱了！
-RESTAURANT_4,Ugh! What is this stuff? But at least I finished it.,噁！這是什麼東西啊？不過總算是吃完了。,噁！这什么东西啊？不过总算是吃完了
-RESTAURANT_5,Huh? Why do I feel…,欸？怎麼感覺...,欸？怎么感觉...
-RESTAURANT_6,"Wait, what just happened?",欸？剛剛發生什麼了？,欸？刚刚发生了什么？
-RESTAURANT_7,Ah! My wallet’s gone!,啊！錢包不見了！,啊！钱包不见了
-RESTAURANT_8,Release the rat.,放出老鼠。,放出老鼠
-RESTAURANT_9,Time to dig in.,我要開動了。,我要开动了
-RESTAURANT_10,Squeak squeak.,吱吱。,吱吱
-RESTAURANT_11,The rat’s dead.,老鼠死了。,老鼠死了
-RESTAURANT_12,The rat’s still alive.,老鼠還活著。,老鼠还活着
-RESTAURANT_13,Haha! Good thing I’m smart.,哈哈！幸虧我聰明。,哈哈！幸亏我聪明
-RESTAURANT_14,I can eat it now!,可以吃了！,可以吃了！
-RESTAURANT_15,Want more?,還要吃嗎？,还要吃吗？
-HOME_0,What should I do next?,做什麼好呢？,做什么好呢？
-HOME_1,Go out.,外出,外出
-PAPER_0,Write the thesis.,寫論文,写论文
-PAPER_1,Ha! Made some good progress today.,哈！今天進度還挺好。,哈！今天进度还挺不错
-PAPER_2,Ugh! I’ve been writing for so long and still haven’t gotten anywhere.,哎！怎麼寫了這麼久都沒寫出什麼呢？,哎！怎么写了这么久都没写出什么呢？
-PAPER_3,Is it a lack of inspiration? Energy? Or something else?,是沒靈感？沒精神？還是什麼原因呢？,是没灵感？没精神？还是什么原因呢？
-SLEEP_0,Sleep.,睡覺,睡觉
-SLEEP_1,Use sleeping pills.,使用安眠藥。,使用安眠药
-SLEEP_2,Sleep straight away.,直接睡。,直接睡
-SLEEP_3,Ha! I feel refreshed!,哈！精神了！,哈！精神了！
-SLEEP_4,Ugh! Why can’t I sleep?,哎！怎麼睡不著呢？,哎！怎么睡不着呢？
-SUPERMARKET_0,Need to buy anything?,需要買什麼呢？,需要买什么呢？
-SUPERMARKET_1,No thanks!,不用了謝謝！,不用了谢谢！
-SUPERMARKET_2,Thank you for your patronage!,謝謝惠顧！,谢谢惠顾！
-SUPERMARKET_3,Come again!,記得再次光臨哦！,记得再次光临哦！
-SUPERMARKET_4,Anything else you need?,還需要什麼嗎？,还需要什么吗？
-LUCKY_DRAW_0,Hit or miss?,中不中呢？,中不中呢？
-LUCKY_DRAW_1,Three,三,三
-LUCKY_DRAW_2,Two,二,二
-LUCKY_DRAW_3,One,一,一
-LUCKY_DRAW_4,Oops!,哎呀！,哎呀！
-LUCKY_DRAW_5,Not bad!,還不錯！,还不错！
-LUCKY_DRAW_6,Awesome!,太好了！,太好了！
-LECTURE_0,What class should I take today?,今天上什麼課好呢？,今天上什么课好呢？
-LECTURE_1,Skip it.,不上了。,不上了
-LECTURE_2,"The professor was great today, learned a lot of useful stuff.",今天教授講得不錯，學到不少有用的知識。,今天教授讲得不错，学到不少有用的知识
-LECTURE_3,"Today’s class was so boring, such a waste of time.",今天的課太無聊了，浪費了不少時間。,今天的课太无聊了，浪费了不少时间
-BAD_END_0,Can this kid still be saved?,這孩子還能救嗎？,这孩子还能救吗？
-BAD_END_1,No hope left.,已經沒救了。,已经没救了
-BAD_END_2,Another one eliminated?,又淘汰一個了嗎？,又淘汰一个了吗？
-BAD_END_3,"You’ll get used to it soon. Pass me a bottle, I’ll store the liver.",很快你就會習慣的了。給個瓶子我把肝放好。,很快你就会习惯的了。给个瓶子我把肝放好好吧
-BAD_END_4,Here you go!,是！給~,是！给~
-GOOD_END_0,Finally graduated! I’m heading back to Hong Kong right away.,終於畢業了，我馬上回到香港。,终于毕业了，我马上回到香港
-GOOD_END_1,Ellie (tearing up)!,艾莉（感動）！,艾莉（感动）！
-GOOD_END_2,Who are you?,你是？,你是？
-GOOD_END_3,You don’t recognize me?,你認不出我了嗎？,你认不出我了吗？
-GOOD_END_4,Serena? Is that you?,你是塞雷娜？,你是塞雷娜？
-GOOD_END_5,Yep!,是啊！,是啊！
-GOOD_END_6,"You know, a few months ago you just disappeared, and I was so worried!",你知道嗎？幾個月前突然就找不到你，我好擔心你啊！,你知道吗？几个月前突然就找不到你，我好担心你啊！
-GOOD_END_7,"Ugh, no choice! Natural Selection University doesn’t let us contact the outside world!",害！沒辦法啊！自然選擇大學不允許我們與外界交流啊！,害！没办法啊！自然选择大学不允许我们与外界交流啊！
-GOOD_END_8,They have a rule like that?!,竟然有這樣的規矩？！,竟然有这样的规矩？！
-GOOD_END_9,Yeah! Natural Selection University is insane! It’s a long story—let’s eat at a restaurant and catch up!,害！自然選擇大學太可怕了！說來話長，我們去餐廳邊吃邊聊吧！,害！自然选择大学太可怕了！说来话长，我们去餐厅边吃边聊吧！
-GOOD_END_10,Sure! Let’s go to that one!,好啊！就去那家吧！,好啊！就去那家吧！
-GOOD_END_11,Wait! I didn’t bring a rat—did you?,等等！我沒帶老鼠，你有嗎？,等等！我没带老鼠，你有吗？
-GOOD_END_12,A rat?,老鼠？,老鼠？
-GOOD_END_13,Yeah! It’s reassuring to have one!,嗯嗯！帶了安心點嘛！,嗯嗯！带了安心点嘛！
-GOOD_END_14,Huh?!,哈？！,哈？！
-GOOD_END_15,"Oh, never mind! Let’s check the supermarket and see if they’ve got any!",哎！沒事兒！我們去超市看看有沒有吧！,哎！没事儿！我们去超市看看有没有吧！
-GOOD_END_16,Huh?!,哈？！,哈？！
-NORMAL_END_0,Ugh! 100 days already!,害！100天了！,害！100天了！
-NORMAL_END_1,I still haven’t finished my thesis.,我還沒有寫好論文啊。,我还没有写好论文啊
-NORMAL_END_2,"But that’s normal, I guess",不過也正常啦，,不过也正常啦
-NORMAL_END_3,"only 1% graduate, after all.",畢竟只有1%的人能畢業嘛。,毕竟只有1%的人能毕业嘛
-NORMAL_END_4,Surviving this long is already pretty impressive.,能生存至今已經很厲害啦。,能生存至今已经很厉害啦
-NORMAL_END_5,I miss Ellie so much.,好想念艾莉啊。,好想念艾莉啊
-NORMAL_END_6,I didn’t mean to lose contact.,我不是故意失聯的啊。,我不是故意失联的啊
-NORMAL_END_7,I hope she doesn’t blame me.,希望她不會怪我吧。,希望她不会怪我吧
-NORMAL_END_8,"Next semester, I’ll definitely graduate.",我下學期一定會順利畢業的。,我下学期一定会顺利毕业的
-NORMAL_END_9,Ellie! Wait for me!,艾莉！要等我哦！,艾莉！要等我哦！
-STEAL_0,"Money, life, or the thesis.",要錢要命要論文。,要钱要命要论文
-STEAL_1,Money.,要錢。,要钱
-STEAL_2,Life.,要命。,要命
-STEAL_3,Thesis.,要論文。,要论文
-STEAL_4,I want it all.,我全都要。,我全都要
-STEAL_5,With fists.,用拳頭。,用拳头
-STEAL_6,With a knife.,用刀。,用刀
-STEAL_7,With a grenade.,用手榴彈。,用手榴弹
-STEAL_8,With an invisibility cloak.,用隱形斗篷。,用隐身斗篷
-STEAL_9,Where’d he go? He got away!,人呢？這都被他逃走了。,人呢？这都被他逃走
-STEAL_10,Ah!,啊！,啊！
-STEAL_11,Hmph! Lucky you.,哼！算你好運。,哼！算你好运
-STEAL_12,Ha! What a greedy guy! Guess I’ll beat you up and take your thesis then!,哈！真是個貪財的傢伙！那我就打你一頓再拿走你的論文咯！,哈！真是个贪财的家伙！那我就打你一顿再拿走你的论文咯！
-STEAL_13,Ha! Fine! Hand over your money and thesis!,哈！行！那就交出錢和論文吧！,哈！行！那就交出钱和论文吧！
-STEAL_14,"Ha! Wanting the thesis over your life? This school’s full of lunatics! Fine, have it your way!",哈！竟然要論文也不要命！這學校的人真的瘋了！不過既然如此，我就成全你吧！,哈！竟然要论文也不要命！这学校的人真的疯了！不过既然如此，我就成全你吧！
-BULLY_0,"Hurry up, don’t waste time. Give me the money or your thesis—pick one.",快點，別浪費時間。把錢交出來，或者把你那篇論文給我，你自己選一個吧。,快点，别浪费时间。把钱交出来，或者把你那篇论文给我，你自己选一个吧
-BULLY_1,But… this…,可是……這。,可是……这
-BULLY_2,Oh? So you want me to make a move? You should know I don’t like repeating myself.,哦？所以你是想讓我動手嗎？你應該知道，我不喜歡重複說第二次。,哦？所以你是想让我动手吗？你应该知道，我不喜欢重复说第二次。
-BULLY_3,Help him.,幫助他。,帮助他
-BULLY_4,Pretend I didn’t see.,假裝看不見。,假装看不见
-BULLY_5,Bullying someone like that? I’ll make sure he gets what’s coming!,竟然這樣欺負人，我一定會幫他出一口氣的。,竟然这样欺负人，我一定会帮他出一口气的
-BULLY_6,This school’s too dangerous. Messing with those guys will only get me in trouble. Survival comes first.,這所學校太危險了，惹到那些人只會遭到麻煩，還是保命緊要。,这所学校太危险了，惹到那些人只会遭到麻烦，还是保命要紧
-BULLY_7,I just want to fight you.,我就是想跟你動手。,我就是想跟你动手
-BULLY_8,Who are you?,誰啊你？,谁啊你？
-BULLY_9,Just a passerby.,只是一個路人罷了。,只是一个路人罢了
-BULLY_10,With fists.,用拳頭。,用拳头
-BULLY_11,With a knife.,用刀。,用刀
-BULLY_12,With a grenade.,用手榴彈。,用手榴弹
-BULLY_13,Ah!,啊！,啊！
-BULLY_14,Hmph! Lucky you.,哼！算你好運。,哼！算你好运
-BULLY_15,"Thank you! I don’t have much to repay you with, but I’ll remember this kindness!",謝謝你！可惜我身上並沒有什麼東西可以報答你！但這份恩情我會記著的！,谢谢你！可惜我身上并没有什么东西可以报答你！但这份恩情我会记着的！
-MERCHANT_0,Wow! Your %s looks pretty cool. Can I trade my %s for it?,哇！我看你的%s挺不錯的，能和你的%s交換嗎？,哇！我看你的%s挺不错的，能和你的%s交换吗？
-MERCHANT_1,Sure.,可以。,可以
-MERCHANT_2,No way.,不可以。,不可以
-MERCHANT_3,Pleasure doing business!,合作愉快！,合作愉快！
-MERCHANT_4,No problem! Catch you later!,沒問題！下次再聊哦！,没问题！下次再聊哦！
+keys,en,zh,cmn,ja,ko,es
+BACK,Back,返回,返回,戻る,돌아가기,Volver
+HOMEPAGE,Back to Homepage,返回主頁,返回主页,ホームページに戻る,홈페이지로 돌아가기,Volver a la página principal
+SETTINGS,Settings,設定,设置,設定,설정,Configuración
+NEW_GAME,New Game,新遊戲,新游戏,新しいゲーム,새 게임,Nuevo juego
+CONTINUE_GAME,Continue Game,繼續遊戲,继续游戏,ゲームを続ける,게임 계속하기,Continuar juego
+QUIT_GAME,Exit Game,離開遊戲,离开游戏,ゲームをやめる,게임 나가기,Salir del juego
+GUIDE_SKIP_STORY,Hold the right mouse button to skip the story,長按右鍵以跳過劇情,长按右键以跳过剧情,右クリックを長押ししてストーリーをスキップ,오른쪽 클릭을 길게 눌러 스토리 건너뛰기,Mantén presionado el botón derecho para saltar la historia
+ME,Serena,塞雷娜,塞雷娜,セレナ,세레나,Serena
+FRIEND,Ellie,艾莉,艾莉,エリー,엘리,Ellie
+PRINCIPAL,Principal,校長,校长,校長,교장,Director
+DOCTOR,Doctor,醫生,医生,医者,의사,Doctor
+DOCTOR_ASSISTANT,Doctor’s Assistant,醫生助手,医生助手,医者の助手,의사 조수,Asistente del doctor
+WAITER,Waiter,服務員,服务员,ウェイター,웨이터,Camarero
+SALES,Shopkeeper,售貨員,售货员,店員,점원,Vendedor
+ROBBER,Robber,強盜,强盗,強盗,강도,Ladrón
+BULLY,Bully,惡霸,恶霸,いじめっ子,폭력배,Matón
+BULLIED,Ordinary Student,普通學生,普通学生,普通の学生,평범한 학생,Estudiante común
+INSURANCE_AGENT,Insurance Agent,保險經紀,保险经纪,保険ブローカー,보험 중개인,Corredor de seguros
+MERCHANT,Merchant,商人,商人,商人,상인,Comerciante
+HOSPITAL,Hospital,醫院,医院,病院,병원,Hospital
+HOME,Dormitory,宿舍,宿舍,寮,기숙사,Dormitorio
+LECTURE_HALL,Lecture Hall,講堂,讲堂,講堂,강당,Auditorio
+SUPERMARKET,Supermarket,超市,超市,スーパー,슈퍼마켓,Supermercado
+RESTAURANT,Restaurant,餐廳,餐厅,レストラン,레스토랑,Restaurante
+ITEM_0,Knife,刀,刀,ナイフ,칼,Cuchillo
+ITEM_1,Grenade,手榴彈,手榴弹,手榴弾,수류탄,Granada
+ITEM_2,Rat,老鼠,老鼠,ネズミ,쥐,Rata
+ITEM_3,Red Bull,紅牛,红牛,レッドブル,레드불,Red Bull
+ITEM_4,Sleeping Pills,安眠藥,安眠药,睡眠薬,수면제,Pastillas para dormir
+ITEM_5,Alcohol,酒,酒,酒,술,Alcohol
+ITEM_6,Mysterious Potion,神秘藥水,神秘药水,謎の薬水,신비의 약물,Poción misteriosa
+ITEM_7,Invisibility Cloak,隱形斗篷,隐身斗篷,透明マント,투명 망토,Capa de invisibilidad
+ITEM_8,Amulet,護身符,护身符,お守り,부적,Amuleto
+FOOD_0,Fresh Soil,新鮮泥土,新鲜泥土,新鮮な土,신선한 흙,Tierra fresca
+FOOD_1,Strawberry Cake,草莓蛋糕,草莓蛋糕,いちごケーキ,딸기 케이크,Pastel de fresa
+FOOD_2,Power Greens,大力菜,大力菜,パワー野菜,힘센 채소,Vegetal poderoso
+FOOD_3,Pig Brain,豬腦,猪脑,豚の脳,돼지 뇌,Cerebro de cerdo
+FOOD_4,Fortune Cookie,幸運餅乾,幸运饼干,フォーチュンクッキー,포춘 쿠키,Galleta de la suerte
+FOOD_5,Foie Gras,鵝肝,鹅肝,フォアグラ,거위 간,Foie gras
+FOOD_6,Duck Blood,鴨血,鸭血,アヒルの血,오리 피,Sangre de pato
+FOOD_7,Coffee,咖啡,咖啡,コーヒー,커피,Café
+COURSE_0,Feng Shui Secrets,風水秘籍,风水秘籍,風水秘訣,풍수 비결,Secretos del feng shui
+COURSE_1,Knife Mastery,刀具使用大法,刀具使用大法,ナイフ使いの極意,칼 사용 비법,Técnicas de uso de cuchillos
+COURSE_2,Meditation Training,冥想訓練,冥想训练,瞑想訓練,명상 훈련,Entrenamiento de meditación
+COURSE_3,Seeing Through the Essence of the Universe,看穿宇宙本質,看穿宇宙本质,宇宙の本質を見抜く,우주의 본질 꿰뚫기,Ver la esencia del universo
+COURSE_4,Basic Fitness Training,基礎體能訓練,基础体能训练,基礎体力トレーニング,기초 체력 훈련,Entrenamiento físico básico
+COURSE_5,"Fall, Mortal!",墮落吧凡人！,堕落吧凡人！,堕ちろ、凡人！,"타락하라, 범인!","¡Cae, mortal!"
+INTRO_0,"Hey, Ellie! I’ve got some good news for you!",喂艾莉！告訴你個好消息！,喂艾莉！告诉你个好消息！,ねえエリー！いいニュースがあるよ！,야 엘리! 좋은 소식 알려줄게!,"¡Oye, Ellie! ¡Te tengo buenas noticias!"
+INTRO_1,What’s up?,怎麼了？,怎么了？,どうしたの？,무슨 일이야?,¿Qué pasa?
+INTRO_2,I’m going to Natural Selection University next month!,我下個月就要去自然選擇大學上學了！,我下个月就要去自然选择大学上学了！,来月、自然選択大学に通うんだ！,다음 달부터 자연 선택 대학교에 다닐 거야!,¡El próximo mes voy a estudiar en la Universidad de Selección Natural!
+INTRO_3,What? You got accepted into Natural Selection University?,什麼？你被自然選擇大學錄取了？,什么？你被自然选择大学录取了？,え？自然選択大学に合格したの？,뭐? 자연 선택 대학교에 합격했어?,¿Qué? ¿Fuiste aceptada en la Universidad de Selección Natural?
+INTRO_4,"Surprising, right?",意想不到吧！,意想不到吧！,意外でしょ！,놀랍지!,"¡Inesperado, verdad!"
+INTRO_5,"Wow! That’s amazing, Serena! You got into such a tough school!",哇！厲害了我的塞雷娜！這麼難考的大學都被你考到了！,哇！厉害了我的塞雷娜！这么难考的大学都被你考到,わあ！すごいよセレナ！こんな難関大学に受かるなんて！,와! 대단해 내 세레나! 이렇게 어려운 대학에 붙다니!,"¡Wow! ¡Impresionante, mi Serena! ¡Lograste entrar a una universidad tan difícil!"
+INTRO_6,Hehe! But I’m so nervous! They say only 1% of students graduate from there.,嘻嘻！不過我好緊張啊！據說這間大學只有1%的人能畢業。,嘻嘻！不过我好紧张啊！据说这间大学只有1%的人能毕业,へへ！でもめっちゃ緊張してる。この大学、卒業できるのは1%だけだって。,헤헤! 근데 엄청 긴장돼. 이 대학은 1%만 졸업할 수 있다던데.,¡Jeje! ¡Pero estoy muy nerviosa! Dicen que solo el 1% se gradúa de esta universidad.
+INTRO_7,1%?! Did I hear that right?,1%？！我沒聽錯吧！,1%？！我没听错吧！,1%？！聞き間違えたんじゃないよね！,1%?! 내가 잘못 들은 거 아니지?,"¿1%? ¡No escuché mal, verdad!"
+INTRO_8,Yep! You heard me right! Just 1%!,是的！你沒聽錯！就是1%！,是的！你没听错！就是1%！,うん！聞き間違いじゃないよ！1%だよ！,응! 잘못 들은 거 아니야! 1%야!,¡Sí! ¡No escuchaste mal! ¡Es el 1%!
+INTRO_9,They say 99% of students either repeat the year or drop out.,據說99%的學生要麼繼續留級，要麼就退學了。,据说99%的学生要么继续留级，要么就退学了,99%の学生は留年するか退学するらしいよ。,99%의 학생은 유급하거나 자퇴한대.,Dicen que el 99% de los estudiantes repiten o abandonan.
+INTRO_10,But that 1% who make it through end up becoming incredible people. Several graduates are on the global rich list.,不過剩下的1%畢業之後都成為了非常厲害的人物。全球富豪排行榜裡有好幾位都是自然選擇大學的畢業生。,不过剩下的1%毕业后都成为了非常厉害的人物。全球富豪排行榜里有好几位都是自然选择大学的毕业生,でも残りの1%は卒業したらすごい人になるんだって。世界の富豪ランキングにも自然選択大学の卒業生が何人もいるよ。,하지만 남은 1%는 졸업 후 엄청난 인물이 된다더라. 세계 부자 순위에 자연 선택 대학교 졸업생이 몇 명이나 있어.,Pero ese 1% que se gradúa termina convirtiéndose en personas increíbles. Hay varios graduados de la Universidad de Selección Natural en la lista de los más ricos del mundo.
+INTRO_11,"Well, when you get rich in six months, don’t forget to take care of me!",那半年後發財了記得關照我啊！,那半年后发财了记得关照我啊！,じゃあ半年後に金持ちになったら面倒見てね！,그럼 반년 뒤에 부자 되면 나 챙겨줘!,"¡Entonces, si te haces rica en seis meses, acuérdate de ayudarme!"
+INTRO_12,Ha! I’m not even sure I’ll graduate!,哎！能不能畢業都說不準呢！,哎！能不能毕业都说不准呢！,あ！卒業できるかどうかもわからないよ！,아! 졸업할 수 있을지도 모르겠어!,¡Ay! ¡Ni siquiera sé si podré graduarme!
+INTRO_13,I know you can do it!,我知道你一定能行的！,我知道你一定能行的！,絶対にできるって信じてるよ！,너라면 꼭 할 수 있을 거라고 믿어!,¡Sé que tú puedes hacerlo!
+INTRO_14,"Hey! I’m going to eat now, let’s talk later!",哎！我要吃飯了，之後再說吧！,哎！我要吃饭了，之后再说吧！,あ！ご飯食べるから、また後でね！,아! 밥 먹어야 해서 나중에 얘기해!,"¡Ay! Voy a comer, ¡hablamos después!"
+INTRO_15,Sure! I need to plan my schedule anyway.,嗯嗯！我也要編排行程了。,嗯嗯！我也要编排行程了,うんうん！私もスケジュール組まなきゃ。,응응! 나도 일정 짜야 해.,"¡Claro, claro! Yo también tengo que organizar mi itinerario."
+INTRO_16,There’s only this one school on Natural Selection Island. I have to fly to the U.S. and then take a boat arranged by the school to get there. I need to register for the boat.,自然選擇島上就只有這座學校，要坐飛機到美國再乘學校安排的船才能到達，我要去登記船了。,自然选择岛上就只有这座学校，要坐飞机到美国再乘学校安排的船才能到达，我要去登记船了,自然選択島にはこの学校しかないから、アメリカまで飛行機で行って、学校の手配した船に乗らなきゃ。船の登録に行ってくるよ。,자연 선택 섬에는 이 학교밖에 없어서 미국까지 비행기 타고 가서 학교에서 마련한 배를 타야 해. 배 등록하러 가야겠어.,"En la isla de Selección Natural solo está esta universidad, hay que tomar un avión a Estados Unidos y luego un barco organizado por la escuela para llegar. Voy a registrarme para el barco."
+INTRO_17,Wow! That’s so far! But it sounds pretty cool.,哇！這麼遠啊！不過好像很厲害的樣子。,哇！这么远啊！不过好像很厉害的样子,わあ！そんな遠くまで！でもすごそうね。,와! 그렇게 멀어! 근데 엄청 대단해 보인다.,¡Wow! ¡Tan lejos! Pero suena increíble.
+INTRO_18,Right? I’ll talk to you later then!,是吧！不跟你說了，下次再說吧！,是吧！不跟你说了，下次再说吧！,でしょ！じゃあまたね、次に話そう！,그치! 그럼 나중에 얘기해!,"¡Verdad! ¡No te digo más, hablamos luego!"
+INTRO_19,Yep! Bye-bye!,嗯嗯！拜拜！,嗯嗯！拜拜！,うんうん！バイバイ！,응응! 바이바이!,"¡Claro, claro! ¡Adiós!"
+CEREMONY_0,Opening Ceremony,開學典禮,开学典礼,入学式,개학식,Ceremonia de inicio
+CEREMONY_1,"Dear new students and repeaters, welcome to Natural Selection University!",各位新生以及留級生，歡迎來到自然選擇大學！,各位新生以及留级生，欢迎来到自然选择大学！,新入生と留年生の皆さん、自然選択大学へようこそ！,"신입생 및 유급생 여러분, 자연 선택 대학교에 오신 것을 환영합니다!","¡Bienvenidos, nuevos estudiantes y repetidores, a la Universidad de Selección Natural!"
+CEREMONY_2,"Natural Selection University is not your average institution. There are no traditional classrooms, no fixed rules, not even so-called ""standard answers."" Our only principle is—survival and victory.",自然選擇大學不是一所普通的學府，這裡沒有傳統的課堂，沒有固定的規則，甚至沒有所謂的「標準答案」。我們唯一的宗旨是——生存與勝利。,自然选择大学不是一所普通的学府，这里没有传统的课堂，没有固定的规则，甚至没有所谓的「标准答案」。我们唯一的宗旨是——生存与胜利。,自然選択大学は普通の学校ではありません。ここには伝統的な授業も固定のルールも、いわゆる「正解」さえありません。私たちの唯一の理念は——生存と勝利です。,"자연 선택 대학교는 평범한 학교가 아닙니다. 여기엔 전통적인 수업도, 정해진 규칙도, 소위 ""정답""도 없습니다. 우리의 유일한 목표는——생존과 승리입니다.","La Universidad de Selección Natural no es una institución común. Aquí no hay clases tradicionales, ni reglas fijas, ni siquiera ""respuestas correctas"". Nuestro único lema es: supervivencia y victoria."
+CEREMONY_3,"Here, you have one goal: complete a thesis within 100 days. This thesis can be on any topic and can be completed by any means.",在這裡，你們的目標只有一個：在100天內完成一篇論文。這篇論文可以是任何主題，可以用任何方法完成。,在这里，你们的目标只有一个：在100天内完成一篇论文。这篇论文可以是任何主题，可以用任何方法完成。,ここでの皆さんの目標はただ一つ、100日以内に論文を完成させることです。この論文はどんなテーマでも、どんな方法で完成させても構いません。,"여기서 여러분의 목표는 단 하나, 100일 안에 논문을 완성하는 겁니다. 이 논문은 어떤 주제든, 어떤 방법으로든 완성할 수 있습니다.","Aquí, su único objetivo es completar una tesis en 100 días. Esta tesis puede ser sobre cualquier tema y completarse por cualquier medio."
+CEREMONY_4,"Yes, any means. There are no laws on Natural Selection Island, and the only rule at this university is that you cannot contact the outside world. We won’t interfere with your methods; we only care about results.",是的，是任何方法。自然選擇島上並沒有任何法律，自然選擇大學的唯一校規，就是你們不得與外界聯絡。我們不會干涉你們的手段，我們只在乎結果。,是的，是任何方法。自然选择岛上并没有任何法律，自然选择大学的唯一校规，就是你们不得与外界联络。我们不会干涉你们的手段，我们只在乎结果。,そうです、どんな方法でもです。自然選択島には法律がなく、自然選択大学の唯一の校則は外部との連絡を禁じることだけです。私たちは皆さんの手段には干渉せず、結果だけを重視します。,"맞습니다, 어떤 방법이든지입니다. 자연 선택 섬에는 법이 없고, 자연 선택 대학교의 유일한 교칙은 외부와의 연락 금지뿐입니다. 우리는 여러분의 수단에 간섭하지 않고 결과만 봅니다.","Sí, cualquier medio. En la isla de Selección Natural no hay leyes, y la única regla de la universidad es que no pueden contactar al exterior. No interferimos en sus métodos, solo nos importa el resultado."
+CEREMONY_5,No contact?! Can I still call Ellie?,不能聯絡？！我還能跟艾莉打電話嗎？,不能联络？！我还能跟艾莉打电话吗？,連絡できない？！エリーと電話できるかな？,연락 못 한다고?! 엘리랑 전화할 수 있나?,¿No contactar? ¿Podré hablar con Ellie por teléfono?
+CEREMONY_6,"In the past, 99% of students failed this challenge—they either repeated or dropped out. But the 1% who succeeded became world-changers.",過去，99%的學生未能完成這項挑戰，他們要麼留級，要麼退學。但剩下的1%，他們成為了改變世界的人。,过去，99%的学生未能完成这项挑战，他们要么留级，要么退学。但剩下的1%，他们成为了改变世界的人。,過去、99%の学生がこの挑戦を達成できませんでした。彼らは留年するか退学しました。しかし残りの1%は、世界を変える人物となりました。,과거 99%의 학생이 이 도전을 완수하지 못했습니다. 그들은 유급하거나 자퇴했죠. 하지만 남은 1%는 세상을 바꾼 인물이 됐습니다.,"En el pasado, el 99% de los estudiantes no logró completar este desafío. Repitieron o abandonaron. Pero el 1% restante se convirtió en personas que cambiaron el mundo."
+CEREMONY_7,"In 100 days, there are only two outcomes: graduation or elimination. Your choices will determine your future.",100天後，只有兩種結果：畢業，或是淘汰。你們的選擇將決定你們的未來。,100天后，只有两种结果：毕业，或是淘汰。你们的选择将决定你们的未来。,100日後、結果は二つだけです：卒業するか、淘汰されるか。皆さんの選択が未来を決めます。,"100일 후, 결과는 두 가지뿐입니다: 졸업하거나 탈락하거나. 여러분의 선택이 미래를 결정합니다.","En 100 días, solo hay dos resultados: graduarse o ser eliminado. Sus elecciones determinarán su futuro."
+CEREMONY_8,"Lastly, good luck to you all.",最後，祝你們好運。,最后，祝你们好运,最後に、皆さんに幸運を祈ります。,"마지막으로, 행운을 빕니다.","Por último, les deseo buena suerte."
+CEREMONY_9,That’s it?,這就完了？,这就完了？,これで終わり？,이게 끝이야?,¿Esto es todo?
+CEREMONY_10,What do I do next?,我之後該幹什麼呢？,我之后该干什么呢？,これから何をしようか？,이제 뭐하지?,¿Qué hago ahora?
+HOSPITAL_0,Welcome to Natural Selection Hospital,歡迎來到自然選擇醫院,欢迎来到自然选择医院,自然選択病院へようこそ,자연 선택 병원에 오신 것을 환영합니다,Bienvenidos al Hospital de Selección Natural
+HOSPITAL_1,"Here, you can forget all your troubles",在這裡，你可以忘記任何煩惱，,在这里，你可以忘记任何烦恼,ここではあらゆる悩みを忘れ、,"여기선 모든 고민을 잊고,","Aquí puedes olvidar todas tus preocupaciones,"
+HOSPITAL_2,and relax as if you were one with nature.,就像置身於大自然那樣的放鬆。,就像置身于大自然那样的放松,自然の中にいるようなリラックスが得られます。,자연 속에 있는 듯한 편안함을 느낄 수 있습니다.,y relajarte como si estuvieras en la naturaleza.
+HOSPITAL_3,May I ask what service you need?,請問，需要什麼服務嗎？,请问，需要什么服务吗？,何かサービスが必要ですか？,어떤 서비스가 필요하신가요?,¿En qué puedo ayudarte?
+HOSPITAL_4,Buy a liver ($%s),買肝（$%s）,买肝（$%s）,肝を買う（$%s）,간 사기($%s),Comprar hígado ($%s)
+HOSPITAL_5,Sell a liver ($%s),賣肝（$%s）,卖肝（$%s）,肝を売る（$%s）,간 팔기($%s),Vender hígado ($%s)
+HOSPITAL_6,Blood transfusion ($%s),輸血（$%s）,输血（$%s）,輸血（$%s）,수혈($%s),Transfusión ($%s)
+HOSPITAL_7,Sell blood ($%s),賣血（$%s）,卖血（$%s）,血を売る（$%s）,혈액 팔기($%s),Vender sangre ($%s)
+HOSPITAL_8,No thanks.,不用了，謝謝。,不用了，谢谢,いいえ、ありがとう。,"아니요, 괜찮습니다.","No, gracias."
+HOSPITAL_9,"Alright! This way, please~",好的！這邊請~,好的！这边请~,了解しました！こちらへどうぞ～,알겠습니다! 이쪽으로 오세요~,"¡Entendido! Por aquí, por favor~"
+HOSPITAL_10,Anything else you need?,還需要什麼嗎？,还需要什么吗？,他に何か必要ですか？,다른 도움 필요하신가요?,¿Necesitas algo más?
+HOSPITAL_11,(Whispering) Ugh! We’re out of human blood. How about some chicken blood?,（小聲）哎！人血用光了，來點雞血吧！,（小声）哎！人血用光了，来点鸡血吧！,（小声）あ！人血がなくなったから、鶏血でいいよね！,"(작게) 아! 사람 피가 떨어졌네, 닭 피라도 줄까!","(Susurra) ¡Ay! Se nos acabó la sangre humana, ¿te sirve sangre de pollo?"
+HOSPITAL_12,Wishing you good health~,祝你身體健康哦~,祝你身体健康哦~,お体に気をつけてくださいね～,건강 조심하세요~,¡Que estés saludable~
+RESTAURANT_0,What do you feel like eating?,想吃啥？,想吃啥？,何を食べたい？,뭐 먹고 싶어?,¿Qué quieres comer?
+RESTAURANT_1,"Nothing, thanks.",不用了。,不用了,いいえ。,아니야.,"No, gracias."
+RESTAURANT_2,Eat up and head out then.,吃完就走吧。,吃完就走吧,食べたら出よう。,먹고 가자.,Come y vámonos.
+RESTAURANT_3,Ha! I’m full!,哈！吃飽了！,哈！吃饱了！,は！お腹いっぱい！,하! 배부프다!,¡Ja! ¡Estoy lleno!
+RESTAURANT_4,Ugh! What is this stuff? But at least I finished it.,噁！這是什麼東西啊？不過總算是吃完了。,噁！这什么东西啊？不过总算是吃完了,うっ！何これ？でもなんとか食べ終わった。,윽! 이게 뭐야? 그래도 다 먹었네.,¡Puaj! ¿Qué es esto? Pero al menos lo terminé.
+RESTAURANT_5,Huh? Why do I feel…,欸？怎麼感覺...,欸？怎么感觉...,え？なんか変な感じ…,어? 뭔가 느낌이…,¿Eh? Me siento raro…
+RESTAURANT_6,"Wait, what just happened?",欸？剛剛發生什麼了？,欸？刚刚发生了什么？,え？今何が起きたの？,어? 방금 뭐였지?,¿Eh? ¿Qué pasó hace un momento?
+RESTAURANT_7,Ah! My wallet’s gone!,啊！錢包不見了！,啊！钱包不见了,あ！財布がない！,아! 지갑이 없어졌어!,¡Ah! ¡Mi cartera desapareció!
+RESTAURANT_8,Release the rat.,放出老鼠。,放出老鼠,ネズミを放す。,쥐를 풀어.,Suelta la rata.
+RESTAURANT_9,Time to dig in.,我要開動了。,我要开动了,いただきます。,잘 먹겠습니다.,Voy a comer.
+RESTAURANT_10,Squeak squeak.,吱吱。,吱吱,チューチュー。,찍찍.,Chillido.
+RESTAURANT_11,The rat’s dead.,老鼠死了。,老鼠死了,ネズミ死んだ。,쥐 죽었어.,La rata murió.
+RESTAURANT_12,The rat’s still alive.,老鼠還活著。,老鼠还活着,ネズミまだ生きてる。,쥐 아직 살아있어.,La rata sigue viva.
+RESTAURANT_13,Haha! Good thing I’m smart.,哈哈！幸虧我聰明。,哈哈！幸亏我聪明,はは！私が賢くてよかった。,하하! 내가 똑똑해서 다행이야.,¡Ja! Menos mal que soy listo.
+RESTAURANT_14,I can eat it now!,可以吃了！,可以吃了！,食べられるよ！,먹을 수 있어!,¡Se puede comer!
+RESTAURANT_15,Want more?,還要吃嗎？,还要吃吗？,まだ食べる？,더 먹을까?,¿Quieres más?
+HOME_0,What should I do next?,做什麼好呢？,做什么好呢？,何しようか？,뭐 할까?,¿Qué hacemos?
+HOME_1,Go out.,外出,外出,外出,외출,Salir
+PAPER_0,Write the thesis.,寫論文,写论文,論文を書く,논문 쓰기,Escribir la tesis
+PAPER_1,Ha! Made some good progress today.,哈！今天進度還挺好。,哈！今天进度还挺不错,は！今日の進捗結構いいね。,하! 오늘 진도 꽤 괜찮네.,¡Ja! ¡Buen progreso hoy!
+PAPER_2,Ugh! I’ve been writing for so long and still haven’t gotten anywhere.,哎！怎麼寫了這麼久都沒寫出什麼呢？,哎！怎么写了这么久都没写出什么呢？,あ！こんなに書いても全然進まないじゃん。,아! 이렇게 오래 썼는데 별로 안 됐네.,¡Ay! ¡Llevo tanto escribiendo y no sale nada!
+PAPER_3,Is it a lack of inspiration? Energy? Or something else?,是沒靈感？沒精神？還是什麼原因呢？,是没灵感？没精神？还是什么原因呢？,インスピレーションがない？疲れてる？それとも何か別の理由？,영감이 없나? 피곤한가? 아니면 다른 이유?,¿Sin inspiración? ¿Cansado? ¿O será otra cosa?
+SLEEP_0,Sleep.,睡覺,睡觉,寝る,자기,Dormir
+SLEEP_1,Use sleeping pills.,使用安眠藥。,使用安眠药,睡眠薬を使う。,수면제 먹기.,Tomar pastillas para dormir.
+SLEEP_2,Sleep straight away.,直接睡。,直接睡,そのまま寝る。,그냥 자기.,Dormir directamente.
+SLEEP_3,Ha! I feel refreshed!,哈！精神了！,哈！精神了！,は！元気になった！,하! 기운 났다!,¡Ja! ¡Estoy lleno de energía!
+SLEEP_4,Ugh! Why can’t I sleep?,哎！怎麼睡不著呢？,哎！怎么睡不着呢？,あ！眠れないじゃん。,아! 잠이 안 와.,¡Ay! ¡No puedo dormir!
+SUPERMARKET_0,Need to buy anything?,需要買什麼呢？,需要买什么呢？,何か買う必要ある？,뭐 살 거 있어?,¿Necesitas comprar algo?
+SUPERMARKET_1,No thanks!,不用了謝謝！,不用了谢谢！,いいえ、ありがとう！,"아니요, 괜찮아요!","No, gracias."
+SUPERMARKET_2,Thank you for your patronage!,謝謝惠顧！,谢谢惠顾！,ご利用ありがとうございます！,이용해 주셔서 감사합니다!,¡Gracias por tu compra!
+SUPERMARKET_3,Come again!,記得再次光臨哦！,记得再次光临哦！,またお越しくださいね！,또 오세요!,¡Vuelve pronto!
+SUPERMARKET_4,Anything else you need?,還需要什麼嗎？,还需要什么吗？,他に何か必要ですか？,다른 도움 필요하세요?,¿Algo más que necesites?
+LUCKY_DRAW_0,Hit or miss?,中不中呢？,中不中呢？,どうかな？,될까?,¿Funcionará?
+LUCKY_DRAW_1,Three,三,三,三,삼,Tres
+LUCKY_DRAW_2,Two,二,二,二,이,Dos
+LUCKY_DRAW_3,One,一,一,一,일,Uno
+LUCKY_DRAW_4,Oops!,哎呀！,哎呀！,あちゃ！,아야!,¡Ay!
+LUCKY_DRAW_5,Not bad!,還不錯！,还不错！,まあまあだね！,괜찮네!,¡No está mal!
+LUCKY_DRAW_6,Awesome!,太好了！,太好了！,やった！,좋아!,¡Genial!
+LECTURE_0,What class should I take today?,今天上什麼課好呢？,今天上什么课好呢？,今日は何の授業にしようか？,오늘 무슨 수업 들을까?,¿Qué clase tomo hoy?
+LECTURE_1,Skip it.,不上了。,不上了,やめとく。,안 들을래.,No voy.
+LECTURE_2,"The professor was great today, learned a lot of useful stuff.",今天教授講得不錯，學到不少有用的知識。,今天教授讲得不错，学到不少有用的知识,今日の教授の講義よかった、役に立つ知識たくさん学んだ。,"오늘 교수 강의 좋았어, 유용한 지식 많이 배웠어.","La clase del profesor estuvo buena hoy, aprendí cosas útiles."
+LECTURE_3,"Today’s class was so boring, such a waste of time.",今天的課太無聊了，浪費了不少時間。,今天的课太无聊了，浪费了不少时间,今日の授業つまらなかった、時間無駄にした。,"오늘 수업 너무 지루했어, 시간 낭비했네.","La clase de hoy fue aburrida, perdí el tiempo."
+BAD_END_0,Can this kid still be saved?,這孩子還能救嗎？,这孩子还能救吗？,この子まだ救える？,이 애 아직 살릴 수 있어?,¿Este chico aún tiene salvación?
+BAD_END_1,No hope left.,已經沒救了。,已经没救了,もうダメだね。,이미 안 되겠네.,Ya no hay esperanza.
+BAD_END_2,Another one eliminated?,又淘汰一個了嗎？,又淘汰一个了吗？,また一人淘汰されたか。,또 한 명 탈락했나?,¿Otro eliminado?
+BAD_END_3,"You’ll get used to it soon. Pass me a bottle, I’ll store the liver.",很快你就會習慣的了。給個瓶子我把肝放好。,很快你就会习惯的了。给个瓶子我把肝放好好吧,すぐ慣れるよ。ボトルちょうだい、肝入れるから。,"곧 익숙해질 거야. 병 줘, 간 넣을게.","Te acostumbrarás pronto. Dame una botella, voy a guardar el hígado."
+BAD_END_4,Here you go!,是！給~,是！给~,はい！どうぞ～,네! 여기요~,¡Sí! Aquí tienes~
+GOOD_END_0,Finally graduated! I’m heading back to Hong Kong right away.,終於畢業了，我馬上回到香港。,终于毕业了，我马上回到香港,やっと卒業できた、すぐ香港に帰るよ。,"드디어 졸업했어, 바로 홍콩으로 돌아갈게.","Por fin me gradué, vuelvo a Hong Kong ahora mismo."
+GOOD_END_1,Ellie (tearing up)!,艾莉（感動）！,艾莉（感动）！,エリー（感動）！,엘리 (감동)!,¡Ellie (emocionada)!
+GOOD_END_2,Who are you?,你是？,你是？,あなた誰？,누구세요?,¿Quién eres?
+GOOD_END_3,You don’t recognize me?,你認不出我了嗎？,你认不出我了吗？,私わかんないの？,나 못 알아보겠어?,¿No me reconoces?
+GOOD_END_4,Serena? Is that you?,你是塞雷娜？,你是塞雷娜？,セレナなの？,세레나야?,¿Eres Serena?
+GOOD_END_5,Yep!,是啊！,是啊！,そう！,맞아!,¡Sí!
+GOOD_END_6,"You know, a few months ago you just disappeared, and I was so worried!",你知道嗎？幾個月前突然就找不到你，我好擔心你啊！,你知道吗？几个月前突然就找不到你，我好担心你啊！,ねえ知ってる？数ヶ月前突然あなたと連絡取れなくなって、すっごく心配したんだから！,"있지, 몇 달 전 갑자기 너랑 연락 안 돼서 진짜 걱정했어!","¿Sabes? Hace unos meses de repente no supe nada de ti, ¡estaba tan preocupada!"
+GOOD_END_7,"Ugh, no choice! Natural Selection University doesn’t let us contact the outside world!",害！沒辦法啊！自然選擇大學不允許我們與外界交流啊！,害！没办法啊！自然选择大学不允许我们与外界交流啊！,うわ！仕方ないよ！自然選択大学じゃ外部と連絡取れないんだもん！,아! 어쩔 수 없었어! 자연 선택 대학교에선 외부랑 연락 못 하거든!,¡Ay! ¡No tuve opción! ¡En la Universidad de Selección Natural no nos dejan contactar al exterior!
+GOOD_END_8,They have a rule like that?!,竟然有這樣的規矩？！,竟然有这样的规矩？！,そんなルールあるの？！,그런 규칙이 있어?!,¿Hay una regla así?
+GOOD_END_9,Yeah! Natural Selection University is insane! It’s a long story—let’s eat at a restaurant and catch up!,害！自然選擇大學太可怕了！說來話長，我們去餐廳邊吃邊聊吧！,害！自然选择大学太可怕了！说来话长，我们去餐厅边吃边聊吧！,うわ！自然選択大学怖すぎる！話せば長いから、レストランで食べながら話そうよ！,아! 자연 선택 대학교 너무 무서워! 얘기 길어질 테니 레스토랑 가서 밥 먹으면서 하자!,"¡Ay! ¡La Universidad de Selección Natural es aterradora! Es una larga historia, ¡vamos a un restaurante a comer y charlar!"
+GOOD_END_10,Sure! Let’s go to that one!,好啊！就去那家吧！,好啊！就去那家吧！,いいね！あそこ行こう！,좋아! 저기 가자!,¡Claro! ¡Vamos a ese!
+GOOD_END_11,Wait! I didn’t bring a rat—did you?,等等！我沒帶老鼠，你有嗎？,等等！我没带老鼠，你有吗？,待って！ネズミ持ってきてないけど、あなた持ってる？,"잠깐! 쥐 안 챙겼는데, 너 있어?","¡Espera! No traje una rata, ¿tú tienes?"
+GOOD_END_12,A rat?,老鼠？,老鼠？,ネズミ？,쥐?,¿Rata?
+GOOD_END_13,Yeah! It’s reassuring to have one!,嗯嗯！帶了安心點嘛！,嗯嗯！带了安心点嘛！,うんうん！持ってると安心するよね！,응응! 있으면 마음 편하잖아!,"¡Sí, sí! ¡Traer una me da tranquilidad!"
+GOOD_END_14,Huh?!,哈？！,哈？！,は？！,뭐?!,¿Qué?!
+GOOD_END_15,"Oh, never mind! Let’s check the supermarket and see if they’ve got any!",哎！沒事兒！我們去超市看看有沒有吧！,哎！没事儿！我们去超市看看有没有吧！,あ！大丈夫！スーパーで探してみようよ！,아! 괜찮아! 슈퍼마켓 가서 찾아보자!,¡Ay! ¡No pasa nada! ¡Vamos al supermercado a ver si hay!
+GOOD_END_16,Huh?!,哈？！,哈？！,は？！,뭐?!,¿Qué?!
+NORMAL_END_0,Ugh! 100 days already!,害！100天了！,害！100天了！,うわ！100日経った！,아! 100일 됐네!,¡Ay! ¡Han pasado 100 días!
+NORMAL_END_1,I still haven’t finished my thesis.,我還沒有寫好論文啊。,我还没有写好论文啊,まだ論文完成してないよ。,아직 논문 못 썼어.,Todavía no terminé mi tesis.
+NORMAL_END_2,"But that’s normal, I guess",不過也正常啦，,不过也正常啦,でもまあ普通だよね、,"근데 그럴 수도 있지,","Pero es normal,"
+NORMAL_END_3,"only 1% graduate, after all.",畢竟只有1%的人能畢業嘛。,毕竟只有1%的人能毕业嘛,だって1%しか卒業できないんだもん。,어차피 1%만 졸업하니까.,"total, solo el 1% se gradúa."
+NORMAL_END_4,Surviving this long is already pretty impressive.,能生存至今已經很厲害啦。,能生存至今已经很厉害啦,ここまで生き残れただけでもすごいよ。,여기까지 살아남은 것도 대단해.,Haber sobrevivido hasta ahora ya es increíble.
+NORMAL_END_5,I miss Ellie so much.,好想念艾莉啊。,好想念艾莉啊,エリーに会いたいな。,엘리 보고 싶다.,Extraño tanto a Ellie.
+NORMAL_END_6,I didn’t mean to lose contact.,我不是故意失聯的啊。,我不是故意失联的啊,わざと連絡絶ったわけじゃないよ。,일부러 연락 끊은 거 아니야.,No dejé de contactarla a propósito.
+NORMAL_END_7,I hope she doesn’t blame me.,希望她不會怪我吧。,希望她不会怪我吧,怒ってないといいな。,나한테 화 안 냈으면 좋겠네.,Espero que no esté enojada conmigo.
+NORMAL_END_8,"Next semester, I’ll definitely graduate.",我下學期一定會順利畢業的。,我下学期一定会顺利毕业的,来学期は絶対スムーズに卒業するよ。,다음 학기엔 꼭 졸업할게.,El próximo semestre me gradúo sin falta.
+NORMAL_END_9,Ellie! Wait for me!,艾莉！要等我哦！,艾莉！要等我哦！,エリー！待っててね！,엘리! 기다려줘!,¡Ellie! ¡Espérame!
+STEAL_0,"Money, life, or the thesis.",要錢要命要論文。,要钱要命要论文,お金か命か論文か。,돈이냐 목숨이냐 논문이냐.,"Dinero, vida o tesis."
+STEAL_1,Money.,要錢。,要钱,お金。,돈.,Dinero.
+STEAL_2,Life.,要命。,要命,命。,목숨.,Vida.
+STEAL_3,Thesis.,要論文。,要论文,論文。,논문.,Tesis.
+STEAL_4,I want it all.,我全都要。,我全都要,全部欲しい。,다 가질 거야.,Lo quiero todo.
+STEAL_5,With fists.,用拳頭。,用拳头,拳で。,주먹으로.,Con puños.
+STEAL_6,With a knife.,用刀。,用刀,ナイフで。,칼로.,Con cuchillo.
+STEAL_7,With a grenade.,用手榴彈。,用手榴弹,手榴弾で。,수류탄으로.,Con granada.
+STEAL_8,With an invisibility cloak.,用隱形斗篷。,用隐身斗篷,透明マントで。,투명 망토로.,Con capa de invisibilidad.
+STEAL_9,Where’d he go? He got away!,人呢？這都被他逃走了。,人呢？这都被他逃走,人どこ？こいつ逃げちゃったよ。,사람 어디 갔어? 저놈 도망쳤네.,¿Dónde está? Se escapó.
+STEAL_10,Ah!,啊！,啊！,あ！,아!,¡Ah!
+STEAL_11,Hmph! Lucky you.,哼！算你好運。,哼！算你好运,ふん！運がいいね。,흥! 운 좋네.,¡Hum! Qué suerte tienes.
+STEAL_12,Ha! What a greedy guy! Guess I’ll beat you up and take your thesis then!,哈！真是個貪財的傢伙！那我就打你一頓再拿走你的論文咯！,哈！真是个贪财的家伙！那我就打你一顿再拿走你的论文咯！,は！金にがめつい奴だ！じゃあ殴って論文奪うよ！,하! 돈 욕심 많은 놈이네! 그럼 때리고 논문 뺏어야지!,¡Ja! ¡Qué codicioso! ¡Te daré una paliza y me llevaré tu tesis!
+STEAL_13,Ha! Fine! Hand over your money and thesis!,哈！行！那就交出錢和論文吧！,哈！行！那就交出钱和论文吧！,は！よし！金と論文出せ！,하! 좋아! 돈과 논문 내놔!,¡Ja! ¡Bien! ¡Dame el dinero y la tesis!
+STEAL_14,"Ha! Wanting the thesis over your life? This school’s full of lunatics! Fine, have it your way!",哈！竟然要論文也不要命！這學校的人真的瘋了！不過既然如此，我就成全你吧！,哈！竟然要论文也不要命！这学校的人真的疯了！不过既然如此，我就成全你吧！,は！論文欲しがって命いらないなんて！この学校の奴らほんと狂ってる！でもまあ、そういうことなら叶えてやるよ！,하! 논문 원하고 목숨은 안 원해? 이 학교 사람들 진짜 미쳤네! 그래도 원한다면 그렇게 해줄게!,"¡Ja! ¡Querer la tesis y no la vida! ¡La gente de esta escuela está loca! Pero si así lo quieres, te complaceré."
+BULLY_0,"Hurry up, don’t waste time. Give me the money or your thesis—pick one.",快點，別浪費時間。把錢交出來，或者把你那篇論文給我，你自己選一個吧。,快点，别浪费时间。把钱交出来，或者把你那篇论文给我，你自己选一个吧,早く、時間無駄にしないで。お金出すか論文くれ、どっちか選んで。,"빨리, 시간 낭비하지 마. 돈 내놓든지 논문 주든지, 하나 골라.","Rápido, no pierdas tiempo. Dame el dinero o tu tesis, elige uno."
+BULLY_1,But… this…,可是……這。,可是……这,でも…これ。,하지만… 이거.,Pero… esto.
+BULLY_2,Oh? So you want me to make a move? You should know I don’t like repeating myself.,哦？所以你是想讓我動手嗎？你應該知道，我不喜歡重複說第二次。,哦？所以你是想让我动手吗？你应该知道，我不喜欢重复说第二次。,お？じゃあ手出すの私に任せるってこと？二度言わないのが好きじゃないの知ってるよね。,오? 그럼 내가 손대길 바라는 거야? 두 번 말하는 거 싫어하는 거 알지.,¿Oh? ¿Entonces quieres que lo haga yo? Sabes que no me gusta repetir dos veces.
+BULLY_3,Help him.,幫助他。,帮助他,助ける。,도와주기.,Ayudarlo.
+BULLY_4,Pretend I didn’t see.,假裝看不見。,假装看不见,見なかったことにする。,못 본 척하기.,Hacer como que no veo.
+BULLY_5,Bullying someone like that? I’ll make sure he gets what’s coming!,竟然這樣欺負人，我一定會幫他出一口氣的。,竟然这样欺负人，我一定会帮他出一口气的,こんなイジメ見てたら絶対助けてやるよ。,이렇게 괴롭히는 거 보면 꼭 도와줘야겠어.,"No soporto ver este bullying, voy a ayudarlo a desquitarse."
+BULLY_6,This school’s too dangerous. Messing with those guys will only get me in trouble. Survival comes first.,這所學校太危險了，惹到那些人只會遭到麻煩，還是保命緊要。,这所学校太危险了，惹到那些人只会遭到麻烦，还是保命要紧,この学校危なすぎる、あいつらに絡んだら面倒なことになるだけ、命が大事だよ。,"이 학교 너무 위험해, 저놈들 건드리면 문제만 커져, 목숨이 우선이야.","Esta escuela es muy peligrosa, meterse con esa gente solo trae problemas, mejor salvar mi vida."
+BULLY_7,I just want to fight you.,我就是想跟你動手。,我就是想跟你动手,お前とやり合いたいだけだ。,너랑 싸우고 싶을 뿐이야.,Solo quiero pelear contigo.
+BULLY_8,Who are you?,誰啊你？,谁啊你？,誰だお前？,너 누구야?,¿Quién eres tú?
+BULLY_9,Just a passerby.,只是一個路人罷了。,只是一个路人罢了,ただの通りすがりだよ。,그냥 지나가는 사람이야.,Solo un transeúnte.
+BULLY_10,With fists.,用拳頭。,用拳头,拳で。,주먹으로.,Con puños.
+BULLY_11,With a knife.,用刀。,用刀,ナイフで。,칼로.,Con cuchillo.
+BULLY_12,With a grenade.,用手榴彈。,用手榴弹,手榴弾で。,수류탄으로.,Con granada.
+BULLY_13,Ah!,啊！,啊！,あ！,아!,¡Ah!
+BULLY_14,Hmph! Lucky you.,哼！算你好運。,哼！算你好运,ふん！運がいいね。,흥! 운 좋네.,¡Hum! Qué suerte tienes.
+BULLY_15,"Thank you! I don’t have much to repay you with, but I’ll remember this kindness!",謝謝你！可惜我身上並沒有什麼東西可以報答你！但這份恩情我會記著的！,谢谢你！可惜我身上并没有什么东西可以报答你！但这份恩情我会记着的！,ありがとう！残念ながらお礼できるもの持ってないけど、この恩は忘れないよ！,고마워! 아쉽게도 보답할 건 없지만 이 은혜는 기억할게!,"¡Gracias! Lamentablemente no tengo nada para agradecerte, ¡pero recordaré este favor!"
+MERCHANT_0,Wow! Your %s looks pretty cool. Can I trade my %s for it?,哇！我看你的%s挺不錯的，能和你的%s交換嗎？,哇！我看你的%s挺不错的，能和你的%s交换吗？,わ！君の%sいいね、私の%sと交換できる？,"와! 너의 %s 꽤 괜찮네, 나의 %s랑 바꿀 수 있어?","¡Wow! Tu %s está genial, ¿puedo cambiarlo por mi %s?"
+MERCHANT_1,Sure.,可以。,可以,いいよ。,좋아.,Sí.
+MERCHANT_2,No way.,不可以。,不可以,ダメだよ。,안 돼.,No.
+MERCHANT_3,Pleasure doing business!,合作愉快！,合作愉快！,協力楽しかったね！,협력 즐거웠어!,¡Fue un placer colaborar!
+MERCHANT_4,No problem! Catch you later!,沒問題！下次再聊哦！,没问题！下次再聊哦！,問題ないよ！また次話そうね！,문제없어! 다음에 또 얘기해!,¡Sin problema! ¡Hablamos luego!

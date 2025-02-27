@@ -1,5 +1,8 @@
 extends Button
 
+var woo_sound = preload("res://assets/audio/woo.mp3")
+var yay_sound = preload("res://assets/audio/yay.mp3")
+
 var item
 var idx
 
@@ -10,6 +13,7 @@ func init(_item_id: int, _idx: int) -> void:
 	icon = item.img
 
 func use_item() -> void:
+	Global.play_sound(yay_sound if randf() < 0.5 else woo_sound)
 	var original_bag = State.progress.get("bag", [])
 	if item.id==6:
 		var new_bag = original_bag.duplicate(true)
