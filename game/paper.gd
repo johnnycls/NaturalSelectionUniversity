@@ -14,7 +14,7 @@ func write_paper() -> bool:
 			"spirit": -25,
 			"hunger": -20, 
 			"mood": -5,
-			"paper": 100 + (State.progress.mood * State.progress.intelligence / 200),
+			"paper": 100 + (State.progress.mood * State.progress.intelligence / 20),
 		})
 		Global.play_sound(sigh_sound)
 		return false
@@ -22,7 +22,7 @@ func write_paper() -> bool:
 		"time": 180, 
 		"spirit": -20, 
 		"hunger": -25, 
-		"paper": 200 + (State.progress.mood * State.progress.intelligence / 100)
+		"paper": 200 + (State.progress.mood * State.progress.intelligence / 10)
 	})
 	Global.play_sound(yay_sound if randf() < 0.5 else woo_sound)
 	return true

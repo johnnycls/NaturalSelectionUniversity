@@ -1,7 +1,7 @@
 extends Control
 
-@onready var new_game_btn: Button = $Buttons/NewGameBtn
-@onready var continue_btn: Button = $Buttons/ContinueBtn
+@onready var new_game_btn: Button = $VBoxContainer/Buttons/NewGameBtn
+@onready var continue_btn: Button = $VBoxContainer/Buttons/ContinueBtn
 
 var settings_scene = load("res://uis/layer1/settings.tscn")
 

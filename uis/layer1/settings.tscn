@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7ew4ek0oaqhx"]
+[gd_scene load_steps=5 format=3 uid="uid://c7ew4ek0oaqhx"]
 
 [ext_resource type="Script" path="res://uis/layer1/settings.gd" id="1_13p4e"]
+[ext_resource type="Texture2D" uid="uid://bicrckpguahx6" path="res://assets/ui_sprites/home/background.png" id="2_7uf3u"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_fot4b"]
 action = &"ui_cancel"
@@ -18,6 +19,13 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_13p4e")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1926.0
+offset_bottom = 1370.0
+texture = ExtResource("2_7uf3u")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="BackBtn" type="Button" parent="."]
 layout_mode = 0

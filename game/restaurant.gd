@@ -7,7 +7,7 @@ var woo_sound = preload("res://assets/audio/woo.mp3")
 var yay_sound = preload("res://assets/audio/yay.mp3")
 
 func food_poison_prob() -> float:
-	return 0.25
+	return 0.2
 
 var FOODS = [
 	{"name": "FOOD_0", "cost": 15, "effect": {"hunger": 60, "time": 60, "mood": -20}, "is_tasty": false},
@@ -71,7 +71,7 @@ func before_eat(is_mouse: bool, idx: int) -> bool: # is_poison
 	var food = food_choices[idx]
 	if randf() < food_poison_prob():
 		if is_mouse:
-			var new_bag = Game.remove_bag_item(3)
+			var new_bag = Game.remove_bag_item(2)
 			Game.update_status({"money": -food.cost, "bag": new_bag, "luck": 10})
 		else:
 			Game.update_status({"money": -300-food.cost, "time": 180, "luck": 15, "mood": -15})

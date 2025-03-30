@@ -2,14 +2,14 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://c6woo1s1lr7s1"
+uid="uid://csvub4mgl5qv6"
 
 [deps]
 
-files=["res://assets/translations/translation.en.translation", "res://assets/translations/translation.zh.translation", "res://assets/translations/translation.cmn.translation", "res://assets/translations/translation.ja.translation", "res://assets/translations/translation.ko.translation", "res://assets/translations/translation.es.translation"]
+files=["res://assets/translations/translation.en.translation", "res://assets/translations/translation.zh.translation", "res://assets/translations/translation.cmn.translation", "res://assets/translations/translation.ja.translation", "res://assets/translations/translation.ko.translation", "res://assets/translations/translation.es.translation", "res://assets/translations/translation.ru.translation"]
 
 source_file="res://assets/translations/translation.csv"
-dest_files=["res://assets/translations/translation.en.translation", "res://assets/translations/translation.zh.translation", "res://assets/translations/translation.cmn.translation", "res://assets/translations/translation.ja.translation", "res://assets/translations/translation.ko.translation", "res://assets/translations/translation.es.translation"]
+dest_files=["res://assets/translations/translation.en.translation", "res://assets/translations/translation.zh.translation", "res://assets/translations/translation.cmn.translation", "res://assets/translations/translation.ja.translation", "res://assets/translations/translation.ko.translation", "res://assets/translations/translation.es.translation", "res://assets/translations/translation.ru.translation"]
 
 [params]
 
