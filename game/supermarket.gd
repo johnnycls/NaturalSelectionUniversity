@@ -10,7 +10,7 @@ func init(saved_dict: Dictionary) -> void:
 	item_choices = saved_dict.get("item_choices", [])
 
 func timeline_events() -> Array:
-	return ("""[background arg="res://assets/environment_sprites/supermarket.png" fade="0.0"]
+	return ("""[background arg="res://assets/environment_sprites/supermarket.jpg" fade="0.0"]
 join sales center
 sales: SUPERMARKET_0
 label choice

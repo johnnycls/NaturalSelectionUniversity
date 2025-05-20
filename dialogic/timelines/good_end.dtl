@@ -1,4 +1,5 @@
-[background arg="res://assets/environment_sprites/supermarket.png" fade="0.0"]
+leave --All--
+[background arg="res://assets/environment_sprites/supermarket.jpg" fade="0.0"]
 GOOD_END_0
 join me left
 join friend right

@@ -1,6 +1,6 @@
 [gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cdnrgd4gdn672"]
 
-[ext_resource type="Texture2D" uid="uid://2ujnpq0emmev" path="res://assets/ui_sprites/dialogue/dialogue_box.png" id="1_s7lhv"]
+[ext_resource type="Texture2D" uid="uid://ch0ci2ruvaw67" path="res://assets/ui_sprites/dialogue/dialogue_box.png" id="1_s7lhv"]
 
 [resource]
 content_margin_left = 25.0

@@ -1,3 +1,4 @@
+leave --All--
 [background arg="res://assets/environment_sprites/hospital.jpg" fade="0.0"]
 join doctor left
 join doctor_assistant right

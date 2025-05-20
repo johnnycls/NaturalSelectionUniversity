@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://7i2ltxhfe2tn"]
 
-[ext_resource type="Script" path="res://uis/layer1/home.gd" id="1_blhe6"]
+[ext_resource type="Script" uid="uid://bds1g8lmi3f7j" path="res://uis/layer1/home.gd" id="1_blhe6"]
 [ext_resource type="Texture2D" uid="uid://bicrckpguahx6" path="res://assets/ui_sprites/home/background.png" id="2_4k6a2"]
 [ext_resource type="Texture2D" uid="uid://by8wlrhae0vkj" path="res://assets/ui_sprites/home/traditional_logo.png" id="3_niurl"]
 
@@ -65,6 +65,7 @@ theme_override_font_sizes/font_size = 64
 text = "SETTINGS"
 
 [node name="QuitBtn" type="Button" parent="VBoxContainer/Buttons"]
+visible = false
 layout_mode = 2
 theme_type_variation = &"HomePageButton"
 theme_override_font_sizes/font_size = 64

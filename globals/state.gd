@@ -9,7 +9,8 @@ var record: Dictionary = {}
 func _ready() -> void:
 	settings = _read_json_file(Config.SETTINGS_PATH)
 	progress = _read_json_file(Config.PROGRESS_PATH)
-	progress.bag = progress.bag.map(func(n): return int(n))
+	if progress.has("bag"):
+		progress.bag = progress.bag.map(func(n): return int(n))
 	record = _read_json_file(Config.RECORD_PATH)
 	_update_lang()
 
